@@ -1,0 +1,35 @@
+services:
+  kronos:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "7070:7070"
+    environment:
+      HF_HOME: /home/kronos/.cache/huggingface
+      OMP_NUM_THREADS: ${OMP_NUM_THREADS:-4}
+    volumes:
+      - ./data:/app/data:ro
+      - ./webui/prediction_results:/app/webui/prediction_results
+      - uploaded-data:/app/webui/uploads
+      - huggingface-cache:/home/kronos/.cache/huggingface
+    init: true
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://127.0.0.1:7070/api/model-status', timeout=5)"
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+
+volumes:
+  uploaded-data:
+  huggingface-cache:

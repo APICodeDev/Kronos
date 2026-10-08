@@ -5,14 +5,34 @@ Web user interface for Kronos financial prediction model, providing intuitive gr
 ## ✨ Features
 
 - **Multi-format data support**: Supports CSV, Feather and other financial data formats
-- **Smart time window**: Fixed 400+120 data point time window slider selection
+- **Smart time window**: Fixed 80+120 data point time window slider selection
 - **Real model prediction**: Integrated real Kronos model, supports multiple model sizes
 - **Prediction quality control**: Adjustable temperature, nucleus sampling, sample count and other parameters
-- **Multi-device support**: Supports CPU, CUDA, MPS and other computing devices
+- **CPU inference**: Runs without a GPU in the provided Docker setup
 - **Comparison analysis**: Detailed comparison between prediction results and actual data
 - **K-line chart display**: Professional financial K-line chart display
 
 ## 🚀 Quick Start
+
+### Run with Docker (CPU)
+
+From the project root:
+
+```bash
+docker compose up --build -d
+```
+
+Open http://localhost:7070. Put CSV or Feather market-data files in the root
+`data/` directory or use **Upload Data File** to choose one from your computer
+(up to 50 MB). Uploaded files are validated and loaded automatically, and are
+kept in the persistent `uploaded-data` Docker volume. The container uses CPU-only
+PyTorch; no GPU or external LLM service is required. On first use, load a
+Kronos model in the UI; its files are downloaded from Hugging Face and cached
+in a persistent Docker volume. Prediction results are written to
+`webui/prediction_results/`.
+
+To stop the service, run `docker compose down`. The model cache and saved
+prediction results are preserved.
 
 ### Method 1: Start with Python script
 ```bash
@@ -37,10 +57,23 @@ After successful startup, visit http://localhost:7070
 
 ## 📋 Usage Steps
 
+### Download market data directly from Kraken
+
+Use **Datos de Kraken**, search for a spot pair (for example BTC/EUR), choose a
+candle interval, and press **Descargar y cargar datos de Kraken**. This uses
+Kraken's free public market-data API and requires no API key or account access.
+The app excludes the unfinished candle, checks OHLC values and time continuity,
+and requires at least 80 completed candles. Timestamps are in UTC. The CSV is
+saved in the same persistent upload directory and can also be downloaded.
+
+Kraken's OHLC endpoint only returns recent candles; it cannot retrieve arbitrary
+older dates. New pairs or long intervals may not provide 80 completed candles.
+See the [official OHLC documentation](https://docs.kraken.com/api-reference/market-data/get-ohlc-data).
+
 1. **Load data**: Select financial data file from data directory
 2. **Load model**: Select Kronos model and computing device
 3. **Set parameters**: Adjust prediction quality parameters
-4. **Select time window**: Use slider to select 400+120 data point time range
+4. **Select time window**: Use slider to select 80+120 data point time range
 5. **Start prediction**: Click prediction button to generate results
 6. **View results**: View prediction results in charts and tables
 
@@ -80,17 +113,23 @@ After successful startup, visit http://localhost:7070
 - **Kronos-small**: 24.7M parameters, balanced performance and speed
 - **Kronos-base**: 102.3M parameters, high quality prediction
 
-## 🖥️ GPU Acceleration Support
+## 🖥️ Docker runtime
 
-- **CPU**: General computing, best compatibility
-- **CUDA**: NVIDIA GPU acceleration, best performance
-- **MPS**: Apple Silicon GPU acceleration, recommended for Mac users
+The provided Docker image installs CPU-only PyTorch; GPU passthrough is not
+configured. The default mode forecasts the next 120 candles from the last 80
+rows in the loaded file. The UI displays the last input timestamp and forecast
+dates before running, and labels them again above the result. Kraken timestamps
+are UTC. Download fresh data to forecast from the latest available candle.
+
+Choose **Comparación histórica (backtest)** to select a 200-row historical
+window: 80 context rows plus 120 held-out rows for comparison. The API requires
+`mode: "backtest"` to use a historical window; otherwise it forecasts from the
+latest rows, even if an older browser tab sends a slider index.
 
 ## ⚠️ Notes
 
 - `amount` column is not used for prediction, only for display
-- Time window is fixed at 400+120=520 data points
-- Ensure data file contains sufficient historical data
+- Future forecasts require 80 historical rows; historical comparisons require 200.
 - First model loading may require download, please be patient
 
 ## 🔍 Comparison Analysis

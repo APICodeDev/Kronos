@@ -44,6 +44,7 @@ Desktop.ini
 *~
 
 # Data files (large files)
+webui/uploads/
 *.feather
 *.parquet
 *.h5
