@@ -3,7 +3,7 @@
         <div>
             <div class="eyebrow">ANÁLISIS DE MERCADO</div>
             <h1 class="mb-1">Kronos <span class="text-secondary fw-normal">/ Predicciones</span></h1>
-            <p class="text-secondary mb-0">Últimas 80 velas reales y predicción futura, en una sola vista.</p>
+            <p class="text-secondary mb-0">Muestra horaria de hasta 29 días y 23 horas y predicción futura, en una sola vista.</p>
         </div>
         <div class="d-flex align-items-center gap-2">
             <label for="theme-select" class="small text-secondary">Apariencia</label>
@@ -32,7 +32,7 @@
                             <div class="col-12 col-sm-6 d-flex align-items-end"><button id="reload-kraken-pairs-btn" type="button" class="btn btn-outline-secondary w-100">Actualizar pares</button></div>
                             <div class="col-12"><button id="import-kraken-btn" type="button" class="btn btn-primary w-100" disabled>Descargar y cargar datos</button></div>
                         </div>
-                        <p id="kraken-status" class="form-text mt-3 mb-0" role="status" aria-live="polite">Se necesitan al menos 80 velas cerradas. Se excluye la vela en curso.</p>
+                        <p id="kraken-status" class="form-text mt-3 mb-0" role="status" aria-live="polite">Kraken ofrece hasta 719 velas cerradas. La muestra se adapta al histórico y al modelo, con un mínimo de 80 velas. Se excluye la vela en curso.</p>
                         <a id="kraken-download" class="d-inline-block mt-2" hidden>Descargar último CSV de Kraken</a>
                     </div>
                 </section>
@@ -60,17 +60,17 @@
                     <h2 class="card-title">Configuración y ejecución</h2>
                     <div class="row g-3">
                         <div class="col-12 col-md-6 form-group"><label for="prediction-mode" class="form-label">Modo de predicción</label><select id="prediction-mode" class="form-select"><option value="forecast" selected>Predicción futura desde la última vela</option><option value="backtest">Comparación histórica (backtest)</option></select></div>
-                        <div class="col-6 col-md-3 form-group"><label for="lookback" class="form-label">Velas reales</label><input type="number" id="lookback" class="form-control" value="80" readonly></div>
+                        <div class="col-6 col-md-3 form-group"><label for="lookback" class="form-label">Velas reales</label><input type="number" id="lookback" class="form-control" value="719" readonly></div>
                         <div class="col-6 col-md-3 form-group"><label for="pred-len" class="form-label">Velas predichas</label><input type="number" id="pred-len" class="form-control" value="120" readonly></div>
-                        <div class="col-12"><p id="prediction-mode-info" class="form-text mb-0">Usa las últimas 80 velas para predecir las próximas 120.</p></div>
+                        <div class="col-12"><p id="prediction-mode-info" class="form-text mb-0">A 1 hora usa hasta 719 velas reales para predecir las próximas 120; se adapta a los datos disponibles y al modelo.</p></div>
                         <div class="col-12 col-md-4 form-group"><label for="temperature" class="form-label d-flex justify-content-between">Temperatura <span id="temperature-value" class="parameter-value">1.0</span></label><input type="range" id="temperature" class="form-range" value="1.0" min="0.1" max="2.0" step="0.1"><small class="form-text">Más alta: mayor variación en las predicciones.</small></div>
                         <div class="col-12 col-md-4 form-group"><label for="top-p" class="form-label d-flex justify-content-between">Muestreo (top_p) <span id="top-p-value" class="parameter-value">0.9</span></label><input type="range" id="top-p" class="form-range" value="0.9" min="0.1" max="1.0" step="0.1"><small class="form-text">Controla la diversidad del muestreo.</small></div>
                         <div class="col-12 col-md-4 form-group"><label for="sample-count" class="form-label">Número de muestras</label><input type="number" id="sample-count" class="form-control" value="1" min="1" max="5" step="1"><small class="form-text">Más muestras requieren más tiempo.</small></div>
                         <div class="col-12"><div id="forecast-range" class="data-info" style="display: none;"><p><strong>Última vela real:</strong> <span id="forecast-context-end">—</span></p><p><strong>Predicción futura:</strong> <span id="forecast-dates">—</span></p><small class="form-text">Fechas del archivo; Kraken usa UTC. Descarga datos recientes antes de ejecutar.</small></div></div>
                         <div class="col-12"><div id="backtest-window" class="time-window-container" style="display: none;">
-                            <h3>Ventana de comparación histórica</h3><div class="time-window-info"><span id="window-start">Inicio: —</span><span id="window-end">Fin: —</span><span id="window-size">80 + 120 = 200 velas</span></div>
+                            <h3>Ventana de comparación histórica</h3><div class="time-window-info"><span id="window-start">Inicio: —</span><span id="window-end">Fin: —</span><span id="window-size">719 + 120 = 839 velas</span></div>
                             <div class="time-window-slider"><div class="slider-track"><div class="slider-handle start-handle" id="start-handle"></div><div class="slider-selection" id="slider-selection"></div><div class="slider-handle end-handle" id="end-handle"></div></div><div class="slider-labels"><span id="min-label">Más antigua</span><span id="max-label">Más reciente</span></div></div>
-                            <small class="form-text">Arrastra para elegir 80 velas de contexto y 120 velas conocidas de comparación.</small>
+                            <small class="form-text">Arrastra para elegir la muestra real y 120 velas conocidas de comparación.</small>
                         </div></div>
                         <div class="col-12 d-flex flex-wrap align-items-center justify-content-between gap-3 execution-bar"><span class="form-text">Al finalizar, se abrirá la pestaña Resultados.</span><button id="predict-btn" type="button" class="btn btn-success px-4" disabled>Predecir próximas 120 velas</button></div>
                     </div>
@@ -95,7 +95,7 @@
             </div>
             <div id="results-empty" class="results-empty"><h3>Aún no hay resultados</h3><p class="text-secondary mb-0">Carga los datos y el modelo, y ejecuta la predicción en Configuración.</p></div>
             <div id="chart" aria-label="Gráfico de velas reales y predicción" hidden></div>
-            <footer id="results-caption" class="d-flex flex-wrap justify-content-between align-items-start gap-3 mt-3" hidden><div><h2 id="results-heading" class="card-title mb-1">Últimas 80 velas y predicción futura</h2><p class="form-text mb-0">Velas reales a la izquierda; la línea vertical marca el inicio de la predicción.</p></div><button id="back-to-config" class="btn btn-outline-secondary btn-sm" type="button">Volver a configuración</button></footer>
+            <footer id="results-caption" class="d-flex flex-wrap justify-content-between align-items-start gap-3 mt-3" hidden><div><h2 id="results-heading" class="card-title mb-1">Muestra real y predicción futura</h2><p class="form-text mb-0">Velas reales a la izquierda; la línea vertical marca el inicio de la predicción.</p></div><button id="back-to-config" class="btn btn-outline-secondary btn-sm" type="button">Volver a configuración</button></footer>
         </div></section>
         <section id="comparison-section" class="card mt-3" style="display: none;"><div class="card-body">
             <h2 class="card-title">Comparación histórica: predicción y datos reales</h2>

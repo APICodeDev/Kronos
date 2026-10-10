@@ -1,0 +1,139 @@
+{
+  "scope": "local commit 325d4e0; offline cached base weights; isolated process",
+  "versions": {
+    "python": "3.11.17",
+    "torch": "2.14.1+cpu",
+    "huggingface_hub": "0.33.1"
+  },
+  "source_sha256": {
+    "model/kronos.py": "638a56e035856c600c9848b368be087cb706a61603a0790124968c95b8c69f3a",
+    "model/module.py": "a07edbadc0e96804c8158c021bbc6063bb7cc43b34d7fc470d5c8ff2005a409f",
+    "webui/app.py": "8a7cd7c373c5ea0ce13633977a6231ee474e53b42fd4f41692f67f60dd762cf4"
+  },
+  "snapshots": {
+    "tokenizer": "0e0117387f39004a9016484a186a908917e22426",
+    "predictor": "2b554741eca47781b64468546e77fef3e85130e6"
+  },
+  "tokenizer": {
+    "parameters": 3958042,
+    "fp32_bytes": 15832168,
+    "largest_parameter": [
+      "encoder.0.ffn.w1.weight",
+      [
+        512,
+        256
+      ],
+      131072
+    ],
+    "parameter_tensors_over_pine_collection_limit": 18,
+    "training": true
+  },
+  "models": {
+    "mini": {
+      "parameters": 4108032,
+      "fp32_bytes": 16432128,
+      "largest_parameter": [
+        "embedding.emb_s1.weight",
+        [
+          1024,
+          256
+        ],
+        262144
+      ],
+      "parameter_tensors_over_pine_collection_limit": 17,
+      "training": true,
+      "config": {
+        "attn_dropout_p": 0.0,
+        "d_model": 256,
+        "ff_dim": 512,
+        "ffn_dropout_p": 0.2,
+        "learn_te": true,
+        "n_heads": 4,
+        "n_layers": 4,
+        "resid_dropout_p": 0.2,
+        "s1_bits": 10,
+        "s2_bits": 10,
+        "token_dropout_p": 0.0
+      },
+      "trunk_linear_mac_80_to_120_one_path": 43882905600
+    },
+    "small": {
+      "parameters": 24741376,
+      "fp32_bytes": 98965504,
+      "largest_parameter": [
+        "embedding.emb_s1.weight",
+        [
+          1024,
+          512
+        ],
+        524288
+      ],
+      "parameter_tensors_over_pine_collection_limit": 65,
+      "training": true,
+      "config": {
+        "attn_dropout_p": 0.1,
+        "d_model": 512,
+        "ff_dim": 1024,
+        "ffn_dropout_p": 0.25,
+        "learn_te": true,
+        "n_heads": 8,
+        "n_layers": 8,
+        "resid_dropout_p": 0.25,
+        "s1_bits": 10,
+        "s2_bits": 10,
+        "token_dropout_p": 0.1
+      },
+      "trunk_linear_mac_80_to_120_one_path": 351063244800
+    },
+    "base": {
+      "parameters": 102310592,
+      "fp32_bytes": 409242368,
+      "largest_parameter": [
+        "transformer.0.ffn.w1.weight",
+        [
+          2048,
+          832
+        ],
+        1703936
+      ],
+      "parameter_tensors_over_pine_collection_limit": 93,
+      "training": true,
+      "config": {
+        "attn_dropout_p": 0.0,
+        "d_model": 832,
+        "ff_dim": 2048,
+        "ffn_dropout_p": 0.2,
+        "learn_te": true,
+        "n_heads": 16,
+        "n_layers": 12,
+        "resid_dropout_p": 0.2,
+        "s1_bits": 10,
+        "s2_bits": 10,
+        "token_dropout_p": 0.0
+      },
+      "trunk_linear_mac_80_to_120_one_path": 1583075819520
+    }
+  },
+  "experiments": {},
+  "input": {
+    "file": "kraken_AVAXUSD_60m_20261008_190936_d38a1a09.csv",
+    "sha256": "dd4a6da56056599a48e6c49e1a27d4f75943f5aa9579b79ef3d9b6f8901fd11c",
+    "rows": 80,
+    "start": "2026-10-05T11:00:00",
+    "end": "2026-10-08T18:00:00"
+  },
+  "inference_mode": {
+    "train_different_seed_coarse_logits_max_abs": 1.885974407196045,
+    "train_different_seed_fine_logits_max_abs": 3.6425132751464844,
+    "eval_different_seed_coarse_logits_max_abs": 0.0,
+    "train_vs_eval_coarse_logits_max_abs": 1.1574516296386719,
+    "single_query_causal_value": [
+      0.0,
+      0.0
+    ],
+    "single_query_noncausal_value": [
+      1.5,
+      1.5
+    ]
+  }
+}

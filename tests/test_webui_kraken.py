@@ -6,7 +6,7 @@ import sys
 import tempfile
 import unittest
 from unittest.mock import patch
-from urllib.error import URLError
+from urllib.error import HTTPError, URLError
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'webui'))
 import kraken_data
@@ -19,6 +19,9 @@ def candles(count=521):
 
 class KrakenTests(unittest.TestCase):
     def setUp(self):
+        kraken_data._candles_cache.clear()
+        kraken_data._next_request = 0
+        kraken_data._cooldown_until = 0
         self.pairs = patch.object(kraken_data, 'available_pairs', return_value=[{'code': 'XBTEUR', 'name': 'BTC/EUR'}])
         self.pairs.start()
         self.addCleanup(self.pairs.stop)
@@ -40,6 +43,13 @@ class KrakenTests(unittest.TestCase):
     def test_rejects_insufficient_history(self):
         with self.assertRaisesRegex(ValueError, '79.*80'):
             self.fetch(candles(80))
+
+    def test_caps_history_to_documented_window_and_discards_current(self):
+        values = candles(721)
+        values[-1][1] = '999999'
+        df = self.fetch(values)
+        self.assertEqual(len(df), 719)
+        self.assertEqual(df.iloc[-1]['open'], 10)
 
     def test_rejects_gaps_and_bad_prices(self):
         for mutation in [lambda v: v[12].__setitem__(0, v[11][0]),
@@ -66,6 +76,34 @@ class KrakenTests(unittest.TestCase):
             with patch.object(kraken_data, 'urlopen', return_value=io.BytesIO(json.dumps(payload).encode())):
                 with self.assertRaises(kraken_data.KrakenDataError):
                     kraken_data.public_request('OHLC')
+
+    def test_paces_public_requests(self):
+        with patch.object(kraken_data, '_public_request', return_value={}), \
+             patch.object(kraken_data.time, 'monotonic', return_value=100), \
+             patch.object(kraken_data.time, 'sleep') as sleep:
+            kraken_data.public_request('OHLC')
+            kraken_data.public_request('AssetPairs')
+            sleep.assert_called_once()
+            self.assertAlmostEqual(sleep.call_args.args[0], 1.05)
+
+    def test_rate_limit_cooldown_prevents_more_requests(self):
+        error = HTTPError('url', 429, 'rate limited', {'Retry-After': '120'}, None)
+        with patch.object(kraken_data.time, 'monotonic', return_value=100), \
+             patch.object(kraken_data, 'urlopen', side_effect=error) as request:
+            with self.assertRaises(kraken_data.KrakenDataError):
+                kraken_data.public_request('OHLC')
+            self.assertEqual(kraken_data._cooldown_until, 220)
+            with self.assertRaises(kraken_data.KrakenDataError):
+                kraken_data.public_request('OHLC')
+            request.assert_called_once()
+
+    def test_cache_reuses_validated_closed_candles_without_sharing_mutations(self):
+        with patch.object(kraken_data, 'public_request', return_value={'XXBTZEUR': candles(), 'last': 0}) as request:
+            first = kraken_data.fetch_candles('XBTEUR', 60)
+            first.loc[0, 'close'] = 999
+            second = kraken_data.fetch_candles('XBTEUR', 60)
+            self.assertEqual(second.loc[0, 'close'], 11)
+            request.assert_called_once()
 
     def test_import_save_list_load_download_and_failure_cleanup(self):
         with tempfile.TemporaryDirectory() as folder:

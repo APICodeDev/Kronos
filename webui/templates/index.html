@@ -19,6 +19,7 @@
         let currentDataInfo = null;
         let availableModels = [];
         let modelLoaded = false;
+        let loadedContextLength = 0;
         let krakenPairs = [];
 
         // Initialize after page loads
@@ -70,6 +71,7 @@
                 option.textContent = `${model.name} (${model.params}) - ${model.description}`;
                 modelSelect.appendChild(option);
             });
+            modelSelect.value = 'kronos-mini';
         }
 
         // Load model
@@ -93,6 +95,7 @@
 
                 if (response.data.success) {
                     modelLoaded = true;
+                    loadedContextLength = response.data.model_info.context_length;
                     showStatus('success', response.data.message);
                     updateModelStatus();
                     updatePredictionMode();
@@ -115,6 +118,7 @@
                 const response = await axios.get('/api/model-status');
                 const status = response.data;
                 modelLoaded = Boolean(status.loaded);
+                loadedContextLength = status.current_model?.context_length || 0;
                 updatePredictionMode();
 
                 if (status.loaded) {
@@ -192,7 +196,7 @@
                 const preferred = document.getElementById('kraken-pair').value || 'XBTEUR';
                 krakenPairs = response.data.pairs;
                 populateKrakenPairs(preferred);
-                status.textContent = 'Selecciona un par y un intervalo. Se necesitan 80 velas cerradas para predecir el futuro; no se utiliza la vela en curso.';
+                status.textContent = 'Kraken ofrece hasta 719 velas cerradas: a 1 hora, 29 días y 23 horas. La muestra se adapta a los datos y al modelo; mínimo 80 velas.';
             } catch (error) {
                 status.textContent = `No se pudieron actualizar los pares: ${error.response?.data?.error || error.message}. Pulsa Actualizar pares para reintentar.`;
                 if (!krakenPairs.length) document.getElementById('kraken-pair').innerHTML = '<option value="">Pares no disponibles</option>';
@@ -215,7 +219,8 @@
                 download.href = '/api/data-download?file_path=' + encodeURIComponent(filePath);
                 download.hidden = false;
                 const loaded = await selectAndLoadData(filePath, `Kraken ${pair} (${interval} min)`);
-                status.textContent = response.data.message + (loaded ? ' Datos listos; carga el modelo para ejecutar la predicción.' : ' CSV guardado; vuelve a cargarlo desde la lista de archivos.');
+                const enough = loaded && response.data.rows >= 80;
+                status.textContent = response.data.message + (enough ? ' Datos listos; carga el modelo para ejecutar la predicción.' : loaded ? ' Histórico cargado; faltan velas para completar la muestra.' : ' CSV guardado; vuelve a cargarlo desde la lista de archivos.');
             } catch (error) {
                 status.textContent = `No se pudieron importar los datos: ${error.response?.data?.error || error.message}`;
             } finally {
@@ -389,8 +394,8 @@
             const startHandle = document.getElementById('start-handle');
             const selection = document.getElementById('slider-selection');
 
-            // Fixed window size of 200 data points
-            const windowSize = 200;
+            // Context plus comparison candles.
+            const windowSize = Number(document.getElementById('lookback').value) + 120;
             const totalRows = sliderData ? sliderData.totalRows : 1000;
             const windowPercentage = windowSize / totalRows;
 
@@ -413,8 +418,8 @@
             const endHandle = document.getElementById('end-handle');
             const selection = document.getElementById('slider-selection');
 
-            // Fixed window size of 200 data points
-            const windowSize = 200;
+            // Context plus comparison candles.
+            const windowSize = Number(document.getElementById('lookback').value) + 120;
             const totalRows = sliderData ? sliderData.totalRows : 1000;
             const windowPercentage = windowSize / totalRows;
 
@@ -455,11 +460,8 @@
             document.getElementById('window-end').textContent = `End: ${endDate.toLocaleDateString()}`;
 
             // Display fixed window size
-            document.getElementById('window-size').textContent = `Window Size: 80 + 120 = 200 data points (fixed)`;
-
-            // Input field values remain fixed
-            document.getElementById('lookback').value = 80;
-            document.getElementById('pred-len').value = 120;
+            const lookback = Number(document.getElementById('lookback').value);
+            document.getElementById('window-size').textContent = `${lookback} + 120 = ${lookback + 120} velas`;
         }
 
         // Update slider based on input fields
@@ -467,10 +469,10 @@
             if (!sliderData) return;
             if (document.getElementById('prediction-mode').value !== 'backtest') return;
 
-            // Fixed window size: 80 + 120 = 200 data points
-            const lookback = 80;
+            // Use the context required by the loaded data frequency.
+            const lookback = Number(document.getElementById('lookback').value);
             const predLen = 120;
-            const windowSize = lookback + predLen; // Fixed at 200
+            const windowSize = lookback + predLen;
 
             // Calculate slider position
             const totalRows = sliderData.totalRows;
@@ -495,6 +497,7 @@
 
         // Initialize time window slider
         function initializeTimeWindowSlider(dataInfo) {
+            updatePredictionMode();
             sliderData = {
                 startDate: new Date(dataInfo.start_date),
                 endDate: new Date(dataInfo.end_date),
@@ -517,17 +520,30 @@
 
         function updatePredictionMode() {
             const forecast = document.getElementById('prediction-mode').value === 'forecast';
+            const preferred = currentDataInfo?.preferred_lookback || 719;
+            const available = currentDataInfo ? currentDataInfo.rows - (forecast ? 0 : 120) : preferred;
+            const lookback = Math.max(80, Math.min(preferred, available, loadedContextLength || 2048));
+            const contextChanged = Number(document.getElementById('lookback').value) !== lookback;
+            document.getElementById('lookback').value = lookback;
+            if (contextChanged && !forecast && sliderData) updateSliderFromInputs();
             document.getElementById('backtest-window').style.display = forecast ? 'none' : 'block';
             document.getElementById('forecast-range').style.display = forecast && currentDataInfo ? 'block' : 'none';
             document.getElementById('prediction-mode-info').textContent = forecast
-                ? 'Usa las últimas 80 velas para predecir las próximas 120. Si el archivo es antiguo, descarga datos recientes de Kraken antes de ejecutar.'
-                : 'Usa 80 velas pasadas para predecir otras 120 ya conocidas y compararlas con los precios reales. Este modo no predice el futuro.';
+                ? `Usa las últimas ${lookback} velas reales para predecir las próximas 120.${preferred === 719 ? ` A 1 hora: ${(lookback / 24).toFixed(2)} días de muestra. Kraken ofrece hasta 719 velas cerradas; el tamaño se adapta al histórico y al modelo.` : ''}`
+                : `Usa ${lookback} velas pasadas y 120 conocidas para comparar. Este modo no predice el futuro.`;
             if (currentDataInfo) {
                 document.getElementById('forecast-context-end').textContent = formatDataTime(currentDataInfo.end_date);
                 document.getElementById('forecast-dates').textContent = `${formatDataTime(currentDataInfo.forecast_start)} → ${formatDataTime(currentDataInfo.forecast_end)}`;
             }
-            const enoughData = currentDataInfo && currentDataInfo.rows >= (forecast ? 80 : 200);
-            document.getElementById('predict-btn').disabled = !modelLoaded || !enoughData;
+            const required = lookback + (forecast ? 0 : 120);
+            const enoughData = currentDataInfo && currentDataInfo.rows >= required;
+            if (currentDataInfo && !enoughData) {
+                document.getElementById('prediction-mode-info').textContent += ` Solo hay ${currentDataInfo.rows} velas; se necesitan ${required}. Carga un CSV con más histórico.`;
+            }
+            if (modelLoaded && loadedContextLength < lookback) {
+                document.getElementById('prediction-mode-info').textContent += ' Carga Kronos-mini para utilizar toda la muestra.';
+            }
+            document.getElementById('predict-btn').disabled = !modelLoaded || !enoughData || loadedContextLength < lookback;
             document.getElementById('predict-btn').textContent = forecast ? 'Predecir próximas 120 velas' : 'Ejecutar comparación histórica';
         }
 
@@ -543,8 +559,9 @@
                 return;
             }
             const mode = document.getElementById('prediction-mode').value;
-            if (!currentDataInfo || currentDataInfo.rows < (mode === 'forecast' ? 80 : 200)) {
-                showStatus('error', `Se necesitan ${mode === 'forecast' ? 80 : 200} velas para este modo.`);
+            const required = Number(document.getElementById('lookback').value) + (mode === 'forecast' ? 0 : 120);
+            if (!currentDataInfo || currentDataInfo.rows < required) {
+                showStatus('error', `Se necesitan ${required} velas para este modo.`);
                 return;
             }
 

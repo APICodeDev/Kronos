@@ -63,7 +63,7 @@
         el('results-empty').hidden = true;
         el('chart').hidden = false;
         el('results-badge').hidden = false;
-        el('results-heading').textContent = mode === 'backtest' ? 'Comparación histórica' : 'Últimas 80 velas y predicción futura';
+        el('results-heading').textContent = mode === 'backtest' ? 'Comparación histórica' : `Últimas ${el('lookback').value} velas y predicción futura`;
         showTab('results', true);
     }
     function clearResults() {

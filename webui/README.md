@@ -5,7 +5,7 @@ Web user interface for Kronos financial prediction model, providing intuitive gr
 ## ✨ Features
 
 - **Multi-format data support**: Supports CSV, Feather and other financial data formats
-- **Smart time window**: Fixed 80+120 data point time window slider selection
+- **Smart time window**: Hourly context: up to 719 closed candles + 120 forecast candles, adapted to available history and model capacity; other intervals: 80 + 120
 - **Real model prediction**: Integrated real Kronos model, supports multiple model sizes
 - **Prediction quality control**: Adjustable temperature, nucleus sampling, sample count and other parameters
 - **CPU inference**: Runs without a GPU in the provided Docker setup
@@ -172,3 +172,11 @@ If you have questions, please check:
 1. Project documentation
 2. GitHub Issues
 3. Console error messages
+
+## Kraken-compatible hourly sample
+
+Kraken OHLC returns at most 720 entries including the unfinished candle. The app discards that candle and uses up to 719 consecutive closed hourly candles (29 days and 23 hours), with a minimum of 80. It adapts to the available history and model capacity: Mini can use 719; Small and Base use up to 512. Backtests reserve 120 known candles for comparison, so a 719-row file uses 599 context candles. Other intervals retain the 80-candle context. The future forecast remains 120 candles (5 days at 1 hour). The interface displays the actual sample size.
+
+Public requests are serialized at most once every 1.05 seconds within the single-worker service. Closed candles are cached for at most 60 seconds, expiring at the next candle boundary; pairs are cached for 15 minutes. HTTP 429/503 responses and Kraken rate-limit/throttle errors trigger a cooldown, honoring Retry-After or a throttle timestamp when supplied. No automatic retries, pagination for unavailable OHLC history, or filling of missing candles are performed. Other applications sharing the public IP can also consume Kraken's rate allowance.
+
+See [OHLC limits](https://docs.kraken.com/api-reference/market-data/get-ohlc-data) and [public API rate limits](https://support.kraken.com/articles/206548367-what-are-the-api-rate-limits-).

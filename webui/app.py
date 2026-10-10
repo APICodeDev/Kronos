@@ -238,6 +238,11 @@ def prediction_interval(df):
     return interval if pd.notna(interval) and interval > pd.Timedelta(0) else pd.Timedelta(hours=1)
 
 
+def preferred_lookback(df):
+    """Use the hourly history available through Kraken's public OHLC API."""
+    return 719 if prediction_interval(df) == pd.Timedelta(hours=1) else 80
+
+
 def create_prediction_chart(df, pred_df, lookback, pred_len, actual_df=None, historical_start_idx=0,
                             prediction_timestamps=None):
     """Create prediction chart"""
@@ -394,8 +399,10 @@ def import_kraken():
         finally:
             if os.path.isfile(temp_path):
                 os.remove(temp_path)
-        return jsonify({'success': True, 'file_path': file_path, 'rows': len(df),
-                        'message': f'{len(df)} velas cerradas descargadas de Kraken. Fechas en UTC; excluida la vela en curso.'})
+        message = f'{len(df)} velas cerradas descargadas de Kraken. Fechas en UTC; excluida la vela en curso.'
+        if interval == 60:
+            message += f' Muestra horaria disponible: {len(df) / 24:.2f} días. La app adapta la muestra al histórico disponible y al modelo.'
+        return jsonify({'success': True, 'file_path': file_path, 'rows': len(df), 'message': message})
     except ValueError as exc:
         return jsonify({'error': str(exc)}), 400
     except KrakenDataError as exc:
@@ -491,6 +498,8 @@ def load_data():
             },
             'prediction_columns': ['open', 'high', 'low', 'close'] + (['volume'] if 'volume' in df.columns else []),
             'timeframe': detect_timeframe(df),
+            'minimum_lookback': 80,
+            'preferred_lookback': preferred_lookback(df),
             'forecast_start': (df['timestamps'].iloc[-1] + prediction_interval(df)).isoformat(),
             'forecast_end': (df['timestamps'].iloc[-1] + 120 * prediction_interval(df)).isoformat()
         }
@@ -510,7 +519,8 @@ def predict():
     try:
         data = request.get_json() or {}
         file_path = data.get('file_path')
-        lookback = int(data.get('lookback', 80))
+        requested_lookback = data.get('lookback')
+        lookback = int(requested_lookback) if requested_lookback is not None else 80
         pred_len = int(data.get('pred_len', 120))
         mode = data.get('mode', 'forecast')
         if mode not in ('forecast', 'backtest'):
@@ -530,9 +540,19 @@ def predict():
         df, error = load_data_file(file_path)
         if error:
             return jsonify({'error': error}), 400
+
+        if lookback < 80:
+            return jsonify({'error': 'Se necesitan al menos 80 velas reales para el análisis.'}), 400
         
         if not MODEL_AVAILABLE or predictor is None:
             return jsonify({'error': 'Kronos model not loaded, please load model first'}), 400
+        if requested_lookback is None:
+            available = len(df) - (pred_len if mode == 'backtest' else 0)
+            lookback = min(preferred_lookback(df), available, predictor.max_context)
+            if lookback < 80:
+                return jsonify({'error': 'No hay suficientes datos: se necesitan 80 velas reales más las velas de comparación en backtest.'}), 400
+        if lookback > predictor.max_context:
+            return jsonify({'error': f'El modelo cargado admite {predictor.max_context} velas y la muestra necesita {lookback}. Reduce la muestra o carga Kronos-mini.'}), 400
 
         # Only an explicit backtest may consume a historical window. Old browser
         # tabs that still send a slider index now also forecast from the latest row.
@@ -589,6 +609,9 @@ def predict():
                 name='timestamps'
             )
             prediction_type = "Kronos model prediction (forecast from latest data)"
+
+        if preferred_lookback(df) == 719 and not (context_df['timestamps'].diff().dropna() == pd.Timedelta(hours=1)).all():
+            return jsonify({'error': 'La muestra horaria debe contener velas consecutivas sin huecos.'}), 400
 
         try:
             pred_df = predictor.predict(
@@ -660,6 +683,8 @@ def predict():
             'mode': mode,
             'market': data_source_info(file_path),
             'context_end': context_df['timestamps'].iloc[-1].isoformat(),
+            'context_start': context_df['timestamps'].iloc[0].isoformat(),
+            'context_rows': lookback,
             'prediction_start': y_timestamp.iloc[0].isoformat(),
             'prediction_end': y_timestamp.iloc[-1].isoformat(),
             'chart': chart_json,
@@ -682,7 +707,7 @@ def load_model():
             return jsonify({'error': 'Kronos model library not available'}), 400
         
         data = request.get_json()
-        model_key = data.get('model_key', 'kronos-small')
+        model_key = data.get('model_key', 'kronos-mini')
         device = data.get('device', 'cpu')
         
         if model_key not in AVAILABLE_MODELS:
@@ -730,6 +755,7 @@ def get_model_status():
                 'message': 'Kronos model loaded and available',
                 'current_model': {
                     'name': predictor.model.__class__.__name__,
+                    'context_length': predictor.max_context,
                     'device': str(next(predictor.model.parameters()).device)
                 }
             })
