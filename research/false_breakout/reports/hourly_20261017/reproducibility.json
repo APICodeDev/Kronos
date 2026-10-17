@@ -1,0 +1,44 @@
+{
+  "hourly_offline_replay": {
+    "compared_files": 12,
+    "all_identical": true,
+    "files": {
+      "REPORT.md": true,
+      "command.txt": true,
+      "config.json": true,
+      "diagnostic_events_1x.csv": true,
+      "diagnostic_portfolio_1x.csv": true,
+      "equity_1x.csv": true,
+      "events_1x.csv": true,
+      "manifest.json": true,
+      "portfolio_1x.csv": true,
+      "resolution_1m.json": true,
+      "resolution_5m.json": true,
+      "summary.json": true
+    }
+  },
+  "baseline_5m_regression": {
+    "compared_files": 16,
+    "all_identical": true,
+    "files": {
+      "REPORT.md": true,
+      "command.txt": true,
+      "equity_10x.csv": true,
+      "equity_1x.csv": true,
+      "equity_3x.csv": true,
+      "equity_5x.csv": true,
+      "events_10x.csv": true,
+      "events_1x.csv": true,
+      "events_3x.csv": true,
+      "events_5x.csv": true,
+      "portfolio_10x.csv": true,
+      "portfolio_1x.csv": true,
+      "portfolio_3x.csv": true,
+      "portfolio_5x.csv": true,
+      "resolution_1m.json": true,
+      "summary.json": true
+    }
+  },
+  "original_inputs_unchanged": true,
+  "source_hashes_valid": true
+}

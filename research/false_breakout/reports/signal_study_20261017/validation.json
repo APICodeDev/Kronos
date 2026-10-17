@@ -1,0 +1,28 @@
+{
+  "local_tests_passed": 88,
+  "local_tests_seconds": 6.05,
+  "lint": "All checks passed",
+  "verification": {
+    "financial_rows_checked": 39330,
+    "matched_rows_checked": 2142,
+    "max_absolute_error": "2.10797024417084E-12",
+    "tolerance": "0.000001",
+    "old_test_rows_excluded": 1752,
+    "all_exit_windows_before_old_test": true,
+    "verifier_sha256": "c912a03da6c5b77caef7228d1923c46fd25662432bb58540cef2dd6ed1008060"
+  },
+  "reproduction": {
+    "all_identical": true,
+    "compared_files": 7,
+    "files": {
+      "diagnostic_matched_signals.csv": true,
+      "diagnostic_signal_controls.csv": true,
+      "protocol.json": true,
+      "REPORT.md": true,
+      "summary.json": true,
+      "manifest.json": true,
+      "command.txt": true
+    },
+    "prior_hourly_work_preserved": true
+  }
+}

@@ -77,8 +77,9 @@ def validate_config(cfg):
             raise ValueError(f'Entero inválido: {key}')
     if cfg['funding'] != 'excluded_provisional' or cfg['timezone'] != 'UTC':
         raise ValueError('Esta versión solo admite UTC y resultados provisionales sin funding.')
-    if cfg['entry_interval'] != '5m' or cfg['context_intervals'] != ['15m', '1H']:
-        raise ValueError('Esta línea base requiere 5m y contexto nativo 15m/1H.')
+    valid_intervals = {'5m': ['15m', '1H'], '1H': []}
+    if cfg['entry_interval'] not in valid_intervals or cfg['context_intervals'] != valid_intervals[cfg['entry_interval']]:
+        raise ValueError('Usa 5m con contexto 15m/1H, o el experimento 1H sin filtros de contexto.')
     if cfg['other_costs_usdt'] < 0 or not math.isfinite(cfg['other_costs_usdt']):
         raise ValueError('Otros costes inválidos.')
     if len(cfg['split_fractions']) != 3 or any(x <= 0 for x in cfg['split_fractions']) or not math.isclose(sum(cfg['split_fractions']), 1):

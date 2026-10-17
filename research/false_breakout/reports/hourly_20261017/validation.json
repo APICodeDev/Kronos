@@ -1,0 +1,75 @@
+{
+  "git_head_at_start": "85d4dfe",
+  "local_tests": {
+    "passed": 78,
+    "seconds": 4.17,
+    "command": "python -m pytest tests/test_hourly.py tests/test_economic_diagnosis.py tests/test_bitget_data.py tests/test_costs.py tests/test_false_breakout.py -q"
+  },
+  "webui_tests": {
+    "passed": 19,
+    "seconds": 6.323,
+    "environment": "Imagen Docker independiente, repositorio read-only"
+  },
+  "lint": "All checks passed",
+  "financial_verification": {
+    "checked_rows": 1810,
+    "checked_funding_rows": 446,
+    "rows_without_funding_coverage": 1364,
+    "max_absolute_error": "3.6841E-13",
+    "tolerance": "0.000001",
+    "method": "Decimal independiente y b\u00c3\u00basqueda binaria de timestamps estrictamente interiores; eventos y cartera por separado.",
+    "verifier_sha256": "5aa47f8c072ccfb164f366725e0e1ac1451a185cf7d15ed65fbb77336ccd4d33"
+  },
+  "reproduction": {
+    "hourly_offline_replay": {
+      "compared_files": 12,
+      "all_identical": true,
+      "files": {
+        "REPORT.md": true,
+        "command.txt": true,
+        "config.json": true,
+        "diagnostic_events_1x.csv": true,
+        "diagnostic_portfolio_1x.csv": true,
+        "equity_1x.csv": true,
+        "events_1x.csv": true,
+        "manifest.json": true,
+        "portfolio_1x.csv": true,
+        "resolution_1m.json": true,
+        "resolution_5m.json": true,
+        "summary.json": true
+      }
+    },
+    "baseline_5m_regression": {
+      "compared_files": 16,
+      "all_identical": true,
+      "files": {
+        "REPORT.md": true,
+        "command.txt": true,
+        "equity_10x.csv": true,
+        "equity_1x.csv": true,
+        "equity_3x.csv": true,
+        "equity_5x.csv": true,
+        "events_10x.csv": true,
+        "events_1x.csv": true,
+        "events_3x.csv": true,
+        "events_5x.csv": true,
+        "portfolio_10x.csv": true,
+        "portfolio_1x.csv": true,
+        "portfolio_3x.csv": true,
+        "portfolio_5x.csv": true,
+        "resolution_1m.json": true,
+        "summary.json": true
+      }
+    },
+    "original_inputs_unchanged": true,
+    "source_hashes_valid": true
+  },
+  "tp_verification": {
+    "checked_events": 910,
+    "checked_tp": 233,
+    "max_absolute_error": "1.94E-13",
+    "tolerance": "0.000001",
+    "method": "Recomputaci\u00f3n Decimal independiente sobre CSV; sin funding.",
+    "verifier_sha256": "c4a21f0c696ee8c6d666a7f445bbb36e5d63a2d26ac72d501695c2d189ad8201"
+  }
+}

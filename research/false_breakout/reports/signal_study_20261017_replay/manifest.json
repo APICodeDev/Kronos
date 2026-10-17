@@ -1,0 +1,30 @@
+{
+  "git_head": "85d4dfeb0aedbb32f52370d14cf7895d8b6b5ec1",
+  "python": "3.14.3",
+  "dependencies": {
+    "numpy": "2.4.4",
+    "pandas": "2.3.3"
+  },
+  "input_sha256": {
+    "webui\\uploads\\bitget_baseline_20261017\\XRPUSDT_1H_1760659200000_1792195200000.csv": "d51c5bab7aa023aee06ae9e611118758d14fe21aa089c5a203aad33fcf78ef99",
+    "webui\\uploads\\bitget_baseline_20261017\\instrument.json": "6437cde4cd71b4046e04a3390f24587c79ccbdbe98f69016cf1e566c74cbd01b",
+    "research\\false_breakout\\config_hourly.json": "f591acabdf480cb49c1c01562c54a7f466feb2444823aa13dfe97659f5397454",
+    "research\\false_breakout\\signal_study_protocol.json": "251a6daae4b2d5be697327cb39f3d03c166cf66c3a28463e7b729b8ba70fde51"
+  },
+  "source_sha256": {
+    "research\\false_breakout\\study_signal.py": "db1ffd0d1f54db26b4ce1aa9af16b65c59aa255f9bf12f56ec0e265e80f38e3b",
+    "research\\false_breakout\\costs.py": "85e83233ef9404b6c74f43abf12bcdd2827189a9d62b807e90ba1c2a0f7cb34c",
+    "research\\false_breakout\\backtest.py": "4a6aa2d7afe15e353c84c72a55c3080fbee5cf7d2ac059be4b9e0f97845f641c",
+    "research\\false_breakout\\run_experiment.py": "8f818e3c019598b401d191ea177a7fe904860535d6ca11d81f1a2531015f7b3d",
+    "webui\\bitget_data.py": "8319f0312a72aa4dc51817efdb7da25b7bd3dd2f324c30a73a024c083f289799",
+    "tests\\test_signal_study.py": "50d843bd8bc34c3c381aba2fa19bf9f0b8de08b7dc22a6874307a5b49aa7c2c8"
+  },
+  "old_test_rows_excluded_before_analysis": 1752,
+  "output_sha256": {
+    "diagnostic_matched_signals.csv": "94bde8568b078a4eb3edf8e6b0bedf8f846686b06205c7d6cb523ad00ddcce10",
+    "diagnostic_signal_controls.csv": "7013ba8f506596b2343bd9ef6ca4082c71d95a9582084f486d22d72bf8fae256",
+    "protocol.json": "cc8d9606c8ef20837db82a4d47eef47513465cb20533dd69851c003be85c4a3b",
+    "REPORT.md": "7fce1e6f4001d76701fe5ff4612606dcd6fd437ac1958c1b4bbc39c7ebad9274",
+    "summary.json": "99e43404131eb0d63875c5a52f1a2c45b37e1e04ed1ce4252e58e4676cbda2cf"
+  }
+}

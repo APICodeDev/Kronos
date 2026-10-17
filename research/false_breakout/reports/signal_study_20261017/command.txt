@@ -1,0 +1,1 @@
+python -m research.false_breakout.study_signal --data webui/uploads/bitget_baseline_20261017 --config research/false_breakout/config_hourly.json --protocol research/false_breakout/signal_study_protocol.json --output NUEVO_DIRECTORIO

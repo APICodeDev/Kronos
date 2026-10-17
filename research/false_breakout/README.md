@@ -6,6 +6,10 @@ El primer hito ya está ejecutado: [resultados e interpretación](RESULTS.md), [
 
 El [diagnóstico económico posterior](DIAGNOSIS.md) explica ejecución, comisiones, relación TP/SL y funding reciente. Incluye conclusiones, límites y comandos para repetirlo sobre las operaciones originales congeladas, sin ajustar filtros ni barreras.
 
+La variante solicitada de **1H sin apalancamiento y horizonte fijo de seis horas** está ejecutada y documentada en [HOURLY_RESULTS.md](HOURLY_RESULTS.md). También pierde con los costes supuestos. Su CLI separado es `python -m research.false_breakout.run_hourly`; no sustituye los experimentos de 5m.
+
+El [estudio posterior de señal frente a gestión](SIGNAL_STUDY.md) compara cierres a 1/6/24 horas con controles de época/franja/volatilidad, sin utilizar el antiguo test ni modificar los TP/SL anteriores. Incluye el protocolo registrado, todos los perfiles y la comprobación independiente.
+
 ## Entorno
 
 ```powershell

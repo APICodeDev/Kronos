@@ -1,0 +1,588 @@
+{
+  "protocol": {
+    "version": 1,
+    "purpose": "Separar valor direccional del patrón y gestión TP/SL; diagnóstico exploratorio, no búsqueda automática de una estrategia rentable.",
+    "entry_interval": "1H",
+    "leverage": 1,
+    "horizons_hours": [
+      1,
+      6,
+      24
+    ],
+    "lookback_bars": 20,
+    "splits_used": [
+      "discovery",
+      "validation"
+    ],
+    "excluded_segment": "test: último 20 % por tiempo; no se calculan sus resultados en este estudio",
+    "purge_hours": 24,
+    "validation_embargo_hours": 24,
+    "entry": "Apertura siguiente al cierre de la señal",
+    "exit": "Cierre de la hora 1, 6 o 24 después de la entrada; sin TP ni SL",
+    "control": "Horas sin señal LONG/SHORT/dual, emparejadas dentro del mismo segmento por mes UTC, bloque horario de 8 horas y rango verdadero medio causal de 20 horas dividido por cierre",
+    "volatility_bin_edges": [
+      0.003,
+      0.006,
+      0.012
+    ],
+    "minimum_controls_per_stratum": 10,
+    "matching_missing_policy": "Excluir y contar eventos sin controles suficientes; no relajar los criterios según el resultado",
+    "funding": "excluded_provisional",
+    "mfe_mae": "Extremos posteriores descriptivos; no representan salidas ejecutables ni un precio que pudiera elegirse por anticipado",
+    "bootstrap": {
+      "seed": 20261017,
+      "repeats": 5000,
+      "cluster": "Semana UTC lunes-domingo, remuestreo conjunto de señales y controles",
+      "validation_comparisons": 6,
+      "confidence": 0.95,
+      "adjustment": "Intervalos percentiles aproximados; banda adicional Bonferroni para seis perfiles dirección/horizonte por segmento"
+    },
+    "decision": "No seleccionar un horizonte como ganador, entrenar IA ni declarar ventaja demostrada. Una hipótesis nueva requerirá costes completos y datos posteriores no observados."
+  },
+  "config": {
+    "symbol": "XRPUSDT",
+    "category": "USDT-FUTURES",
+    "entry_interval": "1H",
+    "execution_interval": "5m",
+    "resolve_all_touches": true,
+    "context_intervals": [],
+    "lookback_bars": 20,
+    "target_net_margin_roi": 0.01,
+    "margin_usdt": 1000,
+    "initial_equity_usdt": 10000,
+    "leverage_scenarios": [
+      1
+    ],
+    "entry_fee_rate": 0.0006,
+    "exit_fee_rate": 0.0006,
+    "entry_slippage_bps": 1,
+    "tp_slippage_bps": 1,
+    "sl_slippage_bps": 2,
+    "timeout_slippage_bps": 1,
+    "funding": "excluded_provisional",
+    "other_costs_usdt": 0,
+    "stop_buffer_ticks": 1,
+    "max_holding_bars": 6,
+    "split_fractions": [
+      0.6,
+      0.2,
+      0.2
+    ],
+    "embargo_bars": 6,
+    "timezone": "UTC"
+  },
+  "bounds": {
+    "start": "2025-10-17 00:00:00+00:00",
+    "discovery_end": "2026-05-24 00:00:00+00:00",
+    "validation_start": "2026-05-25 00:00:00+00:00",
+    "research_end": "2026-08-05 00:00:00+00:00",
+    "excluded_test_rows": 1752
+  },
+  "profiles": [
+    {
+      "split": "discovery",
+      "side": "LONG",
+      "horizon_hours": 1,
+      "signals_total": 320,
+      "signals_matched": 315,
+      "signals_excluded": 5,
+      "coverage": 0.984375,
+      "mean_net_usdt": -1.4156081660952373,
+      "median_net_usdt": -1.4408583200000806,
+      "mean_reference_usdt": 0.053470476190474556,
+      "matched_control_mean_usdt": -1.5493787723305725,
+      "excess_usdt": 0.13377060623533515,
+      "mean_net_roi_bps": -14.173616610285702,
+      "matched_control_mean_bps": -15.508061890212556,
+      "excess_bps": 1.3344452799268591,
+      "positive_pnl_rate": 0.3523809523809524,
+      "ever_target_no_stop_rate": 0.12380952380952381,
+      "median_mfe_price_bps": 35.8477614217081,
+      "median_mae_price_bps": 39.221382916907686,
+      "control_count_min": 10,
+      "bootstrap": {
+        "weeks": 32,
+        "valid_draws": 5000,
+        "candidate_bps_ci95": [
+          -20.835446347272825,
+          -7.863007302908234
+        ],
+        "excess_bps_ci95": [
+          -6.051895166791491,
+          8.934458456736095
+        ],
+        "candidate_bps_adjusted_band": [
+          -22.96818756104399,
+          -5.674251474757261
+        ],
+        "excess_bps_adjusted_band": [
+          -8.628977529782299,
+          11.343102336650949
+        ]
+      }
+    },
+    {
+      "split": "discovery",
+      "side": "LONG",
+      "horizon_hours": 6,
+      "signals_total": 320,
+      "signals_matched": 315,
+      "signals_excluded": 5,
+      "coverage": 0.984375,
+      "mean_net_usdt": -0.26836739999999765,
+      "median_net_usdt": -0.47701095999991916,
+      "mean_reference_usdt": 1.2015580952380969,
+      "matched_control_mean_usdt": -1.5766395605805186,
+      "excess_usdt": 1.308272160580521,
+      "mean_net_roi_bps": -2.6962107230481633,
+      "matched_control_mean_bps": -15.781275787658862,
+      "excess_bps": 13.085065064610705,
+      "positive_pnl_rate": 0.4793650793650794,
+      "ever_target_no_stop_rate": 0.42857142857142855,
+      "median_mfe_price_bps": 98.79021607057922,
+      "median_mae_price_bps": 95.97290176891218,
+      "control_count_min": 10,
+      "bootstrap": {
+        "weeks": 32,
+        "valid_draws": 5000,
+        "candidate_bps_ci95": [
+          -32.6989641389847,
+          23.21637399370868
+        ],
+        "excess_bps_ci95": [
+          -16.790427592285827,
+          38.84221971382157
+        ],
+        "candidate_bps_adjusted_band": [
+          -44.62911620167526,
+          32.43561054539626
+        ],
+        "excess_bps_adjusted_band": [
+          -28.179421257322115,
+          47.68051652713916
+        ]
+      }
+    },
+    {
+      "split": "discovery",
+      "side": "LONG",
+      "horizon_hours": 24,
+      "signals_total": 320,
+      "signals_matched": 315,
+      "signals_excluded": 5,
+      "coverage": 0.984375,
+      "mean_net_usdt": -0.6712458452698391,
+      "median_net_usdt": -0.05052491999991393,
+      "mean_reference_usdt": 0.797364126984129,
+      "matched_control_mean_usdt": -2.9652689121322915,
+      "excess_usdt": 2.2940230668624526,
+      "mean_net_roi_bps": -6.7250477346070525,
+      "matched_control_mean_bps": -29.68492369053997,
+      "excess_bps": 22.95987595593291,
+      "positive_pnl_rate": 0.4984126984126984,
+      "ever_target_no_stop_rate": 0.7238095238095238,
+      "median_mfe_price_bps": 219.31932369260448,
+      "median_mae_price_bps": 212.70288297635773,
+      "control_count_min": 10,
+      "bootstrap": {
+        "weeks": 32,
+        "valid_draws": 5000,
+        "candidate_bps_ci95": [
+          -63.99726634644317,
+          51.83055076222389
+        ],
+        "excess_bps_ci95": [
+          -21.213452182285867,
+          79.64859258149444
+        ],
+        "candidate_bps_adjusted_band": [
+          -83.54836180252586,
+          70.72405973193025
+        ],
+        "excess_bps_adjusted_band": [
+          -38.16923275080071,
+          100.8325159292389
+        ]
+      }
+    },
+    {
+      "split": "discovery",
+      "side": "SHORT",
+      "horizon_hours": 1,
+      "signals_total": 218,
+      "signals_matched": 215,
+      "signals_excluded": 3,
+      "coverage": 0.9862385321100917,
+      "mean_net_usdt": -1.158203057209304,
+      "median_net_usdt": -0.4810025600000789,
+      "mean_reference_usdt": 0.3062274418604704,
+      "matched_control_mean_usdt": -1.4603278432021076,
+      "excess_usdt": 0.3021247859928034,
+      "mean_net_roi_bps": -11.59090118422678,
+      "matched_control_mean_bps": -14.616169698633394,
+      "excess_bps": 3.02526851440661,
+      "positive_pnl_rate": 0.4372093023255814,
+      "ever_target_no_stop_rate": 0.10232558139534884,
+      "median_mfe_price_bps": 40.70757160831959,
+      "median_mae_price_bps": 37.34827264238936,
+      "control_count_min": 14,
+      "bootstrap": {
+        "weeks": 32,
+        "valid_draws": 5000,
+        "candidate_bps_ci95": [
+          -21.99605567564304,
+          -1.1955962223884529
+        ],
+        "excess_bps_ci95": [
+          -7.671810690526121,
+          14.238332550894624
+        ],
+        "candidate_bps_adjusted_band": [
+          -25.455825576514414,
+          2.522311968912588
+        ],
+        "excess_bps_adjusted_band": [
+          -11.499210274901024,
+          17.931013144385958
+        ]
+      }
+    },
+    {
+      "split": "discovery",
+      "side": "SHORT",
+      "horizon_hours": 6,
+      "signals_total": 218,
+      "signals_matched": 215,
+      "signals_excluded": 3,
+      "coverage": 0.9862385321100917,
+      "mean_net_usdt": -1.527431903534889,
+      "median_net_usdt": 0.6950070400001148,
+      "mean_reference_usdt": -0.06230046511627952,
+      "matched_control_mean_usdt": -1.3429582684028272,
+      "excess_usdt": -0.18447363513206178,
+      "mean_net_roi_bps": -15.293058444252198,
+      "matched_control_mean_bps": -13.43805033504472,
+      "excess_bps": -1.8550081092074728,
+      "positive_pnl_rate": 0.5348837209302325,
+      "ever_target_no_stop_rate": 0.4,
+      "median_mfe_price_bps": 91.76225234619311,
+      "median_mae_price_bps": 82.70625720290143,
+      "control_count_min": 14,
+      "bootstrap": {
+        "weeks": 32,
+        "valid_draws": 5000,
+        "candidate_bps_ci95": [
+          -44.33694661623312,
+          15.073891674279603
+        ],
+        "excess_bps_ci95": [
+          -28.078154356214554,
+          26.80329380421205
+        ],
+        "candidate_bps_adjusted_band": [
+          -56.629480036953524,
+          26.89613399996958
+        ],
+        "excess_bps_adjusted_band": [
+          -36.26691703160854,
+          37.371589239383496
+        ]
+      }
+    },
+    {
+      "split": "discovery",
+      "side": "SHORT",
+      "horizon_hours": 24,
+      "signals_total": 218,
+      "signals_matched": 215,
+      "signals_excluded": 3,
+      "coverage": 0.9862385321100917,
+      "mean_net_usdt": 0.9187847137674352,
+      "median_net_usdt": 4.409947360000029,
+      "mean_reference_usdt": 2.3829418604651185,
+      "matched_control_mean_usdt": -0.5455842079612325,
+      "excess_usdt": 1.4643689217286657,
+      "mean_net_roi_bps": 9.187687856294264,
+      "matched_control_mean_bps": -5.453791887529278,
+      "excess_bps": 14.641479743823568,
+      "positive_pnl_rate": 0.5581395348837209,
+      "ever_target_no_stop_rate": 0.6465116279069767,
+      "median_mfe_price_bps": 186.73218673218798,
+      "median_mae_price_bps": 157.65765765765636,
+      "control_count_min": 14,
+      "bootstrap": {
+        "weeks": 32,
+        "valid_draws": 5000,
+        "candidate_bps_ci95": [
+          -54.232713846959044,
+          74.65312446948263
+        ],
+        "excess_bps_ci95": [
+          -30.69523595216007,
+          69.51878865689298
+        ],
+        "candidate_bps_adjusted_band": [
+          -75.68037143736375,
+          97.07266644558632
+        ],
+        "excess_bps_adjusted_band": [
+          -51.90464739648594,
+          86.85315265466906
+        ]
+      }
+    },
+    {
+      "split": "validation",
+      "side": "LONG",
+      "horizon_hours": 1,
+      "signals_total": 100,
+      "signals_matched": 100,
+      "signals_excluded": 0,
+      "coverage": 1.0,
+      "mean_net_usdt": -0.9780929417999993,
+      "median_net_usdt": -1.1046269800000104,
+      "mean_reference_usdt": 0.5717650000000014,
+      "matched_control_mean_usdt": -1.6937105791600444,
+      "excess_usdt": 0.7156176373600452,
+      "mean_net_roi_bps": -9.787844204756938,
+      "matched_control_mean_bps": -16.947976618526535,
+      "excess_bps": 7.160132413769593,
+      "positive_pnl_rate": 0.46,
+      "ever_target_no_stop_rate": 0.06,
+      "median_mfe_price_bps": 30.66683723390698,
+      "median_mae_price_bps": 32.7170192650892,
+      "control_count_min": 17,
+      "bootstrap": {
+        "weeks": 11,
+        "valid_draws": 5000,
+        "candidate_bps_ci95": [
+          -23.11013245776961,
+          1.4045606850820727
+        ],
+        "excess_bps_ci95": [
+          -7.409897587087726,
+          21.753016468123587
+        ],
+        "candidate_bps_adjusted_band": [
+          -27.50682987345932,
+          4.366418896988338
+        ],
+        "excess_bps_adjusted_band": [
+          -12.03471925500835,
+          26.198955513702057
+        ]
+      }
+    },
+    {
+      "split": "validation",
+      "side": "LONG",
+      "horizon_hours": 6,
+      "signals_total": 100,
+      "signals_matched": 100,
+      "signals_excluded": 0,
+      "coverage": 1.0,
+      "mean_net_usdt": -1.988512326200003,
+      "median_net_usdt": -1.8147401100001181,
+      "mean_reference_usdt": -0.4392609999999984,
+      "matched_control_mean_usdt": -1.6227659163075254,
+      "excess_usdt": -0.3657464098924775,
+      "mean_net_roi_bps": -19.900921915843217,
+      "matched_control_mean_bps": -16.237518440180434,
+      "excess_bps": -3.6634034756627862,
+      "positive_pnl_rate": 0.45,
+      "ever_target_no_stop_rate": 0.31,
+      "median_mfe_price_bps": 83.28009819138651,
+      "median_mae_price_bps": 98.72846633225845,
+      "control_count_min": 17,
+      "bootstrap": {
+        "weeks": 11,
+        "valid_draws": 5000,
+        "candidate_bps_ci95": [
+          -38.85148680035181,
+          0.015150936730340799
+        ],
+        "excess_bps_ci95": [
+          -19.48657975119396,
+          13.48769498117977
+        ],
+        "candidate_bps_adjusted_band": [
+          -44.429403167903004,
+          5.943443424286038
+        ],
+        "excess_bps_adjusted_band": [
+          -26.579481164937174,
+          18.51224462990373
+        ]
+      }
+    },
+    {
+      "split": "validation",
+      "side": "LONG",
+      "horizon_hours": 24,
+      "signals_total": 100,
+      "signals_matched": 100,
+      "signals_excluded": 0,
+      "coverage": 1.0,
+      "mean_net_usdt": -6.494190296399996,
+      "median_net_usdt": -9.504261679999995,
+      "mean_reference_usdt": -4.947643999999993,
+      "matched_control_mean_usdt": -4.580281559128438,
+      "excess_usdt": -1.913908737271558,
+      "mean_net_roi_bps": -64.98018071565234,
+      "matched_control_mean_bps": -45.83051059443173,
+      "excess_bps": -19.149670121220616,
+      "positive_pnl_rate": 0.45,
+      "ever_target_no_stop_rate": 0.6,
+      "median_mfe_price_bps": 149.76302590012529,
+      "median_mae_price_bps": 213.17310068236566,
+      "control_count_min": 17,
+      "bootstrap": {
+        "weeks": 11,
+        "valid_draws": 5000,
+        "candidate_bps_ci95": [
+          -155.61128216092223,
+          24.50534280480385
+        ],
+        "excess_bps_ci95": [
+          -67.43512430292111,
+          38.33799107330839
+        ],
+        "candidate_bps_adjusted_band": [
+          -181.90153672919516,
+          43.56982422156615
+        ],
+        "excess_bps_adjusted_band": [
+          -86.30555462911494,
+          55.10802375399499
+        ]
+      }
+    },
+    {
+      "split": "validation",
+      "side": "SHORT",
+      "horizon_hours": 1,
+      "signals_total": 84,
+      "signals_matched": 84,
+      "signals_excluded": 0,
+      "coverage": 1.0,
+      "mean_net_usdt": -2.3382877352380915,
+      "median_net_usdt": -1.9158039199999208,
+      "mean_reference_usdt": -0.7810976190476302,
+      "matched_control_mean_usdt": -1.3912594704268575,
+      "excess_usdt": -0.947028264811234,
+      "mean_net_roi_bps": -23.396478175722017,
+      "matched_control_mean_bps": -13.920091505824692,
+      "excess_bps": -9.47638666989733,
+      "positive_pnl_rate": 0.25,
+      "ever_target_no_stop_rate": 0.011904761904761904,
+      "median_mfe_price_bps": 25.21638687952337,
+      "median_mae_price_bps": 41.25369594503084,
+      "control_count_min": 17,
+      "bootstrap": {
+        "weeks": 11,
+        "valid_draws": 5000,
+        "candidate_bps_ci95": [
+          -32.94443431440127,
+          -13.064160142467427
+        ],
+        "excess_bps_ci95": [
+          -17.653479080250854,
+          1.3771243556229975
+        ],
+        "candidate_bps_adjusted_band": [
+          -35.567745169278815,
+          -9.965883669386578
+        ],
+        "excess_bps_adjusted_band": [
+          -21.26400314154998,
+          4.823966667502179
+        ]
+      }
+    },
+    {
+      "split": "validation",
+      "side": "SHORT",
+      "horizon_hours": 6,
+      "signals_total": 84,
+      "signals_matched": 84,
+      "signals_excluded": 0,
+      "coverage": 1.0,
+      "mean_net_usdt": -1.8883691364285742,
+      "median_net_usdt": -0.3955811400000884,
+      "mean_reference_usdt": -0.3314488095238109,
+      "matched_control_mean_usdt": -1.267390109543669,
+      "excess_usdt": -0.6209790268849057,
+      "mean_net_roi_bps": -18.888485900461745,
+      "matched_control_mean_bps": -12.679737837872604,
+      "excess_bps": -6.20874806258915,
+      "positive_pnl_rate": 0.4642857142857143,
+      "ever_target_no_stop_rate": 0.34523809523809523,
+      "median_mfe_price_bps": 70.42464002042053,
+      "median_mae_price_bps": 80.74094389364828,
+      "control_count_min": 17,
+      "bootstrap": {
+        "weeks": 11,
+        "valid_draws": 5000,
+        "candidate_bps_ci95": [
+          -50.83138429819369,
+          10.892331775523951
+        ],
+        "excess_bps_ci95": [
+          -36.37698362229525,
+          23.066165415464546
+        ],
+        "candidate_bps_adjusted_band": [
+          -62.184344520355545,
+          18.70271998600628
+        ],
+        "excess_bps_adjusted_band": [
+          -49.55600795582,
+          30.846832421612376
+        ]
+      }
+    },
+    {
+      "split": "validation",
+      "side": "SHORT",
+      "horizon_hours": 24,
+      "signals_total": 84,
+      "signals_matched": 84,
+      "signals_excluded": 0,
+      "coverage": 1.0,
+      "mean_net_usdt": -3.332056257857147,
+      "median_net_usdt": 0.6501019299998935,
+      "mean_reference_usdt": -1.7742702380952462,
+      "matched_control_mean_usdt": 0.508899812307528,
+      "excess_usdt": -3.8409560701646757,
+      "mean_net_roi_bps": -33.33558444740011,
+      "matched_control_mean_bps": 5.095528088020951,
+      "excess_bps": -38.431112535421065,
+      "positive_pnl_rate": 0.5,
+      "ever_target_no_stop_rate": 0.6071428571428571,
+      "median_mfe_price_bps": 151.30375511557375,
+      "median_mae_price_bps": 122.98528403888464,
+      "control_count_min": 17,
+      "bootstrap": {
+        "weeks": 11,
+        "valid_draws": 5000,
+        "candidate_bps_ci95": [
+          -90.67925913294549,
+          16.449438079706823
+        ],
+        "excess_bps_ci95": [
+          -128.94589914008077,
+          34.777954064940516
+        ],
+        "candidate_bps_adjusted_band": [
+          -110.78094353461545,
+          31.87726355986915
+        ],
+        "excess_bps_adjusted_band": [
+          -169.84130301862643,
+          52.0836751222309
+        ]
+      }
+    }
+  ],
+  "conclusion": "El estudio separa señal y gestión, pero no establece una estrategia rentable. No se selecciona un perfil por su mejor resultado ni se utiliza el antiguo test para volver a ajustar la regla."
+}

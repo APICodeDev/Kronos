@@ -1,0 +1,14 @@
+{
+  "all_identical": true,
+  "compared_files": 7,
+  "files": {
+    "diagnostic_matched_signals.csv": true,
+    "diagnostic_signal_controls.csv": true,
+    "protocol.json": true,
+    "REPORT.md": true,
+    "summary.json": true,
+    "manifest.json": true,
+    "command.txt": true
+  },
+  "prior_hourly_work_preserved": true
+}

@@ -1,0 +1,51 @@
+{
+  "git_head": "85d4dfeb0aedbb32f52370d14cf7895d8b6b5ec1",
+  "python": "3.14.3",
+  "dependencies": {
+    "numpy": "2.4.4",
+    "pandas": "2.3.3",
+    "requests": "2.32.5"
+  },
+  "inputs_sha256": {
+    "webui\\uploads\\bitget_baseline_20261017\\XRPUSDT_1H_1760659200000_1792195200000.csv": "d51c5bab7aa023aee06ae9e611118758d14fe21aa089c5a203aad33fcf78ef99",
+    "webui\\uploads\\bitget_baseline_20261017\\XRPUSDT_5m_1760659200000_1792195200000.csv": "04b07987ef8b8be451e69c62090442f00b1e04627c27884a3d6d9a6f07ce17a6",
+    "webui\\uploads\\bitget_baseline_20261017\\XRPUSDT_1H_1760659200000_1792195200000.metadata.json": "ba33bdb717da80bf5f7c2822a0d059ce17f39a1a48d2476dc422475f1b2b86fc",
+    "webui\\uploads\\bitget_baseline_20261017\\XRPUSDT_5m_1760659200000_1792195200000.metadata.json": "74e00709ef348153f75c40b4455cf5ef6d1c7962104c81b500294d7ebddb3e7a",
+    "webui\\uploads\\bitget_baseline_20261017\\instrument.json": "6437cde4cd71b4046e04a3390f24587c79ccbdbe98f69016cf1e566c74cbd01b",
+    "research\\false_breakout\\config_hourly.json": "f591acabdf480cb49c1c01562c54a7f466feb2444823aa13dfe97659f5397454",
+    "research\\false_breakout\\reports\\baseline_20261017_v1\\summary.json": "8c8db868861208f0f6f61cac82eb70a3db5a7a15b7850124b7ee1396dbab9184"
+  },
+  "funding_files_sha256": {
+    "webui\\uploads\\bitget_hourly_funding_20261017\\rates.csv": "f743864f47dc7aafb89cbb0455cf92f4daac04df1566e13520caa7719678d2d0",
+    "webui\\uploads\\bitget_hourly_funding_20261017\\marks.csv": "46bd74b73fb4b81e59a8e7621e85765e03293caaebf873ba8bf9273b880948fa",
+    "webui\\uploads\\bitget_hourly_funding_20261017\\metadata.json": "b1515ab522460a07e7b5251854d1c8bc6a70ffad881663bde1504dcbe02aa33d"
+  },
+  "source_sha256": {
+    "research\\false_breakout\\backtest.py": "4a6aa2d7afe15e353c84c72a55c3080fbee5cf7d2ac059be4b9e0f97845f641c",
+    "research\\false_breakout\\costs.py": "85e83233ef9404b6c74f43abf12bcdd2827189a9d62b807e90ba1c2a0f7cb34c",
+    "research\\false_breakout\\download_history.py": "2e5ee4b6f8e3fee54c1baea69449c00127de4aabb2ad3c614076986ecd0962bc",
+    "research\\false_breakout\\economic_diagnosis.py": "0511d55638f5a30e8ea9301f96a58e207c715262e54dd0619cb56eaf6654a6d3",
+    "research\\false_breakout\\funding_data.py": "10944f3d9cf44ca7f9b86a1221e9fcc70fd92c6f030e83b95f323ca1e730c488",
+    "research\\false_breakout\\run_experiment.py": "8f818e3c019598b401d191ea177a7fe904860535d6ca11d81f1a2531015f7b3d",
+    "research\\false_breakout\\run_hourly.py": "a69dfc02542ee23b4a75c4b912e9b172d5f6d476996ae469afd291d730b80dbf",
+    "research\\false_breakout\\verify_diagnosis.py": "5aa47f8c072ccfb164f366725e0e1ac1451a185cf7d15ed65fbb77336ccd4d33",
+    "research\\false_breakout\\verify_results.py": "c4a21f0c696ee8c6d666a7f445bbb36e5d63a2d26ac72d501695c2d189ad8201",
+    "tests\\test_hourly.py": "7731273164817da1a96df25dd8d11d5f99dfe21fa50b3a6020110294d0274bd6",
+    "webui\\bitget_data.py": "8319f0312a72aa4dc51817efdb7da25b7bd3dd2f324c30a73a024c083f289799"
+  },
+  "output_sha256": {
+    "config.json": "43512b96dfbd5e7f86a83c76e72ccf962ef22a7a04f5d1f1dc22a1309635c32a",
+    "diagnostic_events_1x.csv": "79d6cdfc23906205e536b414e6c6064fb394ace27e07c42ef6ad50376821b5ce",
+    "diagnostic_portfolio_1x.csv": "625f287370b032c27fbcca585c64a57110c64c894c1942b5e0fa37056f9c6147",
+    "equity_1x.csv": "151bcf558d7e890d62054bbcf308c3d9cfa015c9add66339776b57b3aec5f3d4",
+    "events_1x.csv": "ea9bf8e9c7db4413d2bab08f1fc92b42e45ad2296eba5bb95fba06484a48eaf6",
+    "portfolio_1x.csv": "e5d2d7905cb36770ef24e2e4b36e4692d9acd22039db6d55d1c80fbe0070ff64",
+    "REPORT.md": "bc76d41f95036bfbf35aad9a9c9c0b3d365af5db9bae3766c2d0dc7e1add9dfa",
+    "resolution_1m.json": "49ad6ddacc7b33db31336f0a5abf8f4d883d8569e8eb2ea242b446adab72f0c9",
+    "resolution_5m.json": "81153a5e79df6ef0455cd1721764a49ba8d2c7031c209fd6ec4d1336e964670b",
+    "summary.json": "9cd3c7dd4419fc4e6950c76fd7c135781efc7503379b197c8b110f5eff4afdea"
+  },
+  "minute_cache_sha256": {
+    "337c90a5b5bb5ea9100aa372987e286303853b5ba4b98003e928233746f9befd.json": "7da856a2ddc92a932e86cfdce7829ed8f8d1cd236461a3e28fb71f2fef5eda69"
+  }
+}

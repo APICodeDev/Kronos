@@ -163,6 +163,8 @@ def main():
     args = parser.parse_args()
     cfg = json.loads(Path(args.config).read_text(encoding='utf-8'))
     validate_config(cfg)
+    if cfg['entry_interval'] != '5m':
+        raise ValueError('Para la variante 1H usa research.false_breakout.run_hourly.')
     directory, output = Path(args.data), Path(args.output)
     if output.exists():
         raise FileExistsError('El informe ya existe; selecciona un directorio nuevo.')

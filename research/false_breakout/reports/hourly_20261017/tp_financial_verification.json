@@ -1,0 +1,8 @@
+{
+  "checked_events": 910,
+  "checked_tp": 233,
+  "max_absolute_error": "1.94E-13",
+  "tolerance": "0.000001",
+  "method": "Recomputaci\u00f3n Decimal independiente sobre CSV; sin funding.",
+  "verifier_sha256": "c4a21f0c696ee8c6d666a7f445bbb36e5d63a2d26ac72d501695c2d189ad8201"
+}

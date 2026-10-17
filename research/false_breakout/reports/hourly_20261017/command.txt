@@ -1,0 +1,1 @@
+python -m research.false_breakout.run_hourly --data webui/uploads/bitget_baseline_20261017 --config research/false_breakout/config_hourly.json --funding webui/uploads/bitget_hourly_funding_20261017 --resolution-cache webui/uploads/bitget_hourly_resolution_20261017 --output NUEVO_DIRECTORIO --offline

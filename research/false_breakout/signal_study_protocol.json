@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "purpose": "Separar valor direccional del patrón y gestión TP/SL; diagnóstico exploratorio, no búsqueda automática de una estrategia rentable.",
+  "entry_interval": "1H",
+  "leverage": 1,
+  "horizons_hours": [1, 6, 24],
+  "lookback_bars": 20,
+  "splits_used": ["discovery", "validation"],
+  "excluded_segment": "test: último 20 % por tiempo; no se calculan sus resultados en este estudio",
+  "purge_hours": 24,
+  "validation_embargo_hours": 24,
+  "entry": "Apertura siguiente al cierre de la señal",
+  "exit": "Cierre de la hora 1, 6 o 24 después de la entrada; sin TP ni SL",
+  "control": "Horas sin señal LONG/SHORT/dual, emparejadas dentro del mismo segmento por mes UTC, bloque horario de 8 horas y rango verdadero medio causal de 20 horas dividido por cierre",
+  "volatility_bin_edges": [0.003, 0.006, 0.012],
+  "minimum_controls_per_stratum": 10,
+  "matching_missing_policy": "Excluir y contar eventos sin controles suficientes; no relajar los criterios según el resultado",
+  "funding": "excluded_provisional",
+  "mfe_mae": "Extremos posteriores descriptivos; no representan salidas ejecutables ni un precio que pudiera elegirse por anticipado",
+  "bootstrap": {
+    "seed": 20261017,
+    "repeats": 5000,
+    "cluster": "Semana UTC lunes-domingo, remuestreo conjunto de señales y controles",
+    "validation_comparisons": 6,
+    "confidence": 0.95,
+    "adjustment": "Intervalos percentiles aproximados; banda adicional Bonferroni para seis perfiles dirección/horizonte por segmento"
+  },
+  "decision": "No seleccionar un horizonte como ganador, entrenar IA ni declarar ventaja demostrada. Una hipótesis nueva requerirá costes completos y datos posteriores no observados."
+}

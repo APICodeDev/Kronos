@@ -5,6 +5,10 @@ import pandas as pd
 from .costs import execution, pnl, position
 
 
+def bar_duration(cfg):
+    return pd.Timedelta(minutes={'5m': 5, '1H': 60}[cfg.get('entry_interval', '5m')])
+
+
 def detect_signals(df, lookback, tick):
     high = df.high.shift(1).rolling(lookback).max()
     low = df.low.shift(1).rolling(lookback).min()
@@ -19,10 +23,10 @@ def detect_signals(df, lookback, tick):
     return pd.DataFrame(signals, columns=['signal_index', 'signal_time', 'side', 'previous_high', 'previous_low'])
 
 
-def attach_context(signals, contexts):
+def attach_context(signals, contexts, entry_interval='5m'):
     result = signals.copy()
     result['signal_time'] = pd.to_datetime(result.signal_time, utc=True)
-    result['entry_time'] = result.signal_time + pd.Timedelta(minutes=5)
+    result['entry_time'] = result.signal_time + bar_duration({'entry_interval': entry_interval})
     for interval, frame in contexts.items():
         duration = pd.Timedelta(minutes=15) if interval == '15m' else pd.Timedelta(hours=1)
         right = frame.copy()
@@ -38,7 +42,7 @@ def partition(entry, final_close, start, end, cfg):
     span = end - start
     first = start + span * cfg['split_fractions'][0]
     second = first + span * cfg['split_fractions'][1]
-    embargo = pd.Timedelta(minutes=5 * cfg['embargo_bars'])
+    embargo = bar_duration(cfg) * cfg['embargo_bars']
     if entry < first:
         return 'discovery' if final_close <= first else 'PURGED'
     if entry < first + embargo:
@@ -70,6 +74,7 @@ def barrier(bar, side, stop, target):
 
 def label_event(signal, df, cfg, inst, leverage, resolver=None):
     result = dict(signal)
+    duration = bar_duration(cfg)
     index = int(signal['signal_index'])
     tick = float(inst['priceMultiplier'])
     entry_index = index + 1
@@ -99,19 +104,24 @@ def label_event(signal, df, cfg, inst, leverage, resolver=None):
         touch = barrier(bar, side, stop, pos['tp'])
         if touch:
             label, reference, at_open = touch
-            result['both_touched_5m'] = label == 'AMBIGUOUS'
-            exit_time = bar.timestamp if at_open else bar.timestamp + pd.Timedelta(minutes=5)
-            if label == 'AMBIGUOUS' and resolver:
+            hourly = cfg.get('entry_interval', '5m') == '1H'
+            result['both_touched_1H' if hourly else 'both_touched_5m'] = label == 'AMBIGUOUS'
+            exit_time = bar.timestamp if at_open else bar.timestamp + duration
+            if (label == 'AMBIGUOUS' or cfg.get('resolve_all_touches', False)) and resolver:
                 resolved = resolver(bar, side, stop, pos['tp'])
                 if resolved:
                     label, reference, exit_time = resolved
-                    result['resolved_1m'] = label != 'AMBIGUOUS'
+                    if hourly:
+                        result['execution_resolution'] = resolver.last_resolution
+                        result['both_touched_5m'] = resolver.last_both_touched_5m
+                    else:
+                        result['resolved_1m'] = label != 'AMBIGUOUS'
             slip = cfg['tp_slippage_bps'] if label == 'TP_FIRST' else cfg['sl_slippage_bps']
             break
     else:
         j = entry_index + cfg['max_holding_bars'] - 1
         label, reference, slip = 'TIMEOUT', df.close.iloc[j], cfg['timeout_slippage_bps']
-        exit_time = df.timestamp.iloc[j] + pd.Timedelta(minutes=5)
+        exit_time = df.timestamp.iloc[j] + duration
     fill = execution(reference, side, slip, tick)
     result.update(pnl(pos, side, fill, cfg))
     result.update(label=label, exit_reference=reference, exit_index=j, exit_time=exit_time,
@@ -147,6 +157,6 @@ def simulate_portfolio(events, df, cfg):
             sign * trade['quantity'] * (df.close.iloc[a:b].to_numpy() - trade['entry_fill']) - trade['entry_fee'])
         realized += trade['net_pnl']
         curve[b:] = cfg['initial_equity_usdt'] + realized
-    equity = pd.DataFrame({'timestamp': df.timestamp + pd.Timedelta(minutes=5), 'equity_usdt': curve})
+    equity = pd.DataFrame({'timestamp': df.timestamp + bar_duration(cfg), 'equity_usdt': curve})
     equity['drawdown'] = equity.equity_usdt / equity.equity_usdt.cummax().clip(lower=cfg['initial_equity_usdt']) - 1
     return pd.DataFrame(trades), equity
