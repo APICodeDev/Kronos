@@ -1,0 +1,86 @@
+{
+  "git_head": "923686f",
+  "preserved_local_files": {
+    "KRONOS_SPEC.md": "5a48817a093438423c5c7dc37a53108275d816b4635eb8481ac848a0694119b7",
+    "webui\\prediction_results\\prediction_20261008_172220.json": "2d2c316587830bb01f9e0b235b28c408cccd9e62f166c4e38fad12adc8a9ad35",
+    "webui\\prediction_results\\prediction_20261008_173229.json": "23bd3787e0861071cc5895c147a4e37297cc78e9e755e7c77a989ec1406ef0ff",
+    "webui\\prediction_results\\prediction_20261008_173942.json": "668f1c180451475ba992ba904ac23607b4b3f08297c3128f1de5029c7d143e47",
+    "webui\\prediction_results\\prediction_20261008_174213.json": "529e86e76d6ab4bf1f71442e0c15e1c50de9ced3b36d7315462578216b607ff7",
+    "webui\\prediction_results\\prediction_20261008_174610.json": "6287916d8e37b82490ef7252901b83002be7bbbbdc2b3bb74f8f9cc34ae619fc",
+    "webui\\prediction_results\\prediction_20261008_175004.json": "dfcc5eef81a30a0772d930a315c43e87e5c19ddb0db28db60909d026c460563f",
+    "webui\\prediction_results\\prediction_20261008_175430.json": "777c7d685fa535b56a1f7cdb17abb3282b6109dd640f883d4451146f8c638c8f",
+    "webui\\prediction_results\\prediction_20261008_175753.json": "6de6b2ece3270303e216d9fe08f6ead9e4007b91c06f8e4f56479695b0b02991",
+    "webui\\prediction_results\\prediction_20261008_180826.json": "ae455666fb359eccede2b2f6f9d523befad52b521fadfce55111e4e78f42a2ac",
+    "webui\\prediction_results\\prediction_20261008_181528.json": "47eaea64e86d985d2dae18d559a1b5f5ff59a3e0ec7f4f749e2259ebfec67a7f",
+    "webui\\prediction_results\\prediction_20261008_182201.json": "ffdf9f6057f1ad9df43e9b2c58c37fb3b3829e777ddfae2be04fa7ef806b99d4",
+    "webui\\prediction_results\\prediction_20261008_183725.json": "86b8840eca7f4054f83f0102eef8b67256fc7126188ad4a14d3b9853f5c3f0e9",
+    "webui\\prediction_results\\prediction_20261008_184311.json": "939a9a642d94ac3d6a326fb4bf85688ce9d826ea16788091d6b577d72cdb1432",
+    "webui\\prediction_results\\prediction_20261008_184704.json": "d5fc910d44cad4132a659a4d739097e4bcd4fdabbb3a93a8aa72ad12f7515675",
+    "webui\\prediction_results\\prediction_20261008_191209.json": "d6079ce3fe5be7898d2b04c4d55e4707587f84e7768c59254ea0bf9b92ccad50",
+    "webui\\prediction_results\\prediction_20261009_175015.json": "d509527ec8bbf04d309cbcd5a8eb1e5ae2ea8eb6be59f6490296236bad20f799",
+    "webui\\prediction_results\\prediction_20261009_184429.json": "fe99112e6aff527a955c87f7c5d199f30ae786454d7987411e7de9e6ccb6809a",
+    "webui\\prediction_results\\prediction_20261009_193334.json": "25cb2abd87bbf3ec400fa9c40fd91a218f6ff7bb1705bad7eb5b362d806fa716",
+    "webui\\prediction_results\\prediction_20261010_072820.json": "90eeb0a3bcf9d26522277668152b88bbb485181daf4d9cd892a2f395bd88ac9a",
+    "webui\\prediction_results\\prediction_20261010_073126.json": "942f757a22793195bc26694e5ff702062d15bfcbd544e8ffc23c09281ae73067",
+    "webui\\prediction_results\\prediction_20261010_074901.json": "0456426e4962658597d6be7ce9d4b5e9077d9d8936d484d623e13551c6267f09",
+    "webui\\prediction_results\\prediction_20261010_091028.json": "1ca26f625c9f6b0475d2684a4c8b9a627b67ef1b7f2e05f917fb556048619448",
+    "webui\\prediction_results\\prediction_20261010_093141.json": "41904f6527493f17e6dc17e477262c863da1f98d3e991632453e73214f55733c",
+    "webui\\prediction_results\\prediction_20261010_162752.json": "411add7fc0e0f445733aee32eb0b64041b261aecdf561933948e8c770cefc542",
+    "webui\\prediction_results\\prediction_20261010_163333.json": "952bb4331ae5cd769ae9e3215bc9a99072f1c7547f51adbf634062771388470f",
+    "webui\\prediction_results\\prediction_20261010_165229.json": "e2d24e23ef4f84f65f3a8a65e2c2d00e84d68b2f000fbf0db2eec10a70349f3e",
+    "webui\\prediction_results\\prediction_20261010_174734.json": "da67545c263c34714b887d67383369eff307b4def26f37b1d004d85ef11e74ec",
+    "webui\\prediction_results\\prediction_20261010_184654.json": "027ac09cca071b4d242247c4e0901404bd9efaa3380806418efcbef6b0e96129",
+    "webui\\prediction_results\\prediction_20261011_063820.json": "590eddf2bc6cfdd27d6b2621f661b020a9425810e9034eeb50072ff85b782f5a",
+    "webui\\prediction_results\\prediction_20261011_063954.json": "ab5c8a0ef1fb6d59c175b679a2040e30cfa1155fe22689a52c32211ff84de201",
+    "webui\\prediction_results\\prediction_20261011_064240.json": "91074052240c47f37e924f0800b0bf956b4cbdeaa3b6e27d37ce37e88b85b181",
+    "webui\\prediction_results\\prediction_20261011_074007.json": "1de7af498722b19319b12b0010c0253ffa39131cde295995af43bc9c467cd70e",
+    "webui\\prediction_results\\prediction_20261011_092734.json": "ec19d9f26a2f74a8b76a0d7ef29fc1c32491e603c2f00ea3acbbba07e43698ed",
+    "webui\\prediction_results\\prediction_20261011_142151.json": "4d45441500ae93aa80a224ba3ff0305dc679613065c75acefdf576fae0a24f2e",
+    "webui\\prediction_results\\prediction_20261012_100747.json": "e8578f6e55d68b627c3d868d984ec1eec1049b020961d313f0742507ce66840c",
+    "webui\\prediction_results\\prediction_20261013_085445.json": "8b74da37eb319d0a0c81c5701b14bd3cc6dd8a9704c6c64beeb23091a45b1d6a",
+    "webui\\prediction_results\\prediction_20261013_192511.json": "8073da0dcae58c52259e800022eae62045a91a18eed2e3b2a1c7b271f20ed3db",
+    "webui\\prediction_results\\prediction_20261015_055134.json": "c421000a90f485c8fedde266e4e296f7eea94a1e0a84cd490591509c01085a49",
+    "webui\\prediction_results\\prediction_20261015_170539.json": "48f07aceaadf2ad590e0feba26689e98240b29ab33b562e35f70f3e241161a8c",
+    "webui\\prediction_results\\prediction_20261016_171220.json": "a8ad89dcae4e708d913bf54d9c8e6af3de8e4814a4b137627fc7808180a8677a",
+    "webui\\prediction_results\\prediction_20261016_171320.json": "74444fbaa2519729b13f8b2b232ddd38736c361102ecbcb40f77b035acdce3c4",
+    "webui\\prediction_results\\prediction_20261016_171650.json": "6538eedaa70126b1a32ce616c3961844cdc43327b9ec2932caf4c8a09d1cc9f7",
+    "webui\\prediction_results\\prediction_20261016_172127.json": "08bfcbbb47a27afeb64fe0287ad11cf740ce24afa73f9b4e106a4000c4db8302",
+    "webui\\prediction_results\\prediction_20261016_221335.json": "f5649cae464802612c33de264deea996bd46497656d704843fc6804237235b83"
+  },
+  "checks": [
+    {
+      "command": "python -m unittest discover -s tests -p 'test_webui_*.py'",
+      "environment": "Imagen Docker kronos-kronos, repositorio montado read-only",
+      "passed": 19,
+      "seconds": 5.543
+    },
+    {
+      "command": "python -m pytest tests/test_kronos_regression.py -q -p no:cacheprovider",
+      "environment": "Imagen Docker kronos-kronos, CPU 4 hilos, cache de modelos read-only",
+      "passed": 4,
+      "seconds": 127.02
+    },
+    {
+      "command": "python -m pytest tests/test_bitget_data.py tests/test_costs.py tests/test_false_breakout.py -q",
+      "environment": "Python local 3.14.3",
+      "passed": 50,
+      "seconds": 4.46
+    },
+    {
+      "command": "python -m ruff check webui/bitget_data.py research/false_breakout tests/test_bitget_data.py tests/test_costs.py tests/test_false_breakout.py",
+      "result": "All checks passed"
+    }
+  ],
+  "financial_verification": {
+    "checked_events": 37808,
+    "checked_tp": 11100,
+    "max_absolute_error": "2.08E-12",
+    "tolerance": "0.000001",
+    "method": "Recomputaci\u00c3\u00b3n Decimal independiente sobre CSV; sin funding."
+  },
+  "offline_replay": {
+    "compared_files": 17,
+    "all_identical": true,
+    "report": "research\\false_breakout\\reports\\baseline_20261017_v1\\reproducibility.json"
+  }
+}

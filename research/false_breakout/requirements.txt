@@ -1,0 +1,5 @@
+# Entorno independiente del modelo y de Flask; pyarrow es opcional.
+numpy>=1.26
+pandas>=2.2,<3
+requests>=2.31
+pytest>=8

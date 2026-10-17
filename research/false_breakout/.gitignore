@@ -1,0 +1,4 @@
+# Históricos y tablas grandes se conservan localmente; sus hashes están en el informe.
+reports/**/events_*.csv
+reports/**/portfolio_*.csv
+reports/**/equity_*.csv

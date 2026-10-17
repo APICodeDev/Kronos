@@ -1,0 +1,93 @@
+{
+  "offline": true,
+  "replay_directory": "research\\false_breakout\\reports\\baseline_20261017_replay",
+  "compared_files": 17,
+  "all_identical": true,
+  "files": {
+    "REPORT.md": {
+      "primary_sha256": "74938330636cb7afd16d9e39544256bbae91a84587c44ca668e156176107bbdb",
+      "replay_sha256": "74938330636cb7afd16d9e39544256bbae91a84587c44ca668e156176107bbdb",
+      "identical": true
+    },
+    "command.txt": {
+      "primary_sha256": "38b2eba52c14ea939a9ae6e963bd50e5b504c978209c0b288b6cfee9bf5a7f2c",
+      "replay_sha256": "38b2eba52c14ea939a9ae6e963bd50e5b504c978209c0b288b6cfee9bf5a7f2c",
+      "identical": true
+    },
+    "equity_10x.csv": {
+      "primary_sha256": "ebf63e5aba1a5fa7846147b8e16d11e642679c625f1e3c705dd8d0dd0b3cb03b",
+      "replay_sha256": "ebf63e5aba1a5fa7846147b8e16d11e642679c625f1e3c705dd8d0dd0b3cb03b",
+      "identical": true
+    },
+    "equity_1x.csv": {
+      "primary_sha256": "243e827604611819a2ae75889a0e2cb42ca2e7e9e665896d899e6bdfe3b6b8bf",
+      "replay_sha256": "243e827604611819a2ae75889a0e2cb42ca2e7e9e665896d899e6bdfe3b6b8bf",
+      "identical": true
+    },
+    "equity_3x.csv": {
+      "primary_sha256": "c4ff2594f4d9d2982735fd4aa50fceb2566cd6e8254db2468a1e44d696ec6df4",
+      "replay_sha256": "c4ff2594f4d9d2982735fd4aa50fceb2566cd6e8254db2468a1e44d696ec6df4",
+      "identical": true
+    },
+    "equity_5x.csv": {
+      "primary_sha256": "bf72f5d14f0f2ff75491f161307633de07cdd9e184f50e5d3469779ca6735d65",
+      "replay_sha256": "bf72f5d14f0f2ff75491f161307633de07cdd9e184f50e5d3469779ca6735d65",
+      "identical": true
+    },
+    "events_10x.csv": {
+      "primary_sha256": "d5331d21c59288a3ba22c422a8808bfeeaa271dc8f3cd4c28e5ba60756c1ff35",
+      "replay_sha256": "d5331d21c59288a3ba22c422a8808bfeeaa271dc8f3cd4c28e5ba60756c1ff35",
+      "identical": true
+    },
+    "events_1x.csv": {
+      "primary_sha256": "c07a92b81878937996efbd540f5288019ba5c214516d4d8c8265a99e81d96e78",
+      "replay_sha256": "c07a92b81878937996efbd540f5288019ba5c214516d4d8c8265a99e81d96e78",
+      "identical": true
+    },
+    "events_3x.csv": {
+      "primary_sha256": "dc763c2186229b389f6c23eb17481a2d69974503e4dbc0b6989b6b9e0fba45f8",
+      "replay_sha256": "dc763c2186229b389f6c23eb17481a2d69974503e4dbc0b6989b6b9e0fba45f8",
+      "identical": true
+    },
+    "events_5x.csv": {
+      "primary_sha256": "4d6a347a2cc29c76d999c1d1ff396c15ab20770e0d7893ccd3559323978cd836",
+      "replay_sha256": "4d6a347a2cc29c76d999c1d1ff396c15ab20770e0d7893ccd3559323978cd836",
+      "identical": true
+    },
+    "manifest.json": {
+      "primary_sha256": "056ab62344df790eba0ab831a9ded383e4f673db6f408cee01a828f8bd70a07d",
+      "replay_sha256": "056ab62344df790eba0ab831a9ded383e4f673db6f408cee01a828f8bd70a07d",
+      "identical": true
+    },
+    "portfolio_10x.csv": {
+      "primary_sha256": "ccca4d263c893e10f64633a6b7ca2f847ed246d80f685fb49939ae137f9dee87",
+      "replay_sha256": "ccca4d263c893e10f64633a6b7ca2f847ed246d80f685fb49939ae137f9dee87",
+      "identical": true
+    },
+    "portfolio_1x.csv": {
+      "primary_sha256": "3ee3aa60a6e70e7fa46bc0d6428d531d478a7d9e94b853aa16a3e7106a985b97",
+      "replay_sha256": "3ee3aa60a6e70e7fa46bc0d6428d531d478a7d9e94b853aa16a3e7106a985b97",
+      "identical": true
+    },
+    "portfolio_3x.csv": {
+      "primary_sha256": "249a210e906196e36afbc61ef6d31bd4e096fd602e57f235a0fc110f8d1fe985",
+      "replay_sha256": "249a210e906196e36afbc61ef6d31bd4e096fd602e57f235a0fc110f8d1fe985",
+      "identical": true
+    },
+    "portfolio_5x.csv": {
+      "primary_sha256": "23fdd39323c39d77ad09ace76a571d5047306b3d1e1c9807d58a5646c5227a09",
+      "replay_sha256": "23fdd39323c39d77ad09ace76a571d5047306b3d1e1c9807d58a5646c5227a09",
+      "identical": true
+    },
+    "resolution_1m.json": {
+      "primary_sha256": "5f5e1af390b93e8b3bb76b4c3d778bbf175a62ca73045c12412fd38a4833d9a7",
+      "replay_sha256": "5f5e1af390b93e8b3bb76b4c3d778bbf175a62ca73045c12412fd38a4833d9a7",
+      "identical": true
+    },
+    "summary.json": {
+      "primary_sha256": "8c8db868861208f0f6f61cac82eb70a3db5a7a15b7850124b7ee1396dbab9184",
+      "replay_sha256": "8c8db868861208f0f6f61cac82eb70a3db5a7a15b7850124b7ee1396dbab9184",
+      "identical": true
+    }
+  }
+}

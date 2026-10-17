@@ -1,0 +1,7 @@
+{
+  "checked_events": 37808,
+  "checked_tp": 11100,
+  "max_absolute_error": "2.08E-12",
+  "tolerance": "0.000001",
+  "method": "Recomputación Decimal independiente sobre CSV; sin funding."
+}

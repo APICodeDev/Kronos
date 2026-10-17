@@ -1,0 +1,1 @@
+python -m research.false_breakout.run_experiment --data webui/uploads/bitget_baseline_20261017 --output NUEVO_DIRECTORIO --config research/false_breakout/config.json --resolve-1m
