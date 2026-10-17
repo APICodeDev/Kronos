@@ -1,0 +1,1 @@
+python -m research.false_breakout.economic_diagnosis --baseline research/false_breakout/reports/baseline_20261017_v1 --funding webui/uploads/bitget_economic_diagnosis_20261017 --instrument webui/uploads/bitget_baseline_20261017/instrument.json --output NUEVO_DIRECTORIO

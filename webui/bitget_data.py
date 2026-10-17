@@ -38,7 +38,7 @@ class PublicClient:
         self.receipts = []
 
     def get(self, endpoint, params=None, cache=True):
-        if endpoint not in {'instruments', 'history-candles', 'time'}:
+        if endpoint not in {'instruments', 'history-candles', 'history-fund-rate', 'time'}:
             raise ValueError('Endpoint público no permitido.')
         params = params or {}
         key = hashlib.sha256(json.dumps([endpoint, params], sort_keys=True).encode()).hexdigest()

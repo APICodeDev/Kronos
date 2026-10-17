@@ -2,3 +2,4 @@
 reports/**/events_*.csv
 reports/**/portfolio_*.csv
 reports/**/equity_*.csv
+reports/**/diagnostic_*.csv

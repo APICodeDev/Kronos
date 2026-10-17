@@ -1,0 +1,39 @@
+{
+  "git_head_at_start": "87bb6b4",
+  "checks": [
+    {
+      "command": "python -m pytest tests/test_economic_diagnosis.py tests/test_bitget_data.py tests/test_costs.py tests/test_false_breakout.py -q",
+      "passed": 69,
+      "seconds": 4.23,
+      "environment": "Python local 3.14.3"
+    },
+    {
+      "command": "docker run --rm --entrypoint python --workdir /workspace -v C:/PROYECTOS/kronos/Kronos:/workspace:ro kronos-kronos -m unittest discover -s tests -p 'test_webui_*.py'",
+      "passed": 19,
+      "seconds": 6.187,
+      "environment": "Contenedor independiente, repositorio read-only"
+    },
+    {
+      "command": "python -m ruff check research/false_breakout/economic_diagnosis.py research/false_breakout/funding_data.py research/false_breakout/verify_diagnosis.py tests/test_economic_diagnosis.py webui/bitget_data.py",
+      "result": "All checks passed"
+    },
+    {
+      "command": "git diff --check",
+      "result": "No whitespace errors; Git warned about future LF-to-CRLF conversion"
+    }
+  ],
+  "financial_verification": {
+    "checked_rows": 48291,
+    "checked_funding_rows": 10486,
+    "rows_without_funding_coverage": 37805,
+    "max_absolute_error": "3.664E-12",
+    "tolerance": "0.000001",
+    "method": "Decimal independiente y b\u00c3\u00basqueda binaria de timestamps estrictamente interiores; eventos y cartera por separado.",
+    "verifier_sha256": "5aa47f8c072ccfb164f366725e0e1ac1451a185cf7d15ed65fbb77336ccd4d33"
+  },
+  "reproduction": {
+    "all_identical": true,
+    "files": 13
+  },
+  "baseline_unchanged": true
+}

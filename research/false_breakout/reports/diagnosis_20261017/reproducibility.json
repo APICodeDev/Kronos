@@ -1,0 +1,72 @@
+{
+  "all_identical": true,
+  "compared_files": 13,
+  "network_required": false,
+  "files": {
+    "REPORT.md": {
+      "primary_sha256": "e6612900392a0269531c76f6d25bce80aad8f135409eae2c8c011a276972b0c9",
+      "replay_sha256": "e6612900392a0269531c76f6d25bce80aad8f135409eae2c8c011a276972b0c9",
+      "identical": true
+    },
+    "command.txt": {
+      "primary_sha256": "42d57021d0c2af2cc50dbb0e11d8cbd00b579ee7da3b6c38b5d362f686748a3a",
+      "replay_sha256": "42d57021d0c2af2cc50dbb0e11d8cbd00b579ee7da3b6c38b5d362f686748a3a",
+      "identical": true
+    },
+    "diagnostic_events_10x.csv": {
+      "primary_sha256": "36a963b98bf8802f452e33a406ae38079e5e4a9cda3a651a8b7e8302be06a42b",
+      "replay_sha256": "36a963b98bf8802f452e33a406ae38079e5e4a9cda3a651a8b7e8302be06a42b",
+      "identical": true
+    },
+    "diagnostic_events_1x.csv": {
+      "primary_sha256": "5e0824f04e41cd4211d64677736b3e555ac88a99b14d294486a314438e6b79bf",
+      "replay_sha256": "5e0824f04e41cd4211d64677736b3e555ac88a99b14d294486a314438e6b79bf",
+      "identical": true
+    },
+    "diagnostic_events_3x.csv": {
+      "primary_sha256": "57679cbdfcc03b74d29ccac66ccff95bc1e1051a86e730372b850d0f4e8d8e14",
+      "replay_sha256": "57679cbdfcc03b74d29ccac66ccff95bc1e1051a86e730372b850d0f4e8d8e14",
+      "identical": true
+    },
+    "diagnostic_events_5x.csv": {
+      "primary_sha256": "9eb9a922e97c210d2feb577f45d1281ca5599cd30b29493fe93682a12ba851cf",
+      "replay_sha256": "9eb9a922e97c210d2feb577f45d1281ca5599cd30b29493fe93682a12ba851cf",
+      "identical": true
+    },
+    "diagnostic_portfolio_10x.csv": {
+      "primary_sha256": "75354e6dd4a13cfe95014aa0d52054a448c6fb2da20130cfada5c0e29ad47fad",
+      "replay_sha256": "75354e6dd4a13cfe95014aa0d52054a448c6fb2da20130cfada5c0e29ad47fad",
+      "identical": true
+    },
+    "diagnostic_portfolio_1x.csv": {
+      "primary_sha256": "2e584f14d1b1b4f29f452ce6a7cfebbfcf42c00639bc254e31ee56bbe0cf0376",
+      "replay_sha256": "2e584f14d1b1b4f29f452ce6a7cfebbfcf42c00639bc254e31ee56bbe0cf0376",
+      "identical": true
+    },
+    "diagnostic_portfolio_3x.csv": {
+      "primary_sha256": "1c711755f9c8a8f6ad8169239770fe69adaea71b32925dab4725eb546d50e750",
+      "replay_sha256": "1c711755f9c8a8f6ad8169239770fe69adaea71b32925dab4725eb546d50e750",
+      "identical": true
+    },
+    "diagnostic_portfolio_5x.csv": {
+      "primary_sha256": "41c06ced450ed7326279bac70b5a39999c6d4739f80da0558400bc085efbebe7",
+      "replay_sha256": "41c06ced450ed7326279bac70b5a39999c6d4739f80da0558400bc085efbebe7",
+      "identical": true
+    },
+    "manifest.json": {
+      "primary_sha256": "42bb5615afd38afc7ecc93886e1e89481f45d276e4c7f637aa53307fb7a6cbcf",
+      "replay_sha256": "42bb5615afd38afc7ecc93886e1e89481f45d276e4c7f637aa53307fb7a6cbcf",
+      "identical": true
+    },
+    "monthly.csv": {
+      "primary_sha256": "94478272668823ec1f34d8b35ab8795c2e1b4070d7fea56907031ba56a87a2cf",
+      "replay_sha256": "94478272668823ec1f34d8b35ab8795c2e1b4070d7fea56907031ba56a87a2cf",
+      "identical": true
+    },
+    "summary.json": {
+      "primary_sha256": "2e90adbe301c9b93505f37a9569b4eac5b03fe77b04c34cd9cf7cbfac9ad46c2",
+      "replay_sha256": "2e90adbe301c9b93505f37a9569b4eac5b03fe77b04c34cd9cf7cbfac9ad46c2",
+      "identical": true
+    }
+  }
+}

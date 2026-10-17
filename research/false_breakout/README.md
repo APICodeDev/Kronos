@@ -4,6 +4,8 @@ Flujo CPU independiente de Kronos/Flask, sin entrenamiento ni órdenes. Kraken y
 
 El primer hito ya está ejecutado: [resultados e interpretación](RESULTS.md), [informe completo](reports/baseline_20261017_v1/REPORT.md) y [auditoría inicial](AUDIT.md). La línea base pierde dinero con los costes supuestos; no se ha añadido IA.
 
+El [diagnóstico económico posterior](DIAGNOSIS.md) explica ejecución, comisiones, relación TP/SL y funding reciente. Incluye conclusiones, límites y comandos para repetirlo sobre las operaciones originales congeladas, sin ajustar filtros ni barreras.
+
 ## Entorno
 
 ```powershell
