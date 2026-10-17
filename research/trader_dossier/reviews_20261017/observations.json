@@ -1,0 +1,37 @@
+{
+  "method": "Descriptivos del impulso cerrado, sin umbrales ni recomendaciones. ATR previo = abs(close-open)/impulse_body_atr. Rango = high-low. Mecha inferior = min(open,close)-low. Mecha superior = high-max(open,close). Posición del cierre = (close-low)/rango. Devolución: cases.json, giveback_fraction_of_impulse_body; excluye la vela de confirmación.",
+  "observations": [
+    {
+      "case_id": "first",
+      "impulse_range_atr": 2.3388385721877514,
+      "impulse_lower_wick_fraction": 0.0,
+      "impulse_upper_wick_fraction": 0.4419134396355345,
+      "close_location_from_low": 0.5580865603644655,
+      "giveback_fraction_of_body": 0.8163265306
+    },
+    {
+      "case_id": "largest_prior_rvol",
+      "impulse_range_atr": 12.566666666666674,
+      "impulse_lower_wick_fraction": 0.6916445623342177,
+      "impulse_upper_wick_fraction": 0.0,
+      "close_location_from_low": 0.6916445623342177,
+      "giveback_fraction_of_body": 0.6430107527
+    },
+    {
+      "case_id": "median_prior_rvol",
+      "impulse_range_atr": 3.061797752879469,
+      "impulse_lower_wick_fraction": 0.3302752293578019,
+      "impulse_upper_wick_fraction": 0.0,
+      "close_location_from_low": 0.3302752293578019,
+      "giveback_fraction_of_body": 0.3287671233
+    },
+    {
+      "case_id": "first_validation",
+      "impulse_range_atr": 2.4428332403315247,
+      "impulse_lower_wick_fraction": 0.23744292237442302,
+      "impulse_upper_wick_fraction": 0.08219178082191878,
+      "close_location_from_low": 0.23744292237442302,
+      "giveback_fraction_of_body": 0.3288590604
+    }
+  ]
+}

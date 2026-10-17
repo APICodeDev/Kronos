@@ -1,0 +1,83 @@
+{
+  "purpose": "Source and fidelity audit; no new strategy returns computed.",
+  "git_head_at_start": "9a86af033081034d1fc4c39ca6bbfd554c299fe1",
+  "initial_worktree": "clean",
+  "date": "2026-10-17",
+  "versions": {
+    "python": "3.14.3",
+    "pandas": "2.3.3",
+    "pytest": "8.4.2"
+  },
+  "files_sha256": {
+    "research/false_breakout/README.md": "443f8be89353921be09e734c8f8bf72e75043815fb2d344e9050ea5fc0556fce",
+    "research/trader_dossier/.gitignore": "72db9e9b35313f66085f429df1c7c5a638b6000f64526bfeaa567991f7e42fae",
+    "research/trader_dossier/__init__.py": "20fb41260e574d00765452d053d283c28f8ff5460c2fc9dec2e9ed622ba9725e",
+    "research/trader_dossier/build_review_pack.py": "78ed9d3a958c87074e22572bab4f86d2c2af9326afcc0ce97206e5e9cd9f586a",
+    "research/trader_dossier/README.md": "647736bfb17d3e3abed963b9f355bf8763710b20073d7e027f21c5ec8bbf8b5e",
+    "research/trader_dossier/render_review_charts.py": "bf648a828e708a3c934376a1513058d48c80641f50c274995f2097a03ad28257",
+    "research/trader_dossier/reviews_20261017/cases.json": "428936a1eb350724f29b0087ae05798775498f7a5ca02386f38feafd5a54e586",
+    "research/trader_dossier/reviews_20261017/first_1D.csv": "3f6240750feeaaa52773653462f3c4f1d1c306ca809809ae162d1922e204a75c",
+    "research/trader_dossier/reviews_20261017/first_1H.csv": "47e9ad36ffdcf32ccb64f5c4d8999b3e6e00aaf19298fa1ca60f0b0a1bbe0e52",
+    "research/trader_dossier/reviews_20261017/first_2H.csv": "82b565776698722ed32467d0720742e0c7493fb91812a1e3efe324f38a76d8e0",
+    "research/trader_dossier/reviews_20261017/first_validation_1D.csv": "f3816a1664dbcd8021c4ba1536aefd19b53cbaad5b1d22eec8801073899b0dcd",
+    "research/trader_dossier/reviews_20261017/first_validation_1H.csv": "8ec442570b0c8c9c05fef7fb1167301204d4a221306d5c797c79f4e25e04818a",
+    "research/trader_dossier/reviews_20261017/first_validation_2H.csv": "6708c5e7ab6f025d3ea1d867690812be9c93a5f6dbd8c4bf2919224d183ec1a3",
+    "research/trader_dossier/reviews_20261017/largest_prior_rvol_1D.csv": "d74193ccb82519b6b8aa5a78ecdcdc23ab66be1fb1a3b7bde61a3ecb89fddefc",
+    "research/trader_dossier/reviews_20261017/largest_prior_rvol_1H.csv": "7b8134b394abaa58531664d52009d2daec68e61be32752e4981eff529c1dd135",
+    "research/trader_dossier/reviews_20261017/largest_prior_rvol_2H.csv": "7655149a5d1ff6363d066daa67792fede814eb729088c30b8c2d458ddca1baf7",
+    "research/trader_dossier/reviews_20261017/median_prior_rvol_1D.csv": "fa882f2a34d6b4ddfefc809045102460cfdfc3e6ced75c99e573a95a832868b5",
+    "research/trader_dossier/reviews_20261017/median_prior_rvol_1H.csv": "73987c1ebf6588652c33291f1c47e502f77c7c67350e09c0364e28cc80b28331",
+    "research/trader_dossier/reviews_20261017/median_prior_rvol_2H.csv": "fe6bbf3278110f5264a8a2cc026c711d1c0d58714e6320f3d3622d3c7a87dcdc",
+    "research/trader_dossier/reviews_20261017/observations.json": "3737b3fc19e108162d0dc9119355fb9c09903ba641804492bdc60837721ac59c",
+    "research/trader_dossier/reviews_20261017/REVIEW.html": "9fff92463bc4a251634c4c46ef5cef28ad91a5bdb97de22a02cbcbb581ab7dcc",
+    "research/trader_dossier/sources.json": "745c09e76068e6c061caab668e90f35e84e02a2682da20172ad203aa4a516da4",
+    "tests/test_trader_review.py": "47311b8a0d360cbb8568848fbdd04ae6731cdbdffacc298815dc5ba5920a6c90"
+  },
+  "public_source_archives_sha256": {
+    "webui/uploads/trader_dossier_sources_20261017/G1.html": "47e7d36701a7a5e8707bbcd9e7bb25499ec54e649b4c64c26b248021c1f4cf23",
+    "webui/uploads/trader_dossier_sources_20261017/G2.html": "ea1ce595e7f28961a1da4da2a27c02774f69fcdc494696d924471648f10fed63",
+    "webui/uploads/trader_dossier_sources_20261017/G3.html": "85430df0b293efc367e72ee64c66715ea9662dfe9774a4724cc4f959da80ae04",
+    "webui/uploads/trader_dossier_sources_20261017/G4.html": "e082ad2ac0a24f0cd68760945c936dd760459c00a40d37b951c138b7c925d073",
+    "webui/uploads/trader_dossier_sources_20261017/grimes_context_20231129.jpg": "d558785eaa56c4668d574e565da733743b57f5c1d15ee6bd08f5a1d24b257cac",
+    "webui/uploads/trader_dossier_sources_20261017/minervini_workshop_review_2021.pdf": "4ffdcca8844bd054b018575de9b594c0ddd2866a339256266d4729ee4dec61d0",
+    "webui/uploads/trader_dossier_sources_20261017/raschke_2004_part2.pdf": "6cf7fb16b866313ff5c965ea5a189261b7058deb9b11f302e30a212d2a622484",
+    "webui/uploads/trader_dossier_sources_20261017/raschke_discerning_1993.pdf": "903b0dddf905d7a435afbd8d81a7358436550222945d9deb83c1cd3bec3390c9",
+    "webui/uploads/trader_dossier_sources_20261017/raschke_rituals_2000.pdf": "f0804fb801b54dea514c4603504ee577b28549fdef834b0a150c7b90aadb5bc4",
+    "webui/uploads/trader_dossier_sources_20261017/raschke_rules_1997.pdf": "693ce57175bf4cf27057c2c2bd5f775df2a85ca0309b00c73d568488f79e0ffb"
+  },
+  "replay": {
+    "output": "webui/uploads/trader_review_replay_20261017",
+    "byte_identical_files": [
+      "cases.json",
+      "first_1D.csv",
+      "first_1H.csv",
+      "first_2H.csv",
+      "first_validation_1D.csv",
+      "first_validation_1H.csv",
+      "first_validation_2H.csv",
+      "largest_prior_rvol_1D.csv",
+      "largest_prior_rvol_1H.csv",
+      "largest_prior_rvol_2H.csv",
+      "median_prior_rvol_1D.csv",
+      "median_prior_rvol_1H.csv",
+      "median_prior_rvol_2H.csv"
+    ],
+    "count": 13
+  },
+  "checks": {
+    "research_and_data_tests": "121 passed in 8.60s",
+    "ruff": "All checks passed",
+    "html": "generated; no browser visual inspection"
+  },
+  "commands": [
+    "python -m research.trader_dossier.build_review_pack --output webui/uploads/trader_review_replay_20261017",
+    "python -m pytest tests/test_bitget_data.py tests/test_costs.py tests/test_false_breakout.py tests/test_hourly.py tests/test_economic_diagnosis.py tests/test_signal_study.py tests/test_momentum.py tests/test_practitioner.py tests/test_practitioner_swing.py tests/test_trader_review.py -q",
+    "python -m ruff check research/trader_dossier tests/test_trader_review.py"
+  ],
+  "limitations": [
+    "Retrospective case selection and previously seen data; not independent validation.",
+    "No new PnL, strategy optimization, market downloads, AI training or live orders.",
+    "Original trading code and reports unchanged.",
+    "Public source archives live under ignored webui/uploads; bibliography retains URLs and page locators."
+  ]
+}

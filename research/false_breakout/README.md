@@ -14,6 +14,8 @@ La nueva familia de [continuación tras ruptura confirmada](MOMENTUM_RESULTS.md)
 
 La [investigación de métodos publicados por operadores](PRACTITIONER_RESEARCH.md) se aplica mediante un playbook de impulso, retroceso, confirmación, volumen y riesgo. [Resultados y revisión de casos](PRACTITIONER_RESULTS.md): se conservan una primera interpretación demasiado restrictiva y una segunda swing, sobre los mismos planes congelados, que gana en investigación y pierde en validación con muestra pequeña. No constituye una evaluación concluyente del método humano ni exige ampliar datos. CLI inicial: `python -m research.false_breakout.run_practitioner`; swing: `python -m research.false_breakout.practitioner_swing`; ambos tienen verificadores independientes.
 
+La [auditoría posterior de fidelidad a los operadores](../trader_dossier/README.md) profundiza en fuentes originales, ejemplos publicados y cuatro fichas locales con el futuro oculto. Identifica diferencias de contexto, órdenes y gestión: los ensayos anteriores evaluaron reglas híbridas propias, no una réplica completa de esos métodos. Conserva todos los resultados y no anuncia una rentabilidad nueva.
+
 ## Entorno
 
 ```powershell
