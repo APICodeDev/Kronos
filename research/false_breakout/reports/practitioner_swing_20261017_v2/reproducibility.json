@@ -1,0 +1,139 @@
+{
+  "files_compared": 22,
+  "all_identical": true,
+  "offline": true,
+  "replay_directory": "webui/uploads/practitioner_swing_replay_20261017",
+  "checks": {
+    "REPORT.md": {
+      "original": "98629538856e47a1d9728a18aaa6aa176a3f9cc71387c946794759f1ba1bf60f",
+      "replay": "98629538856e47a1d9728a18aaa6aa176a3f9cc71387c946794759f1ba1bf60f",
+      "identical": true
+    },
+    "command.txt": {
+      "original": "3461a826a966af7da7fca4e75f538f021e5d40acdc0bca2e0e573c5bd50125c3",
+      "replay": "3461a826a966af7da7fca4e75f538f021e5d40acdc0bca2e0e573c5bd50125c3",
+      "identical": true
+    },
+    "config.json": {
+      "original": "c0bd84a7863e58565fec44c82a5f11a38dc80fde8db4f49ab4326cfa2d563e87",
+      "replay": "c0bd84a7863e58565fec44c82a5f11a38dc80fde8db4f49ab4326cfa2d563e87",
+      "identical": true
+    },
+    "manifest.json": {
+      "original": "5288b5e0f7b7ba53a0785d3362f360477be83b826cf85923df6550714c88ae32",
+      "replay": "5288b5e0f7b7ba53a0785d3362f360477be83b826cf85923df6550714c88ae32",
+      "identical": true
+    },
+    "price_volume/diagnostic_events_1x.csv": {
+      "original": "76a5e9696873e036aec995b8cdc91b679b8180cfebea460a6918e187ed7cff99",
+      "replay": "76a5e9696873e036aec995b8cdc91b679b8180cfebea460a6918e187ed7cff99",
+      "identical": true
+    },
+    "price_volume/diagnostic_portfolio_1x.csv": {
+      "original": "f13db58feb893f472ba8a4ca79024348291bbb8af03930e8304227cf26164a52",
+      "replay": "f13db58feb893f472ba8a4ca79024348291bbb8af03930e8304227cf26164a52",
+      "identical": true
+    },
+    "price_volume/equity_1x.csv": {
+      "original": "d7cd2e90f41cf147bf2121160ddc0836b68f2e6ddef0229ef9487647990df0f6",
+      "replay": "d7cd2e90f41cf147bf2121160ddc0836b68f2e6ddef0229ef9487647990df0f6",
+      "identical": true
+    },
+    "price_volume/events_1x.csv": {
+      "original": "ade3bb6c18af11c02c5d2ceda54dfe7d1a85b2f42b76ba0c369d19c1037bf79f",
+      "replay": "ade3bb6c18af11c02c5d2ceda54dfe7d1a85b2f42b76ba0c369d19c1037bf79f",
+      "identical": true
+    },
+    "price_volume/manifest.json": {
+      "original": "71b2c0896fcdb6e1b85a0ed4fc48e2c75f10c758c72395ba2236dac312e1bf61",
+      "replay": "71b2c0896fcdb6e1b85a0ed4fc48e2c75f10c758c72395ba2236dac312e1bf61",
+      "identical": true
+    },
+    "price_volume/portfolio_1x.csv": {
+      "original": "8ea20d4d78062b31182c3b2612b549004663353f1e71e1f7e8543809d3fe2ac2",
+      "replay": "8ea20d4d78062b31182c3b2612b549004663353f1e71e1f7e8543809d3fe2ac2",
+      "identical": true
+    },
+    "price_volume/summary.json": {
+      "original": "272c44c8ef1d626eb8f44f3810eb55a5c1a39c2f6e4fcb5064fc59e36fd0a646",
+      "replay": "272c44c8ef1d626eb8f44f3810eb55a5c1a39c2f6e4fcb5064fc59e36fd0a646",
+      "identical": true
+    },
+    "protocol.json": {
+      "original": "e65ba9db644f2913a368f598dc3011a7321aad7535a70a85184171bc52ebbe80",
+      "replay": "e65ba9db644f2913a368f598dc3011a7321aad7535a70a85184171bc52ebbe80",
+      "identical": true
+    },
+    "resolution_1m.json": {
+      "original": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "replay": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "identical": true
+    },
+    "resolution_5m.json": {
+      "original": "3258c7d2f044ef4c7b45d842e644d44be5d7c7c4a762dc26640f4087170bd5b4",
+      "replay": "3258c7d2f044ef4c7b45d842e644d44be5d7c7c4a762dc26640f4087170bd5b4",
+      "identical": true
+    },
+    "structure/diagnostic_events_1x.csv": {
+      "original": "90f67ca438eefb9736834e31f89bfdd99b5b9d46c4774e8ffec0add87bd6ea06",
+      "replay": "90f67ca438eefb9736834e31f89bfdd99b5b9d46c4774e8ffec0add87bd6ea06",
+      "identical": true
+    },
+    "structure/diagnostic_portfolio_1x.csv": {
+      "original": "a8748d8f93c9587b994477e504c14ecb582d1ca0a8627a5ea2a87bea124ad879",
+      "replay": "a8748d8f93c9587b994477e504c14ecb582d1ca0a8627a5ea2a87bea124ad879",
+      "identical": true
+    },
+    "structure/equity_1x.csv": {
+      "original": "0fda210a65136c74277663f4f964aba7cb4998605bdc6673d8a3cf987338f2f2",
+      "replay": "0fda210a65136c74277663f4f964aba7cb4998605bdc6673d8a3cf987338f2f2",
+      "identical": true
+    },
+    "structure/events_1x.csv": {
+      "original": "8d075dc57f5650de833dd98edc2792f54ba1670b2014483774b61180a847eadc",
+      "replay": "8d075dc57f5650de833dd98edc2792f54ba1670b2014483774b61180a847eadc",
+      "identical": true
+    },
+    "structure/manifest.json": {
+      "original": "779c90fa28a78719411775139ca81458c352a8a680a471e5a8f49224d4801264",
+      "replay": "779c90fa28a78719411775139ca81458c352a8a680a471e5a8f49224d4801264",
+      "identical": true
+    },
+    "structure/portfolio_1x.csv": {
+      "original": "0fb9f14e03cf46bcc7d074f93ffd9f4fca50a78669adad24fad17f415c6fefbb",
+      "replay": "0fb9f14e03cf46bcc7d074f93ffd9f4fca50a78669adad24fad17f415c6fefbb",
+      "identical": true
+    },
+    "structure/summary.json": {
+      "original": "0440f03e65197786586e7f61224caaa99e5c246ba4a78cebb5fadebc759984f4",
+      "replay": "0440f03e65197786586e7f61224caaa99e5c246ba4a78cebb5fadebc759984f4",
+      "identical": true
+    },
+    "summary.json": {
+      "original": "bfdc646f5460dbac31bf6bef1080399a3b4e7bc95d01c69083b9c1dc34688989",
+      "replay": "bfdc646f5460dbac31bf6bef1080399a3b4e7bc95d01c69083b9c1dc34688989",
+      "identical": true
+    }
+  },
+  "results_unchanged_after_windows_verifier_fix": {
+    "command.txt": true,
+    "config.json": true,
+    "protocol.json": true,
+    "REPORT.md": true,
+    "resolution_1m.json": true,
+    "resolution_5m.json": true,
+    "summary.json": true,
+    "price_volume/diagnostic_events_1x.csv": true,
+    "price_volume/diagnostic_portfolio_1x.csv": true,
+    "price_volume/equity_1x.csv": true,
+    "price_volume/events_1x.csv": true,
+    "price_volume/portfolio_1x.csv": true,
+    "price_volume/summary.json": true,
+    "structure/diagnostic_events_1x.csv": true,
+    "structure/diagnostic_portfolio_1x.csv": true,
+    "structure/equity_1x.csv": true,
+    "structure/events_1x.csv": true,
+    "structure/portfolio_1x.csv": true,
+    "structure/summary.json": true
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "registered_before_swing_results": "2026-10-17; después de revisar el embudo del ensayo anterior, antes de calcular salidas de sus oportunidades rechazadas",
+  "reference": "https://www.brookstradingcourse.com/futures-market/trade-trend-channels/",
+  "hypothesis": "Una operación swing a favor del impulso puede continuar más allá de un extremo anterior. Un TP neto de 2R no necesita quedar limitado al high/low de la vela inicial del impulso.",
+  "origin": "La primera adaptación impuso techo/suelo en la vela inicial, rechazando 86 de 87 planes. Esa limitación no es una regla universal de las publicaciones. Se conserva íntegro el ensayo y se declara esta segunda interpretación, sin ocultar la decisión posterior.",
+  "frozen_input": "research/false_breakout/reports/practitioner_20261017/structure/events_1x.csv",
+  "unchanged": "Todas las señales, niveles, confirmaciones, reglas de volumen, aperturas, cantidades, stops, triggers TP y horizonte de 24h ya calculados y guardados. Margen máximo 1000 USDT, 1x, riesgo previsto máximo 25 USDT, objetivo >=1% margen y >=2R neto. No se modifican esos valores.",
+  "change": "NO_SPACE por superar extremo previo deja de ser un veto. El extremo se conserva como referencia descriptiva que puede necesitar romperse, nunca como dato futuro ni fill. No se mueve el TP después de entrar.",
+  "variants": ["structure", "price_volume"],
+  "primary_variant": "price_volume",
+  "splits": ["discovery", "validation"],
+  "horizon_hours": 24,
+  "bootstrap": {"seed": 20261017, "repeats": 5000},
+  "selection_bias": "Hipótesis formulada tras ver la ausencia de actividad del primer ensayo. Investigaciones previas conocidas y dos interpretaciones de objetivo; no es prueba independiente ni se elige retrospectivamente una como confirmada.",
+  "decision": "Mostrar todos los resultados junto al primer ensayo, por dirección y segmento. Media y cartera de validación positivas, banda semanal inferior >0 y mínimo 100 eventos serían condiciones exploratorias para continuar. Con menos de 100, evidencia escasa. Sin IA, nuevos rangos, optimización automática, órdenes, commits ni push."
+}

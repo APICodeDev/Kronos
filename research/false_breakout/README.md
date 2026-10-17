@@ -10,6 +10,10 @@ La variante solicitada de **1H sin apalancamiento y horizonte fijo de seis horas
 
 El [estudio posterior de señal frente a gestión](SIGNAL_STUDY.md) compara cierres a 1/6/24 horas con controles de época/franja/volatilidad, sin utilizar el antiguo test ni modificar los TP/SL anteriores. Incluye el protocolo registrado, todos los perfiles y la comprobación independiente.
 
+La nueva familia de [continuación tras ruptura confirmada](MOMENTUM_RESULTS.md) mantiene 1H/1x y separa contraste direccional y cartera con TP/SL. Su protocolo está en `momentum_protocol.json`; el comando independiente es `python -m research.false_breakout.study_momentum`. Conserva los experimentos anteriores y excluye el antiguo test antes de analizar. No modifica el comportamiento de las otras CLI.
+
+La [investigación de métodos publicados por operadores](PRACTITIONER_RESEARCH.md) se aplica mediante un playbook de impulso, retroceso, confirmación, volumen y riesgo. [Resultados y revisión de casos](PRACTITIONER_RESULTS.md): se conservan una primera interpretación demasiado restrictiva y una segunda swing, sobre los mismos planes congelados, que gana en investigación y pierde en validación con muestra pequeña. No constituye una evaluación concluyente del método humano ni exige ampliar datos. CLI inicial: `python -m research.false_breakout.run_practitioner`; swing: `python -m research.false_breakout.practitioner_swing`; ambos tienen verificadores independientes.
+
 ## Entorno
 
 ```powershell

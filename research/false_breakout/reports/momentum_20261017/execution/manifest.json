@@ -1,0 +1,61 @@
+{
+  "git_head": "02fa161823ece9d318834c98971f529ea8b01718",
+  "python": "3.14.3",
+  "dependencies": {
+    "numpy": "2.4.4",
+    "pandas": "2.3.3",
+    "requests": "2.32.5"
+  },
+  "input_sha256": {
+    "webui\\uploads\\bitget_baseline_20261017\\XRPUSDT_1H_1760659200000_1792195200000.csv": "d51c5bab7aa023aee06ae9e611118758d14fe21aa089c5a203aad33fcf78ef99",
+    "webui\\uploads\\bitget_baseline_20261017\\XRPUSDT_5m_1760659200000_1792195200000.csv": "04b07987ef8b8be451e69c62090442f00b1e04627c27884a3d6d9a6f07ce17a6",
+    "webui\\uploads\\bitget_baseline_20261017\\instrument.json": "6437cde4cd71b4046e04a3390f24587c79ccbdbe98f69016cf1e566c74cbd01b",
+    "webui\\uploads\\bitget_baseline_20261017\\XRPUSDT_1H_1760659200000_1792195200000.metadata.json": "ba33bdb717da80bf5f7c2822a0d059ce17f39a1a48d2476dc422475f1b2b86fc",
+    "webui\\uploads\\bitget_baseline_20261017\\XRPUSDT_5m_1760659200000_1792195200000.metadata.json": "74e00709ef348153f75c40b4455cf5ef6d1c7962104c81b500294d7ebddb3e7a",
+    "research\\false_breakout\\config_hourly.json": "f591acabdf480cb49c1c01562c54a7f466feb2444823aa13dfe97659f5397454",
+    "research\\false_breakout\\momentum_protocol.json": "2a6292dff902af16ecff8a8344fb98bb373eb8fd536f4ef05833aa8d85b39710"
+  },
+  "source_sha256": {
+    "research\\false_breakout\\backtest.py": "4a6aa2d7afe15e353c84c72a55c3080fbee5cf7d2ac059be4b9e0f97845f641c",
+    "research\\false_breakout\\costs.py": "85e83233ef9404b6c74f43abf12bcdd2827189a9d62b807e90ba1c2a0f7cb34c",
+    "research\\false_breakout\\download_history.py": "2e5ee4b6f8e3fee54c1baea69449c00127de4aabb2ad3c614076986ecd0962bc",
+    "research\\false_breakout\\economic_diagnosis.py": "0511d55638f5a30e8ea9301f96a58e207c715262e54dd0619cb56eaf6654a6d3",
+    "research\\false_breakout\\funding_data.py": "10944f3d9cf44ca7f9b86a1221e9fcc70fd92c6f030e83b95f323ca1e730c488",
+    "research\\false_breakout\\run_experiment.py": "8f818e3c019598b401d191ea177a7fe904860535d6ca11d81f1a2531015f7b3d",
+    "research\\false_breakout\\run_hourly.py": "a69dfc02542ee23b4a75c4b912e9b172d5f6d476996ae469afd291d730b80dbf",
+    "research\\false_breakout\\study_momentum.py": "95ac694aa21a4537e9106d06eed2c26f11bb7d6723991ac88484af23ccb599fa",
+    "research\\false_breakout\\study_signal.py": "db1ffd0d1f54db26b4ce1aa9af16b65c59aa255f9bf12f56ec0e265e80f38e3b",
+    "research\\false_breakout\\verify_diagnosis.py": "5aa47f8c072ccfb164f366725e0e1ac1451a185cf7d15ed65fbb77336ccd4d33",
+    "research\\false_breakout\\verify_momentum.py": "f48ad5a0d5016e086aa2444dad39882293aee8fd762bf612c1f327b64970580b",
+    "research\\false_breakout\\verify_results.py": "c4a21f0c696ee8c6d666a7f445bbb36e5d63a2d26ac72d501695c2d189ad8201",
+    "research\\false_breakout\\verify_signal_study.py": "c912a03da6c5b77caef7228d1923c46fd25662432bb58540cef2dd6ed1008060",
+    "webui\\bitget_data.py": "8319f0312a72aa4dc51817efdb7da25b7bd3dd2f324c30a73a024c083f289799",
+    "tests\\test_momentum.py": "e3b616d494ea5bd59fdd756980445f2de6fb07e16ad633bdf2389bdaf67cdbe7"
+  },
+  "funding_files_sha256": {
+    "webui\\uploads\\bitget_momentum_funding_20261017\\rates.csv": "f743864f47dc7aafb89cbb0455cf92f4daac04df1566e13520caa7719678d2d0",
+    "webui\\uploads\\bitget_momentum_funding_20261017\\marks.csv": "2356122b0c43cae0f9a50e4b83548cb290989c13a8ee2e346896a5264f082675",
+    "webui\\uploads\\bitget_momentum_funding_20261017\\metadata.json": "053fff7a9761c6c0639a9a481b02c01eb8a602d62cbe271d14301099dca4cb99"
+  },
+  "old_test_rows_excluded_before_analysis": 1752,
+  "minute_cache_sha256": {},
+  "output_sha256": {
+    "diagnostic_events_1x.csv": "a1cad0be8274712b01c6ab78424866de8dc6d85f4be5010693acac3097de4554",
+    "diagnostic_portfolio_1x.csv": "27557f432801e6134ccdb54c35253912e43952ba9f9b75edcacee07429721e31",
+    "equity_1x.csv": "b9f5a645df38e4a2c0ac1876ddeeac597cefb70badf0169df39be65acb8a361b",
+    "events_1x.csv": "ae0d35f839674b8f2ff9e1e5b6b3ffc2957554f61d98a445a94033bc6ae9175d",
+    "portfolio_1x.csv": "a3b35989b3f7ca0dd53fcb47a8b619493b9c1d7355f2f769b67b3f75f466bc74",
+    "resolution_1m.json": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "resolution_5m.json": "106569a5ed726327cf0fc6be995300da957f31b95cfdbfb35371c480bff58003",
+    "summary.json": "b86bd0aefdf7f1676b1e693eb901e51484afd416f2ebc1d6d61834dcd74b29e1"
+  },
+  "inputs_sha256": {
+    "webui\\uploads\\bitget_baseline_20261017\\XRPUSDT_1H_1760659200000_1792195200000.csv": "d51c5bab7aa023aee06ae9e611118758d14fe21aa089c5a203aad33fcf78ef99",
+    "webui\\uploads\\bitget_baseline_20261017\\XRPUSDT_5m_1760659200000_1792195200000.csv": "04b07987ef8b8be451e69c62090442f00b1e04627c27884a3d6d9a6f07ce17a6",
+    "webui\\uploads\\bitget_baseline_20261017\\instrument.json": "6437cde4cd71b4046e04a3390f24587c79ccbdbe98f69016cf1e566c74cbd01b",
+    "webui\\uploads\\bitget_baseline_20261017\\XRPUSDT_1H_1760659200000_1792195200000.metadata.json": "ba33bdb717da80bf5f7c2822a0d059ce17f39a1a48d2476dc422475f1b2b86fc",
+    "webui\\uploads\\bitget_baseline_20261017\\XRPUSDT_5m_1760659200000_1792195200000.metadata.json": "74e00709ef348153f75c40b4455cf5ef6d1c7962104c81b500294d7ebddb3e7a",
+    "research\\false_breakout\\config_hourly.json": "f591acabdf480cb49c1c01562c54a7f466feb2444823aa13dfe97659f5397454",
+    "research\\false_breakout\\momentum_protocol.json": "2a6292dff902af16ecff8a8344fb98bb373eb8fd536f4ef05833aa8d85b39710"
+  }
+}

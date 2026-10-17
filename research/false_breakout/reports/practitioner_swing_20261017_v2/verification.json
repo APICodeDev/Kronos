@@ -1,0 +1,47 @@
+{
+  "variants": {
+    "structure": {
+      "identical_frozen_plans_checked": 87,
+      "financial": {
+        "checked_events": 87,
+        "checked_tp": 21,
+        "max_absolute_error": "1.58E-13",
+        "tolerance": "0.000001",
+        "method": "Recomputaci\u00f3n Decimal independiente sobre CSV; sin funding."
+      },
+      "funding": {
+        "checked_rows": 163,
+        "checked_funding_rows": 12,
+        "rows_without_funding_coverage": 151,
+        "max_absolute_error": "2.7162E-13",
+        "tolerance": "0.000001",
+        "method": "Decimal independiente y b\u00fasqueda binaria de timestamps estrictamente interiores; eventos y cartera por separado.",
+        "verifier_sha256": "5aa47f8c072ccfb164f366725e0e1ac1451a185cf7d15ed65fbb77336ccd4d33"
+      },
+      "portfolio_trades_checked": 76
+    },
+    "price_volume": {
+      "identical_frozen_plans_checked": 56,
+      "financial": {
+        "checked_events": 56,
+        "checked_tp": 14,
+        "max_absolute_error": "1.515E-13",
+        "tolerance": "0.000001",
+        "method": "Recomputaci\u00f3n Decimal independiente sobre CSV; sin funding."
+      },
+      "funding": {
+        "checked_rows": 105,
+        "checked_funding_rows": 4,
+        "rows_without_funding_coverage": 101,
+        "max_absolute_error": "2.7162E-13",
+        "tolerance": "0.000001",
+        "method": "Decimal independiente y b\u00fasqueda binaria de timestamps estrictamente interiores; eventos y cartera por separado.",
+        "verifier_sha256": "5aa47f8c072ccfb164f366725e0e1ac1451a185cf7d15ed65fbb77336ccd4d33"
+      },
+      "portfolio_trades_checked": 49
+    }
+  },
+  "no_entries_stops_sizes_or_targets_changed": true,
+  "only_prior_extreme_veto_removed": true,
+  "verifier_sha256": "db2cf09d392e4068ae6635c0de66da0378526386b4b28006204da7c1a2e76a7c"
+}

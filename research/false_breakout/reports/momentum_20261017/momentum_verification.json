@@ -1,0 +1,33 @@
+{
+  "study": {
+    "financial_rows_checked": 39516,
+    "matched_rows_checked": 1947,
+    "max_absolute_error": "2.10797024417084E-12",
+    "tolerance": "0.000001",
+    "old_test_rows_excluded": 1752,
+    "all_exit_windows_before_old_test": true,
+    "verifier_sha256": "c912a03da6c5b77caef7228d1923c46fd25662432bb58540cef2dd6ed1008060"
+  },
+  "tp": {
+    "checked_events": 662,
+    "checked_tp": 265,
+    "max_absolute_error": "2E-13",
+    "tolerance": "0.000001",
+    "method": "Recomputaci\u00f3n Decimal independiente sobre CSV; sin funding."
+  },
+  "funding_attribution": {
+    "checked_rows": 1185,
+    "checked_funding_rows": 69,
+    "rows_without_funding_coverage": 1116,
+    "max_absolute_error": "3.7804E-13",
+    "tolerance": "0.000001",
+    "method": "Decimal independiente y b\u00fasqueda binaria de timestamps estrictamente interiores; eventos y cartera por separado.",
+    "verifier_sha256": "5aa47f8c072ccfb164f366725e0e1ac1451a185cf7d15ed65fbb77336ccd4d33"
+  },
+  "independently_checked_signal_control_rows": 39516,
+  "complete_registered_event_set": true,
+  "portfolio_no_overlap": true,
+  "portfolio_trades_checked": 523,
+  "max_portfolio_equity_error": "2.2990165E-11",
+  "verifier_sha256": "f48ad5a0d5016e086aa2444dad39882293aee8fd762bf612c1f327b64970580b"
+}

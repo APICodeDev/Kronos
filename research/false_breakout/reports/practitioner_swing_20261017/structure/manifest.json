@@ -1,0 +1,46 @@
+{
+  "git_head": "02fa161823ece9d318834c98971f529ea8b01718",
+  "python": "3.14.3",
+  "dependencies": {
+    "numpy": "2.4.4",
+    "pandas": "2.3.3",
+    "requests": "2.32.5"
+  },
+  "inputs_sha256": {
+    "research\\false_breakout\\reports\\practitioner_20261017\\structure\\events_1x.csv": "7b691b2079e5990250ff6d91035c6778b9fe142040b1177ea9049d19708d439a",
+    "research\\false_breakout\\reports\\practitioner_20261017\\summary.json": "f7393dbe4a2acfbe3995bf76ec8f98399cadf396843a209beb3ef76910180a9b",
+    "research\\false_breakout\\reports\\practitioner_20261017\\manifest.json": "e9202ca0e55102000fba6847d08affb683a29b106bc108b7371854f045898b54",
+    "webui\\uploads\\bitget_baseline_20261017\\XRPUSDT_1H_1760659200000_1792195200000.csv": "d51c5bab7aa023aee06ae9e611118758d14fe21aa089c5a203aad33fcf78ef99",
+    "webui\\uploads\\bitget_baseline_20261017\\XRPUSDT_5m_1760659200000_1792195200000.csv": "04b07987ef8b8be451e69c62090442f00b1e04627c27884a3d6d9a6f07ce17a6",
+    "webui\\uploads\\bitget_baseline_20261017\\instrument.json": "6437cde4cd71b4046e04a3390f24587c79ccbdbe98f69016cf1e566c74cbd01b",
+    "research\\false_breakout\\practitioner_swing_protocol.json": "0c71e0a1592632def8115d05361ca2d326eadf6aa4e3af40ebcbc528673839a4"
+  },
+  "source_sha256": {
+    "research\\false_breakout\\practitioner_swing.py": "3eb21280c9e96755914681522096874dd94bedeb81093f8aeea03f43e8c7bf08",
+    "research\\false_breakout\\verify_practitioner_swing.py": "712621e3e1121b004208248b5e1af85a710e9c39ad775c54f0be9f265ac23c42",
+    "research\\false_breakout\\practitioner.py": "6efdaa9cca635b2b80675c725b3166b5e90579bc298d6103a04820d2e8eeac68",
+    "research\\false_breakout\\run_practitioner.py": "d48faa9c430f3275ff0bac8b44f83ad5ee26cb7434609398dc81e12f3bee83d1",
+    "research\\false_breakout\\backtest.py": "4a6aa2d7afe15e353c84c72a55c3080fbee5cf7d2ac059be4b9e0f97845f641c",
+    "research\\false_breakout\\run_hourly.py": "a69dfc02542ee23b4a75c4b912e9b172d5f6d476996ae469afd291d730b80dbf",
+    "research\\false_breakout\\run_experiment.py": "8f818e3c019598b401d191ea177a7fe904860535d6ca11d81f1a2531015f7b3d",
+    "research\\false_breakout\\costs.py": "85e83233ef9404b6c74f43abf12bcdd2827189a9d62b807e90ba1c2a0f7cb34c",
+    "research\\false_breakout\\funding_data.py": "10944f3d9cf44ca7f9b86a1221e9fcc70fd92c6f030e83b95f323ca1e730c488",
+    "research\\false_breakout\\economic_diagnosis.py": "0511d55638f5a30e8ea9301f96a58e207c715262e54dd0619cb56eaf6654a6d3",
+    "tests\\test_practitioner_swing.py": "73072bf4d2ff4c8b8e3a36cab42ceec1d64e6604239f487fd174bd8620ff89f2",
+    "webui\\bitget_data.py": "8319f0312a72aa4dc51817efdb7da25b7bd3dd2f324c30a73a024c083f289799"
+  },
+  "funding_files_sha256": {
+    "webui\\uploads\\bitget_practitioner_swing_funding_20261017\\rates.csv": "f743864f47dc7aafb89cbb0455cf92f4daac04df1566e13520caa7719678d2d0",
+    "webui\\uploads\\bitget_practitioner_swing_funding_20261017\\marks.csv": "c75aa45214dd0ecdf8aae5dcdc87e7ed8cc5b9a6ecbbb47af07d3175cef53f46",
+    "webui\\uploads\\bitget_practitioner_swing_funding_20261017\\metadata.json": "285a6b5043eefe435047d4185a1904db95664833d992ed82e3ccede7c78338e5"
+  },
+  "minute_cache_sha256": {},
+  "output_sha256": {
+    "diagnostic_events_1x.csv": "90f67ca438eefb9736834e31f89bfdd99b5b9d46c4774e8ffec0add87bd6ea06",
+    "diagnostic_portfolio_1x.csv": "a8748d8f93c9587b994477e504c14ecb582d1ca0a8627a5ea2a87bea124ad879",
+    "equity_1x.csv": "0fda210a65136c74277663f4f964aba7cb4998605bdc6673d8a3cf987338f2f2",
+    "events_1x.csv": "8d075dc57f5650de833dd98edc2792f54ba1670b2014483774b61180a847eadc",
+    "portfolio_1x.csv": "0fb9f14e03cf46bcc7d074f93ffd9f4fca50a78669adad24fad17f415c6fefbb",
+    "summary.json": "0440f03e65197786586e7f61224caaa99e5c246ba4a78cebb5fadebc759984f4"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "checked_rows": 105,
+  "checked_funding_rows": 4,
+  "rows_without_funding_coverage": 101,
+  "max_absolute_error": "2.7162E-13",
+  "tolerance": "0.000001",
+  "method": "Decimal independiente y búsqueda binaria de timestamps estrictamente interiores; eventos y cartera por separado.",
+  "verifier_sha256": "5aa47f8c072ccfb164f366725e0e1ac1451a185cf7d15ed65fbb77336ccd4d33"
+}

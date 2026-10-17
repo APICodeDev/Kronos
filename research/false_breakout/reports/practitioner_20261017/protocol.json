@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "registered_before_results": "2026-10-17; búsqueda de fuentes y reglas escritas antes del cálculo de resultados de esta familia",
+  "hypothesis": "Esperar retroceso y confirmación tras un impulso, con menor participación en el retroceso y mayor participación al reanudar, permite mejorar la localización y el riesgo respecto a perseguir rupturas.",
+  "scope": "Mismo histórico XRPUSDT USDT-FUTURES, 1H/1x, sin ampliar rango ni contratos. Último 20% antiguo excluido antes de indicadores. Investigación y validación ya observadas: resultados exploratorios.",
+  "sources": [
+    {
+      "author": "Adam Grimes",
+      "url": "https://www.adamhgrimes.com/fundamental-trading-patterns/",
+      "principle": "Impulso, retroceso y reanudación dentro de tendencia; entrada cuando vuelve a avanzar."
+    },
+    {
+      "author": "SMB Training",
+      "url": "https://www.smbtraining.com/blog/how-to-improve-your-trading-entries",
+      "principle": "Leer volumen, niveles sostenidos, zona de entrada e invalidación; mala localización empeora recompensa/riesgo."
+    },
+    {
+      "author": "Morpheus Trading",
+      "url": "https://morpheustrading.com/blog/miss-breakout-buy-pullback/",
+      "principle": "Ruptura con volumen, retroceso con menor volumen y recuperación de participación al reanudar."
+    },
+    {
+      "author": "Al Brooks",
+      "url": "https://www.brookstradingcourse.com/futures-market/trade-trend-channels/",
+      "principle": "Stop estructural, reducir cantidad si aumenta riesgo y buscar recompensa al menos doble en swing."
+    },
+    {
+      "author": "Mike Bellafiore, SMB",
+      "url": "https://www.smbtraining.com/blog/finding-the-setups-best-for-your-trading-personality",
+      "principle": "Registrar un playbook, medir y revisar operaciones de un setup a la vez."
+    }
+  ],
+  "interpretation": "Adaptación determinista parcial de ideas publicadas, no reproducción de la discreción humana ni rentabilidad verificada de autores. Los umbrales siguientes son decisiones nuestras, no reglas textuales de las fuentes. No se usan noticias, order book ni identidades de compradores inferidas a partir de OHLCV.",
+  "lookback_bars": 20,
+  "impulse": "Cierre fuera del máximo/mínimo de 20 horas anteriores por un tick; cuerpo direccional de la vela >= ATR simple de las 20 velas anteriores. El ATR excluye la vela del impulso.",
+  "minimum_impulse_body_atr": 1.0,
+  "minimum_wait_bars": 2,
+  "maximum_wait_bars": 6,
+  "pullback": "Entre impulso y confirmación hay al menos una vela, un cierre contrario y retroceso >=0,25 ATR del impulso. Los cierres conservan el nivel roto; el extremo mantiene el origen del impulso. Stop en extremo de todo el retroceso incluida la confirmación, más un tick.",
+  "minimum_pullback_atr": 0.25,
+  "confirmation": "Primera vela dentro de 2..6 horas que cierra en dirección del impulso y más allá del high/low de la vela anterior por un tick. Solo una confirmación por impulso; invalidación permanente si un cierre pierde el nivel roto o un extremo cruza el origen. Si confluyen impulsos del mismo lado en una hora, conservar el más reciente; decisión solo por tiempo.",
+  "variants": [
+    "structure",
+    "price_volume"
+  ],
+  "primary_variant": "price_volume",
+  "volume_rules": "Impulso volume >=1,5 veces mediana de las 20 horas previas; volumen medio del retroceso menor que volumen del impulso; volumen de confirmación mayor que el de la hora anterior. No cambiar soporte, riesgo, entrada o salidas entre variantes.",
+  "minimum_impulse_relative_volume": 1.5,
+  "entry": "Apertura siguiente a confirmación. No entrar si apertura/fill cruza stop o si no queda espacio para el objetivo antes del extremo del impulso. Usar apertura conocida para decidir, nunca high/low futuros.",
+  "target": "Máximo entre +1% neto sobre margen y 2 veces pérdida neta prevista en stop, con comisiones y slippage. Antes de entrar, el trigger debe quedar antes o en el extremo previo del impulso. No se requiere adivinar máximos futuros.",
+  "minimum_net_reward_risk": 2.0,
+  "risk_budget_fraction_of_initial_equity": 0.0025,
+  "sizing": "Margen máximo 1000 USDT y riesgo SL modelado máximo 25 USDT =0,25% de 10000 iniciales; cantidad al lote inferior; 1x y una sola posición; sin capitalización. Gaps pueden exceder riesgo previsto.",
+  "horizons_hours": [
+    24
+  ],
+  "purge_hours": 24,
+  "validation_embargo_hours": 24,
+  "splits_used": [
+    "discovery",
+    "validation"
+  ],
+  "bootstrap": {
+    "repeats": 5000,
+    "seed": 20261017
+  },
+  "funding": "Base provisional sin funding completo; overlay público solo con cobertura completa dentro del rango conservado. No ampliar histórico OHLCV.",
+  "decision": "Mostrar los dos libros completos, sin elegir al ganador. La hipótesis principal necesitaría media neta y cartera de validación positivas, límite inferior bootstrap semanal >0 y al menos 100 eventos de validación; con menos de 100 declarar evidencia escasa, aunque sea positiva. No optimizar umbrales, ampliar datos, entrenar IA ni enviar órdenes."
+}

@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "registered_before_calculation": "2026-10-17; nueva familia, sin consultar sus resultados",
+  "purpose": "Contrastar continuación tras ruptura confirmada; no optimizar el falso rompimiento anterior.",
+  "hypothesis": "La persistencia de movimientos puede producir continuación después de cerrar fuera del rango previo. La evidencia académica sobre momentum motiva la familia, pero no demuestra esta regla horaria.",
+  "reference": "https://www.nber.org/papers/w24877",
+  "entry_interval": "1H",
+  "leverage": 1,
+  "lookback_bars": 20,
+  "signal": "LONG: cierre al menos un tick por encima del máximo de las 20 horas completas anteriores. SHORT: cierre al menos un tick por debajo del mínimo. Comparación en ticks enteros; excluye la vela actual. Cada cierre que cumple cuenta como evento; la cartera impide solapamientos.",
+  "entry": "Apertura siguiente al cierre; deslizamiento adverso y redondeo ejecutable.",
+  "horizons_hours": [
+    1,
+    6,
+    24
+  ],
+  "primary_horizon_hours": 6,
+  "secondary_horizons_policy": "1h y 24h son diagnósticos descriptivos; no se seleccionará el mejor para sustituir al principal.",
+  "splits_used": [
+    "discovery",
+    "validation"
+  ],
+  "excluded_segment": "Antiguo test, último 20% temporal; se recorta antes de indicadores y etiquetas. Los dos segmentos usados ya fueron observados en otras investigaciones; no son datos nuevos independientes.",
+  "purge_hours": 24,
+  "validation_embargo_hours": 24,
+  "control": "Horas sin ruptura LONG ni SHORT, mismo segmento/mes UTC/bloque de 8 horas/banda de volatilidad causal; resultado de cierre fijo y mismos costes para ambos grupos.",
+  "volatility_bin_edges": [
+    0.003,
+    0.006,
+    0.012
+  ],
+  "minimum_controls_per_stratum": 10,
+  "matching_missing_policy": "Excluir y contar eventos sin soporte; no ampliar bandas ni cambiar umbrales.",
+  "portfolio": {
+    "horizon_hours": 6,
+    "stop": "Extremo de la vela de señal más un tick adverso; invalida entrada si la apertura ya cruza el stop.",
+    "take_profit": "+1% del margen efectivo después de comisiones y ejecución previstas; provisional sin funding completo.",
+    "risk": "Una posición por símbolo, margen fijo máximo de 1000 USDT, capital 10000 USDT, 1x, sin reinversión. El SL limita precio bajo el modelo, no garantiza pérdida máxima ante gaps.",
+    "execution": "Todas las barreras recorridas en 5m; si ambas coinciden, consultar 1m y mantener SL conservador si no hay orden. Timeout al cierre de la sexta hora."
+  },
+  "funding": "Resultados base provisionales sin funding; overlay público únicamente donde exista cobertura completa, sin extrapolar al resto.",
+  "bootstrap": {
+    "seed": 20261017,
+    "repeats": 5000,
+    "cluster": "Semana UTC, señales y controles conjuntamente",
+    "validation_comparisons": 6,
+    "confidence": 0.95,
+    "adjustment": "Bandas percentiles descriptivas; cuantiles Bonferroni para seis perfiles por segmento. No corrige investigaciones anteriores."
+  },
+  "decision": "Para justificar validación prospectiva de la regla completa: medias netas y excesos positivos a 6h en LONG y SHORT, bandas ajustadas inferiores mayores que cero, al menos 100 eventos de validación entre ambos y cartera de validación positiva. Es un criterio exploratorio necesario, no prueba de rentabilidad. No seleccionar dirección ni horizonte a posteriori ni entrenar IA. Si no cumple, documentar y no añadir filtros para rescatarla."
+}

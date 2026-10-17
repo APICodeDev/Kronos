@@ -1,0 +1,9 @@
+{
+  "financial_rows_checked": 39516,
+  "matched_rows_checked": 1947,
+  "max_absolute_error": "2.10797024417084E-12",
+  "tolerance": "0.000001",
+  "old_test_rows_excluded": 1752,
+  "all_exit_windows_before_old_test": true,
+  "verifier_sha256": "c912a03da6c5b77caef7228d1923c46fd25662432bb58540cef2dd6ed1008060"
+}

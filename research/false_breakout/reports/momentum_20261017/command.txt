@@ -1,0 +1,1 @@
+python -m research.false_breakout.study_momentum --data webui/uploads/bitget_baseline_20261017 --config research/false_breakout/config_hourly.json --protocol research/false_breakout/momentum_protocol.json --funding webui/uploads/bitget_momentum_funding_20261017 --resolution-cache webui/uploads/bitget_momentum_resolution_20261017 --output NUEVO_DIRECTORIO --offline

@@ -1,0 +1,4896 @@
+{
+  "config": {
+    "symbol": "XRPUSDT",
+    "category": "USDT-FUTURES",
+    "entry_interval": "1H",
+    "execution_interval": "5m",
+    "resolve_all_touches": true,
+    "context_intervals": [],
+    "lookback_bars": 20,
+    "target_net_margin_roi": 0.01,
+    "margin_usdt": 1000,
+    "initial_equity_usdt": 10000,
+    "leverage_scenarios": [
+      1
+    ],
+    "entry_fee_rate": 0.0006,
+    "exit_fee_rate": 0.0006,
+    "entry_slippage_bps": 1,
+    "tp_slippage_bps": 1,
+    "sl_slippage_bps": 2,
+    "timeout_slippage_bps": 1,
+    "funding": "excluded_provisional",
+    "other_costs_usdt": 0,
+    "stop_buffer_ticks": 1,
+    "max_holding_bars": 24,
+    "split_fractions": [
+      0.6,
+      0.2,
+      0.2
+    ],
+    "embargo_bars": 24,
+    "timezone": "UTC"
+  },
+  "events": {
+    "ALL": {
+      "signals": 87,
+      "executed": 87,
+      "labels": {
+        "SL_FIRST": 51,
+        "TP_FIRST": 21,
+        "TIMEOUT": 15
+      },
+      "tp_rate_evaluable": 0.2413793103448276,
+      "mean_net_pnl": -0.40222777425287776,
+      "median_net_pnl": -8.806369039999977,
+      "sum_net_pnl": -34.993816360000366,
+      "mean_margin_roi": -0.0023427277812590433,
+      "profit_factor": 0.955513131963091,
+      "winning_net_pnl_sum": 751.6162082199993,
+      "losing_net_pnl_sum_abs": 786.6100245799995,
+      "mean_winner": 22.776248733939372,
+      "mean_loser": -14.566852307037028,
+      "loss_quantiles": {
+        "0.0": -24.99910602000005,
+        "0.05": -24.991945672999925,
+        "0.5": -13.092851289999995,
+        "0.95": -6.816301470000005,
+        "1.0": -1.8286559000001303
+      },
+      "entry_fees": 49.83328128,
+      "exit_fees": 49.90433507999999,
+      "mean_duration_minutes": 663.448275862069,
+      "both_touched_5m": 0,
+      "unresolved_execution": 0,
+      "incomplete": 0
+    },
+    "by_split": {
+      "discovery": {
+        "signals": 69,
+        "executed": 69,
+        "labels": {
+          "SL_FIRST": 40,
+          "TP_FIRST": 20,
+          "TIMEOUT": 9
+        },
+        "tp_rate_evaluable": 0.2898550724637681,
+        "mean_net_pnl": 0.8055444191304297,
+        "median_net_pnl": -8.808850019999998,
+        "sum_net_pnl": 55.582564919999655,
+        "mean_margin_roi": -0.0016527105653757132,
+        "profit_factor": 1.0860347434447584,
+        "winning_net_pnl_sum": 701.6304601599994,
+        "losing_net_pnl_sum_abs": 646.0478952399999,
+        "mean_winner": 25.05823071999998,
+        "mean_loser": -15.757265737560973,
+        "loss_quantiles": {
+          "0.0": -24.99910602000005,
+          "0.05": -24.995507399999923,
+          "0.5": -14.316995839999848,
+          "0.95": -7.035422399999997,
+          "1.0": -5.326432159999868
+        },
+        "entry_fees": 39.10306169999999,
+        "exit_fees": 39.154573379999995,
+        "mean_duration_minutes": 628.9855072463768,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "validation": {
+        "signals": 18,
+        "executed": 18,
+        "labels": {
+          "SL_FIRST": 11,
+          "TIMEOUT": 6,
+          "TP_FIRST": 1
+        },
+        "tp_rate_evaluable": 0.05555555555555555,
+        "mean_net_pnl": -5.032021182222222,
+        "median_net_pnl": -8.183731359999932,
+        "sum_net_pnl": -90.57638127999999,
+        "mean_margin_roi": -0.00498779377547848,
+        "profit_factor": 0.3556131960628696,
+        "winning_net_pnl_sum": 49.98574805999977,
+        "losing_net_pnl_sum_abs": 140.56212933999976,
+        "mean_winner": 9.997149611999955,
+        "mean_loser": -10.812471487692289,
+        "loss_quantiles": {
+          "0.0": -17.712625359999993,
+          "0.05": -17.189386503999977,
+          "0.5": -10.190119679999842,
+          "0.95": -5.067423104000063,
+          "1.0": -1.8286559000001303
+        },
+        "entry_fees": 10.730219579999998,
+        "exit_fees": 10.7497617,
+        "mean_duration_minutes": 795.5555555555555,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      }
+    },
+    "by_side": {
+      "LONG": {
+        "signals": 34,
+        "executed": 34,
+        "labels": {
+          "SL_FIRST": 19,
+          "TP_FIRST": 10,
+          "TIMEOUT": 5
+        },
+        "tp_rate_evaluable": 0.29411764705882354,
+        "mean_net_pnl": 1.5493099517647055,
+        "median_net_pnl": -9.372921470000005,
+        "sum_net_pnl": 52.67653835999999,
+        "mean_margin_roi": 0.000286141564003735,
+        "profit_factor": 1.1578346408874634,
+        "winning_net_pnl_sum": 386.4216405999999,
+        "losing_net_pnl_sum_abs": 333.74510223999977,
+        "mean_winner": 29.724741584615376,
+        "mean_loser": -15.892623916190464,
+        "loss_quantiles": {
+          "0.0": -24.99910602000005,
+          "0.05": -24.997265280000132,
+          "0.5": -16.48971607999997,
+          "0.95": -5.326432159999868,
+          "1.0": -1.8286559000001303
+        },
+        "entry_fees": 19.4259558,
+        "exit_fees": 19.48090584,
+        "mean_duration_minutes": 642.2058823529412,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "SHORT": {
+        "signals": 53,
+        "executed": 53,
+        "labels": {
+          "SL_FIRST": 32,
+          "TP_FIRST": 11,
+          "TIMEOUT": 10
+        },
+        "tp_rate_evaluable": 0.20754716981132076,
+        "mean_net_pnl": -1.6541576362264212,
+        "median_net_pnl": -8.292773400000012,
+        "sum_net_pnl": -87.67035472000032,
+        "mean_margin_roi": -0.004029172266899317,
+        "profit_factor": 0.8064094823970941,
+        "winning_net_pnl_sum": 365.1945676199994,
+        "losing_net_pnl_sum_abs": 452.86492233999974,
+        "mean_winner": 18.25972838099997,
+        "mean_loser": -13.723179464848476,
+        "loss_quantiles": {
+          "0.0": -24.990027819999927,
+          "0.05": -24.95909480000003,
+          "0.5": -11.887802819999985,
+          "0.95": -7.150129704000002,
+          "1.0": -6.40936260000001
+        },
+        "entry_fees": 30.407325479999994,
+        "exit_fees": 30.42342924,
+        "mean_duration_minutes": 677.0754716981132,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      }
+    },
+    "monthly": {
+      "2025-10-01 00:00:00+00:00": {
+        "signals": 1,
+        "executed": 1,
+        "labels": {
+          "TP_FIRST": 1
+        },
+        "tp_rate_evaluable": 1.0,
+        "mean_net_pnl": 27.8968482,
+        "median_net_pnl": 27.8968482,
+        "sum_net_pnl": 27.8968482,
+        "mean_margin_roi": 0.027936792225524056,
+        "profit_factor": null,
+        "winning_net_pnl_sum": 27.8968482,
+        "losing_net_pnl_sum_abs": -0.0,
+        "mean_winner": 27.8968482,
+        "mean_loser": null,
+        "loss_quantiles": {},
+        "entry_fees": 0.59914212,
+        "exit_fees": 0.6166096799999999,
+        "mean_duration_minutes": 570.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2025-11-01 00:00:00+00:00": {
+        "signals": 12,
+        "executed": 12,
+        "labels": {
+          "SL_FIRST": 8,
+          "TP_FIRST": 3,
+          "TIMEOUT": 1
+        },
+        "tp_rate_evaluable": 0.25,
+        "mean_net_pnl": -0.5694373783333351,
+        "median_net_pnl": -12.148014919999962,
+        "sum_net_pnl": -6.833248540000021,
+        "mean_margin_roi": -0.0015057260266575464,
+        "profit_factor": 0.9512260143291617,
+        "winning_net_pnl_sum": 133.26702101999987,
+        "losing_net_pnl_sum_abs": 140.1002695599999,
+        "mean_winner": 33.31675525499997,
+        "mean_loser": -17.512533694999988,
+        "loss_quantiles": {
+          "0.0": -24.971962400000077,
+          "0.05": -24.96278150800004,
+          "0.5": -16.992779340000016,
+          "0.95": -9.646222456000004,
+          "1.0": -9.467016239999964
+        },
+        "entry_fees": 6.762747599999999,
+        "exit_fees": 6.731600939999999,
+        "mean_duration_minutes": 464.1666666666667,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2025-12-01 00:00:00+00:00": {
+        "signals": 5,
+        "executed": 5,
+        "labels": {
+          "SL_FIRST": 3,
+          "TIMEOUT": 2
+        },
+        "tp_rate_evaluable": 0.0,
+        "mean_net_pnl": -4.161546140000039,
+        "median_net_pnl": -11.15869944000001,
+        "sum_net_pnl": -20.807730700000192,
+        "mean_margin_roi": -0.004163968634491718,
+        "profit_factor": 0.464349205223608,
+        "winning_net_pnl_sum": 18.03797045999977,
+        "losing_net_pnl_sum_abs": 38.84570115999996,
+        "mean_winner": 9.018985229999885,
+        "mean_loser": -12.94856705333332,
+        "loss_quantiles": {
+          "0.0": -15.066434700000006,
+          "0.05": -14.821847931999999,
+          "0.5": -12.620567019999944,
+          "0.95": -11.304886198000004,
+          "1.0": -11.15869944000001
+        },
+        "entry_fees": 2.99690376,
+        "exit_fees": 3.0135269399999998,
+        "mean_duration_minutes": 837.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-01-01 00:00:00+00:00": {
+        "signals": 15,
+        "executed": 15,
+        "labels": {
+          "SL_FIRST": 8,
+          "TIMEOUT": 4,
+          "TP_FIRST": 3
+        },
+        "tp_rate_evaluable": 0.2,
+        "mean_net_pnl": -2.259286050666647,
+        "median_net_pnl": -6.40936260000001,
+        "sum_net_pnl": -33.8892907599997,
+        "mean_margin_roi": -0.0032834895379038535,
+        "profit_factor": 0.7532561468090704,
+        "winning_net_pnl_sum": 103.45674774000008,
+        "losing_net_pnl_sum_abs": 137.3460384999998,
+        "mean_winner": 17.242791290000014,
+        "mean_loser": -15.26067094444442,
+        "loss_quantiles": {
+          "0.0": -24.995507399999923,
+          "0.05": -24.973574423999956,
+          "0.5": -19.07361259999988,
+          "0.95": -5.759604335999925,
+          "1.0": -5.326432159999868
+        },
+        "entry_fees": 8.558670779999998,
+        "exit_fees": 8.484619980000002,
+        "mean_duration_minutes": 682.6666666666666,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-02-01 00:00:00+00:00": {
+        "signals": 9,
+        "executed": 9,
+        "labels": {
+          "SL_FIRST": 6,
+          "TP_FIRST": 3
+        },
+        "tp_rate_evaluable": 0.3333333333333333,
+        "mean_net_pnl": -2.4141724111111227,
+        "median_net_pnl": -16.48971607999997,
+        "sum_net_pnl": -21.727551700000106,
+        "mean_margin_roi": -0.01723023949527345,
+        "profit_factor": 0.8304632589216763,
+        "winning_net_pnl_sum": 106.43081421999986,
+        "losing_net_pnl_sum_abs": 128.15836591999997,
+        "mean_winner": 35.47693807333329,
+        "mean_loser": -21.359727653333326,
+        "loss_quantiles": {
+          "0.0": -24.990027819999927,
+          "0.05": -24.980149964999946,
+          "0.5": -24.920151400000037,
+          "0.95": -13.03828113499998,
+          "1.0": -11.887802819999985
+        },
+        "entry_fees": 4.192051739999999,
+        "exit_fees": 4.251999959999999,
+        "mean_duration_minutes": 422.22222222222223,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-03-01 00:00:00+00:00": {
+        "signals": 13,
+        "executed": 13,
+        "labels": {
+          "SL_FIRST": 7,
+          "TP_FIRST": 5,
+          "TIMEOUT": 1
+        },
+        "tp_rate_evaluable": 0.38461538461538464,
+        "mean_net_pnl": 4.785740232307666,
+        "median_net_pnl": -7.182148859999997,
+        "sum_net_pnl": 62.214623019999664,
+        "mean_margin_roi": 0.0040350332849694494,
+        "profit_factor": 1.506165088183772,
+        "winning_net_pnl_sum": 185.12832147999995,
+        "losing_net_pnl_sum_abs": 122.91369846000032,
+        "mean_winner": 30.85472024666666,
+        "mean_loser": -17.559099780000047,
+        "loss_quantiles": {
+          "0.0": -24.99910602000005,
+          "0.05": -24.998553798000074,
+          "0.5": -17.82598428000004,
+          "0.95": -8.827721568000028,
+          "1.0": -7.182148859999997
+        },
+        "entry_fees": 7.599513179999999,
+        "exit_fees": 7.645363799999999,
+        "mean_duration_minutes": 711.5384615384615,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-04-01 00:00:00+00:00": {
+        "signals": 9,
+        "executed": 9,
+        "labels": {
+          "SL_FIRST": 6,
+          "TP_FIRST": 2,
+          "TIMEOUT": 1
+        },
+        "tp_rate_evaluable": 0.2222222222222222,
+        "mean_net_pnl": -1.7199117688888785,
+        "median_net_pnl": -8.808850019999998,
+        "sum_net_pnl": -15.479205919999908,
+        "mean_margin_roi": -0.0017207318107911578,
+        "profit_factor": 0.7440915423179845,
+        "winning_net_pnl_sum": 45.00807168000002,
+        "losing_net_pnl_sum_abs": 60.48727759999993,
+        "mean_winner": 15.002690560000007,
+        "mean_loser": -10.08121293333332,
+        "loss_quantiles": {
+          "0.0": -12.09722184000009,
+          "0.05": -11.874313020000052,
+          "0.5": -10.670098389999954,
+          "0.95": -7.478779304999997,
+          "1.0": -7.035422399999997
+        },
+        "entry_fees": 5.3965716,
+        "exit_fees": 5.406634319999999,
+        "mean_duration_minutes": 653.3333333333334,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-05-01 00:00:00+00:00": {
+        "signals": 7,
+        "executed": 7,
+        "labels": {
+          "SL_FIRST": 4,
+          "TP_FIRST": 3
+        },
+        "tp_rate_evaluable": 0.42857142857142855,
+        "mean_net_pnl": 5.929758217142852,
+        "median_net_pnl": -7.226601240000005,
+        "sum_net_pnl": 41.50830751999996,
+        "mean_margin_roi": 0.005934927233147774,
+        "profit_factor": 2.0149634273642203,
+        "winning_net_pnl_sum": 82.40466535999994,
+        "losing_net_pnl_sum_abs": 40.89635783999997,
+        "mean_winner": 27.468221786666646,
+        "mean_loser": -10.224089459999993,
+        "loss_quantiles": {
+          "0.0": -15.473212559999963,
+          "0.05": -14.544054680999976,
+          "0.5": -9.09827202,
+          "0.95": -7.480268654999998,
+          "1.0": -7.226601240000005
+        },
+        "entry_fees": 4.19618076,
+        "exit_fees": 4.2151117199999995,
+        "mean_duration_minutes": 728.5714285714286,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-06-01 00:00:00+00:00": {
+        "signals": 6,
+        "executed": 6,
+        "labels": {
+          "SL_FIRST": 4,
+          "TIMEOUT": 2
+        },
+        "tp_rate_evaluable": 0.0,
+        "mean_net_pnl": -2.6190745999999834,
+        "median_net_pnl": -7.440419659999979,
+        "sum_net_pnl": -15.7144475999999,
+        "mean_margin_roi": -0.002478194400727701,
+        "profit_factor": 0.6437619490386883,
+        "winning_net_pnl_sum": 28.397762080000078,
+        "losing_net_pnl_sum_abs": 44.11220967999998,
+        "mean_winner": 14.198881040000039,
+        "mean_loser": -11.028052419999995,
+        "loss_quantiles": {
+          "0.0": -17.712625359999993,
+          "0.05": -16.783543306,
+          "0.5": -9.539919339999958,
+          "0.95": -7.355947846000044,
+          "1.0": -7.319745640000071
+        },
+        "entry_fees": 3.53522112,
+        "exit_fees": 3.53802648,
+        "mean_duration_minutes": 710.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-07-01 00:00:00+00:00": {
+        "signals": 9,
+        "executed": 9,
+        "labels": {
+          "SL_FIRST": 4,
+          "TIMEOUT": 4,
+          "TP_FIRST": 1
+        },
+        "tp_rate_evaluable": 0.1111111111111111,
+        "mean_net_pnl": -4.66355557777781,
+        "median_net_pnl": -8.806369039999977,
+        "sum_net_pnl": -41.972000200000295,
+        "mean_margin_roi": -0.004665299849790219,
+        "profit_factor": 0.33964743036386386,
+        "winning_net_pnl_sum": 21.587985979999694,
+        "losing_net_pnl_sum_abs": 63.55998617999999,
+        "mean_winner": 7.195995326666565,
+        "mean_loser": -10.593331029999998,
+        "loss_quantiles": {
+          "0.0": -16.840560599999968,
+          "0.05": -16.01603376999999,
+          "0.5": -11.27097367999993,
+          "0.95": -3.573084185000092,
+          "1.0": -1.8286559000001303
+        },
+        "entry_fees": 5.39671446,
+        "exit_fees": 5.39588574,
+        "mean_duration_minutes": 935.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-08-01 00:00:00+00:00": {
+        "signals": 1,
+        "executed": 1,
+        "labels": {
+          "SL_FIRST": 1
+        },
+        "tp_rate_evaluable": 0.0,
+        "mean_net_pnl": -10.190119679999842,
+        "median_net_pnl": -10.190119679999842,
+        "sum_net_pnl": -10.190119679999842,
+        "mean_margin_roi": -0.010197527163731577,
+        "profit_factor": 0.0,
+        "winning_net_pnl_sum": 0.0,
+        "losing_net_pnl_sum_abs": 10.190119679999842,
+        "mean_winner": null,
+        "mean_loser": -10.190119679999842,
+        "loss_quantiles": {
+          "0.0": -10.190119679999842,
+          "0.05": -10.190119679999842,
+          "0.5": -10.190119679999842,
+          "0.95": -10.190119679999842,
+          "1.0": -10.190119679999842
+        },
+        "entry_fees": 0.59956416,
+        "exit_fees": 0.60495552,
+        "mean_duration_minutes": 450.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      }
+    },
+    "weekly": {
+      "2025-10-27 00:00:00+00:00": {
+        "signals": 1,
+        "executed": 1,
+        "labels": {
+          "TP_FIRST": 1
+        },
+        "tp_rate_evaluable": 1.0,
+        "mean_net_pnl": 27.8968482,
+        "median_net_pnl": 27.8968482,
+        "sum_net_pnl": 27.8968482,
+        "mean_margin_roi": 0.027936792225524056,
+        "profit_factor": null,
+        "winning_net_pnl_sum": 27.8968482,
+        "losing_net_pnl_sum_abs": -0.0,
+        "mean_winner": 27.8968482,
+        "mean_loser": null,
+        "loss_quantiles": {},
+        "entry_fees": 0.59914212,
+        "exit_fees": 0.6166096799999999,
+        "mean_duration_minutes": 570.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2025-11-03 00:00:00+00:00": {
+        "signals": 3,
+        "executed": 3,
+        "labels": {
+          "TP_FIRST": 2,
+          "SL_FIRST": 1
+        },
+        "tp_rate_evaluable": 0.6666666666666666,
+        "mean_net_pnl": 24.776751806666628,
+        "median_net_pnl": 40.36773889999994,
+        "sum_net_pnl": 74.33025541999989,
+        "mean_margin_roi": 0.02479307986555647,
+        "profit_factor": 8.85149761399376,
+        "winning_net_pnl_sum": 83.79727165999985,
+        "losing_net_pnl_sum_abs": 9.467016239999964,
+        "mean_winner": 41.898635829999925,
+        "mean_loser": -9.467016239999964,
+        "loss_quantiles": {
+          "0.0": -9.467016239999964,
+          "0.05": -9.467016239999964,
+          "0.5": -9.467016239999964,
+          "0.95": -9.467016239999964,
+          "1.0": -9.467016239999964
+        },
+        "entry_fees": 1.7980475999999999,
+        "exit_fees": 1.7413969799999998,
+        "mean_duration_minutes": 470.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2025-11-10 00:00:00+00:00": {
+        "signals": 4,
+        "executed": 4,
+        "labels": {
+          "SL_FIRST": 2,
+          "TIMEOUT": 1,
+          "TP_FIRST": 1
+        },
+        "tp_rate_evaluable": 0.25,
+        "mean_net_pnl": 2.4446010699999676,
+        "median_net_pnl": 2.9744376999999664,
+        "sum_net_pnl": 9.77840427999987,
+        "mean_margin_roi": 0.0009297488563011227,
+        "profit_factor": 1.2463611213046812,
+        "winning_net_pnl_sum": 49.46974936000002,
+        "losing_net_pnl_sum_abs": 39.69134508000015,
+        "mean_winner": 24.73487468000001,
+        "mean_loser": -19.845672540000074,
+        "loss_quantiles": {
+          "0.0": -24.971962400000077,
+          "0.05": -24.459333414000078,
+          "0.5": -19.845672540000074,
+          "0.95": -15.232011666000073,
+          "1.0": -14.719382680000072
+        },
+        "entry_fees": 2.0700228,
+        "exit_fees": 2.1073729199999995,
+        "mean_duration_minutes": 722.5,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2025-11-17 00:00:00+00:00": {
+        "signals": 2,
+        "executed": 2,
+        "labels": {
+          "SL_FIRST": 2
+        },
+        "tp_rate_evaluable": 0.0,
+        "mean_net_pnl": -14.622605000000021,
+        "median_net_pnl": -14.622605000000021,
+        "sum_net_pnl": -29.245210000000043,
+        "mean_margin_roi": -0.014647512624116048,
+        "profit_factor": 0.0,
+        "winning_net_pnl_sum": 0.0,
+        "losing_net_pnl_sum_abs": 29.245210000000043,
+        "mean_winner": null,
+        "mean_loser": -14.622605000000021,
+        "loss_quantiles": {
+          "0.0": -19.266175999999962,
+          "0.05": -18.80181889999997,
+          "0.5": -14.622605000000021,
+          "0.95": -10.443391100000072,
+          "1.0": -9.979034000000079
+        },
+        "entry_fees": 1.1983967999999998,
+        "exit_fees": 1.1928131999999998,
+        "mean_duration_minutes": 262.5,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2025-11-24 00:00:00+00:00": {
+        "signals": 3,
+        "executed": 3,
+        "labels": {
+          "SL_FIRST": 3
+        },
+        "tp_rate_evaluable": 0.0,
+        "mean_net_pnl": -20.565566079999915,
+        "median_net_pnl": -22.433971119999917,
+        "sum_net_pnl": -61.69669823999974,
+        "mean_margin_roi": -0.022290640697844116,
+        "profit_factor": 0.0,
+        "winning_net_pnl_sum": 0.0,
+        "losing_net_pnl_sum_abs": 61.69669823999974,
+        "mean_winner": null,
+        "mean_loser": -20.565566079999915,
+        "loss_quantiles": {
+          "0.0": -24.945731279999976,
+          "0.05": -24.69455526399997,
+          "0.5": -22.433971119999917,
+          "0.95": -15.128693367999855,
+          "1.0": -14.316995839999848
+        },
+        "entry_fees": 1.6962803999999998,
+        "exit_fees": 1.6900178399999999,
+        "mean_duration_minutes": 248.33333333333334,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2025-12-01 00:00:00+00:00": {
+        "signals": 1,
+        "executed": 1,
+        "labels": {
+          "TIMEOUT": 1
+        },
+        "tp_rate_evaluable": 0.0,
+        "mean_net_pnl": 12.787733659999866,
+        "median_net_pnl": 12.787733659999866,
+        "sum_net_pnl": 12.787733659999866,
+        "mean_margin_roi": 0.012813868826859127,
+        "profit_factor": null,
+        "winning_net_pnl_sum": 12.787733659999866,
+        "losing_net_pnl_sum_abs": -0.0,
+        "mean_winner": 12.787733659999866,
+        "mean_loser": null,
+        "loss_quantiles": {},
+        "entry_fees": 0.59877624,
+        "exit_fees": 0.5903901,
+        "mean_duration_minutes": 1440.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2025-12-08 00:00:00+00:00": {
+        "signals": 1,
+        "executed": 1,
+        "labels": {
+          "TIMEOUT": 1
+        },
+        "tp_rate_evaluable": 0.0,
+        "mean_net_pnl": 5.250236799999903,
+        "median_net_pnl": 5.250236799999903,
+        "sum_net_pnl": 5.250236799999903,
+        "mean_margin_roi": 0.005250714615029871,
+        "profit_factor": null,
+        "winning_net_pnl_sum": 5.250236799999903,
+        "losing_net_pnl_sum_abs": -0.0,
+        "mean_winner": 5.250236799999903,
+        "mean_loser": null,
+        "loss_quantiles": {},
+        "entry_fees": 0.5999454,
+        "exit_fees": 0.6038178,
+        "mean_duration_minutes": 1440.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2025-12-15 00:00:00+00:00": {
+        "signals": 1,
+        "executed": 1,
+        "labels": {
+          "SL_FIRST": 1
+        },
+        "tp_rate_evaluable": 0.0,
+        "mean_net_pnl": -15.066434700000006,
+        "median_net_pnl": -15.066434700000006,
+        "sum_net_pnl": -15.066434700000006,
+        "mean_margin_roi": -0.015078758569378759,
+        "profit_factor": 0.0,
+        "winning_net_pnl_sum": 0.0,
+        "losing_net_pnl_sum_abs": 15.066434700000006,
+        "mean_winner": null,
+        "mean_loser": -15.066434700000006,
+        "loss_quantiles": {
+          "0.0": -15.066434700000006,
+          "0.05": -15.066434700000006,
+          "0.5": -15.066434700000006,
+          "0.95": -15.066434700000006,
+          "1.0": -15.066434700000006
+        },
+        "entry_fees": 0.59950962,
+        "exit_fees": 0.6078250799999999,
+        "mean_duration_minutes": 825.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2025-12-22 00:00:00+00:00": {
+        "signals": 1,
+        "executed": 1,
+        "labels": {
+          "SL_FIRST": 1
+        },
+        "tp_rate_evaluable": 0.0,
+        "mean_net_pnl": -11.15869944000001,
+        "median_net_pnl": -11.15869944000001,
+        "sum_net_pnl": -11.15869944000001,
+        "mean_margin_roi": -0.011170549158547398,
+        "profit_factor": 0.0,
+        "winning_net_pnl_sum": 0.0,
+        "losing_net_pnl_sum_abs": 11.15869944000001,
+        "mean_winner": null,
+        "mean_loser": -11.15869944000001,
+        "loss_quantiles": {
+          "0.0": -11.15869944000001,
+          "0.05": -11.15869944000001,
+          "0.5": -11.15869944000001,
+          "0.95": -11.15869944000001,
+          "1.0": -11.15869944000001
+        },
+        "entry_fees": 0.5993635199999999,
+        "exit_fees": 0.6053359199999999,
+        "mean_duration_minutes": 205.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2025-12-29 00:00:00+00:00": {
+        "signals": 1,
+        "executed": 1,
+        "labels": {
+          "SL_FIRST": 1
+        },
+        "tp_rate_evaluable": 0.0,
+        "mean_net_pnl": -12.620567019999944,
+        "median_net_pnl": -12.620567019999944,
+        "sum_net_pnl": -12.620567019999944,
+        "mean_margin_roi": -0.012635118886421435,
+        "profit_factor": 0.0,
+        "winning_net_pnl_sum": 0.0,
+        "losing_net_pnl_sum_abs": 12.620567019999944,
+        "mean_winner": null,
+        "mean_loser": -12.620567019999944,
+        "loss_quantiles": {
+          "0.0": -12.620567019999944,
+          "0.05": -12.620567019999944,
+          "0.5": -12.620567019999944,
+          "0.95": -12.620567019999944,
+          "1.0": -12.620567019999944
+        },
+        "entry_fees": 0.59930898,
+        "exit_fees": 0.60615804,
+        "mean_duration_minutes": 275.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-01-05 00:00:00+00:00": {
+        "signals": 2,
+        "executed": 2,
+        "labels": {
+          "TIMEOUT": 1,
+          "SL_FIRST": 1
+        },
+        "tp_rate_evaluable": 0.0,
+        "mean_net_pnl": -12.200022379999874,
+        "median_net_pnl": -12.200022379999874,
+        "sum_net_pnl": -24.400044759999748,
+        "mean_margin_roi": -0.012248268969698748,
+        "profit_factor": 0.0,
+        "winning_net_pnl_sum": 0.0,
+        "losing_net_pnl_sum_abs": 24.400044759999748,
+        "mean_winner": null,
+        "mean_loser": -12.200022379999874,
+        "loss_quantiles": {
+          "0.0": -19.07361259999988,
+          "0.05": -18.38625357799988,
+          "0.5": -12.200022379999874,
+          "0.95": -6.013791181999869,
+          "1.0": -5.326432159999868
+        },
+        "entry_fees": 1.1901322799999998,
+        "exit_fees": 1.17691248,
+        "mean_duration_minutes": 820.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-01-12 00:00:00+00:00": {
+        "signals": 3,
+        "executed": 3,
+        "labels": {
+          "SL_FIRST": 2,
+          "TP_FIRST": 1
+        },
+        "tp_rate_evaluable": 0.3333333333333333,
+        "mean_net_pnl": -2.8447774666667094,
+        "median_net_pnl": -19.47935394,
+        "sum_net_pnl": -8.534332400000128,
+        "mean_margin_roi": -0.007744668155227306,
+        "profit_factor": 0.8078719755177799,
+        "winning_net_pnl_sum": 35.88569649999988,
+        "losing_net_pnl_sum_abs": 44.420028900000005,
+        "mean_winner": 35.88569649999988,
+        "mean_loser": -22.210014450000003,
+        "loss_quantiles": {
+          "0.0": -24.94067496000001,
+          "0.05": -24.66760890900001,
+          "0.5": -22.210014450000003,
+          "0.95": -19.752419991,
+          "1.0": -19.47935394
+        },
+        "entry_fees": 1.5766643999999999,
+        "exit_fees": 1.550868,
+        "mean_duration_minutes": 720.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-01-19 00:00:00+00:00": {
+        "signals": 2,
+        "executed": 2,
+        "labels": {
+          "SL_FIRST": 2
+        },
+        "tp_rate_evaluable": 0.0,
+        "mean_net_pnl": -16.64414039999997,
+        "median_net_pnl": -16.64414039999997,
+        "sum_net_pnl": -33.28828079999994,
+        "mean_margin_roi": -0.017643974706664303,
+        "profit_factor": 0.0,
+        "winning_net_pnl_sum": 0.0,
+        "losing_net_pnl_sum_abs": 33.28828079999994,
+        "mean_winner": null,
+        "mean_loser": -16.64414039999997,
+        "loss_quantiles": {
+          "0.0": -24.995507399999923,
+          "0.05": -24.160370699999927,
+          "0.5": -16.64414039999997,
+          "0.95": -9.127910100000008,
+          "1.0": -8.292773400000012
+        },
+        "entry_fees": 1.15538328,
+        "exit_fees": 1.14529752,
+        "mean_duration_minutes": 460.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-01-26 00:00:00+00:00": {
+        "signals": 4,
+        "executed": 4,
+        "labels": {
+          "TIMEOUT": 2,
+          "SL_FIRST": 2
+        },
+        "tp_rate_evaluable": 0.0,
+        "mean_net_pnl": 1.6278481150000013,
+        "median_net_pnl": 1.340137800000008,
+        "sum_net_pnl": 6.511392460000005,
+        "mean_margin_roi": 0.0016309372828455823,
+        "profit_factor": 1.4444942163920291,
+        "winning_net_pnl_sum": 21.160385000000062,
+        "losing_net_pnl_sum_abs": 14.648992540000057,
+        "mean_winner": 10.580192500000031,
+        "mean_loser": -7.3244962700000285,
+        "loss_quantiles": {
+          "0.0": -8.239629940000047,
+          "0.05": -8.148116573000046,
+          "0.5": -7.3244962700000285,
+          "0.95": -6.500875967000012,
+          "1.0": -6.40936260000001
+        },
+        "entry_fees": 2.3982440999999994,
+        "exit_fees": 2.39146344,
+        "mean_duration_minutes": 838.75,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-02-02 00:00:00+00:00": {
+        "signals": 4,
+        "executed": 4,
+        "labels": {
+          "TP_FIRST": 2,
+          "TIMEOUT": 1,
+          "SL_FIRST": 1
+        },
+        "tp_rate_evaluable": 0.5,
+        "mean_net_pnl": 6.4554936850000235,
+        "median_net_pnl": 9.109197090000043,
+        "sum_net_pnl": 25.821974740000094,
+        "mean_margin_roi": 0.006810599904616976,
+        "profit_factor": 2.2541824107666115,
+        "winning_net_pnl_sum": 46.410666240000126,
+        "losing_net_pnl_sum_abs": 20.588691500000035,
+        "mean_winner": 15.470222080000042,
+        "mean_loser": -20.588691500000035,
+        "loss_quantiles": {
+          "0.0": -20.588691500000035,
+          "0.05": -20.588691500000035,
+          "0.5": -20.588691500000035,
+          "0.95": -20.588691500000035,
+          "1.0": -20.588691500000035
+        },
+        "entry_fees": 2.23824672,
+        "exit_fees": 2.22007854,
+        "mean_duration_minutes": 541.25,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-02-09 00:00:00+00:00": {
+        "signals": 2,
+        "executed": 2,
+        "labels": {
+          "SL_FIRST": 2
+        },
+        "tp_rate_evaluable": 0.0,
+        "mean_net_pnl": -24.924651540000017,
+        "median_net_pnl": -24.924651540000017,
+        "sum_net_pnl": -49.849303080000034,
+        "mean_margin_roi": -0.07740485534004254,
+        "profit_factor": 0.0,
+        "winning_net_pnl_sum": 0.0,
+        "losing_net_pnl_sum_abs": 49.849303080000034,
+        "mean_winner": null,
+        "mean_loser": -24.924651540000017,
+        "loss_quantiles": {
+          "0.0": -24.9505164,
+          "0.05": -24.947929914000003,
+          "0.5": -24.924651540000017,
+          "0.95": -24.90137316600003,
+          "1.0": -24.898786680000033
+        },
+        "entry_fees": 0.38883888,
+        "exit_fees": 0.4182642,
+        "mean_duration_minutes": 857.5,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-02-16 00:00:00+00:00": {
+        "signals": 3,
+        "executed": 3,
+        "labels": {
+          "TP_FIRST": 2,
+          "SL_FIRST": 1
+        },
+        "tp_rate_evaluable": 0.6666666666666666,
+        "mean_net_pnl": 18.520751153333304,
+        "median_net_pnl": 36.711488040000084,
+        "sum_net_pnl": 55.56225345999991,
+        "mean_margin_roi": 0.010808448722836546,
+        "profit_factor": 3.2277015235431414,
+        "winning_net_pnl_sum": 80.50376957999995,
+        "losing_net_pnl_sum_abs": 24.941516120000042,
+        "mean_winner": 40.25188478999998,
+        "mean_loser": -24.941516120000042,
+        "loss_quantiles": {
+          "0.0": -24.941516120000042,
+          "0.05": -24.941516120000042,
+          "0.5": -24.941516120000042,
+          "0.95": -24.941516120000042,
+          "1.0": -24.941516120000042
+        },
+        "entry_fees": 1.50893868,
+        "exit_fees": 1.5441078599999998,
+        "mean_duration_minutes": 453.3333333333333,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-02-23 00:00:00+00:00": {
+        "signals": 2,
+        "executed": 2,
+        "labels": {
+          "TP_FIRST": 1,
+          "SL_FIRST": 1
+        },
+        "tp_rate_evaluable": 0.5,
+        "mean_net_pnl": 7.019620909999957,
+        "median_net_pnl": 7.019620909999957,
+        "sum_net_pnl": 14.039241819999914,
+        "mean_margin_roi": 0.0070288675619144874,
+        "profit_factor": 2.18097869156951,
+        "winning_net_pnl_sum": 25.9270446399999,
+        "losing_net_pnl_sum_abs": 11.887802819999985,
+        "mean_winner": 25.9270446399999,
+        "mean_loser": -11.887802819999985,
+        "loss_quantiles": {
+          "0.0": -11.887802819999985,
+          "0.05": -11.887802819999985,
+          "0.5": -11.887802819999985,
+          "0.95": -11.887802819999985,
+          "1.0": -11.887802819999985
+        },
+        "entry_fees": 1.19905734,
+        "exit_fees": 1.1892008399999998,
+        "mean_duration_minutes": 190.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-03-02 00:00:00+00:00": {
+        "signals": 3,
+        "executed": 3,
+        "labels": {
+          "SL_FIRST": 3
+        },
+        "tp_rate_evaluable": 0.0,
+        "mean_net_pnl": -22.159003060000007,
+        "median_net_pnl": -24.990027819999927,
+        "sum_net_pnl": -66.47700918000002,
+        "mean_margin_roi": -0.025104226677021304,
+        "profit_factor": 0.0,
+        "winning_net_pnl_sum": 0.0,
+        "losing_net_pnl_sum_abs": 66.47700918000002,
+        "mean_winner": null,
+        "mean_loser": -22.159003060000007,
+        "loss_quantiles": {
+          "0.0": -24.997265280000132,
+          "0.05": -24.996541534000112,
+          "0.5": -24.990027819999927,
+          "0.95": -17.339747253999967,
+          "1.0": -16.48971607999997
+        },
+        "entry_fees": 1.6202379599999999,
+        "exit_fees": 1.61107122,
+        "mean_duration_minutes": 343.3333333333333,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-03-09 00:00:00+00:00": {
+        "signals": 2,
+        "executed": 2,
+        "labels": {
+          "TP_FIRST": 1,
+          "SL_FIRST": 1
+        },
+        "tp_rate_evaluable": 0.5,
+        "mean_net_pnl": 10.86073604999998,
+        "median_net_pnl": 10.86073604999998,
+        "sum_net_pnl": 21.72147209999996,
+        "mean_margin_roi": 0.010871318434146984,
+        "profit_factor": 2.540486225692957,
+        "winning_net_pnl_sum": 35.82187218000002,
+        "losing_net_pnl_sum_abs": 14.10040008000006,
+        "mean_winner": 35.82187218000002,
+        "mean_loser": -14.10040008000006,
+        "loss_quantiles": {
+          "0.0": -14.10040008000006,
+          "0.05": -14.10040008000006,
+          "0.5": -14.10040008000006,
+          "0.95": -14.10040008000006,
+          "1.0": -14.10040008000006
+        },
+        "entry_fees": 1.1991329999999998,
+        "exit_fees": 1.2290948999999998,
+        "mean_duration_minutes": 192.5,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-03-16 00:00:00+00:00": {
+        "signals": 4,
+        "executed": 4,
+        "labels": {
+          "TP_FIRST": 3,
+          "SL_FIRST": 1
+        },
+        "tp_rate_evaluable": 0.75,
+        "mean_net_pnl": 22.261776764999997,
+        "median_net_pnl": 30.385492440000043,
+        "sum_net_pnl": 89.04710705999999,
+        "mean_margin_roi": 0.022282688637447517,
+        "profit_factor": 5.995354290753352,
+        "winning_net_pnl_sum": 106.87309134000003,
+        "losing_net_pnl_sum_abs": 17.82598428000004,
+        "mean_winner": 35.62436378000001,
+        "mean_loser": -17.82598428000004,
+        "loss_quantiles": {
+          "0.0": -17.82598428000004,
+          "0.05": -17.82598428000004,
+          "0.5": -17.82598428000004,
+          "0.95": -17.82598428000004,
+          "1.0": -17.82598428000004
+        },
+        "entry_fees": 2.39752692,
+        "exit_fees": 2.4538660199999995,
+        "mean_duration_minutes": 812.5,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-03-23 00:00:00+00:00": {
+        "signals": 2,
+        "executed": 2,
+        "labels": {
+          "SL_FIRST": 2
+        },
+        "tp_rate_evaluable": 0.0,
+        "mean_net_pnl": -23.070254370000004,
+        "median_net_pnl": -23.070254370000004,
+        "sum_net_pnl": -46.14050874000001,
+        "mean_margin_roi": -0.026228484809361158,
+        "profit_factor": 0.0,
+        "winning_net_pnl_sum": 0.0,
+        "losing_net_pnl_sum_abs": 46.14050874000001,
+        "mean_winner": null,
+        "mean_loser": -23.070254370000004,
+        "loss_quantiles": {
+          "0.0": -24.99910602000005,
+          "0.05": -24.806220855000046,
+          "0.5": -23.070254370000004,
+          "0.95": -21.334287884999963,
+          "1.0": -21.14140271999996
+        },
+        "entry_fees": 1.0789421399999999,
+        "exit_fees": 1.0764665999999998,
+        "mean_duration_minutes": 970.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-03-30 00:00:00+00:00": {
+        "signals": 4,
+        "executed": 4,
+        "labels": {
+          "SL_FIRST": 2,
+          "TIMEOUT": 1,
+          "TP_FIRST": 1
+        },
+        "tp_rate_evaluable": 0.25,
+        "mean_net_pnl": 5.64595446999996,
+        "median_net_pnl": 5.35207069,
+        "sum_net_pnl": 22.58381787999984,
+        "mean_margin_roi": 0.005651541216647623,
+        "profit_factor": 2.1377501840838495,
+        "winning_net_pnl_sum": 42.433357959999924,
+        "losing_net_pnl_sum_abs": 19.849540080000082,
+        "mean_winner": 21.216678979999962,
+        "mean_loser": -9.924770040000041,
+        "loss_quantiles": {
+          "0.0": -12.667391220000086,
+          "0.05": -12.393129102000081,
+          "0.5": -9.924770040000041,
+          "0.95": -7.456410978000002,
+          "1.0": -7.182148859999997
+        },
+        "entry_fees": 2.3988899999999997,
+        "exit_fees": 2.3752921199999997,
+        "mean_duration_minutes": 747.5,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-04-06 00:00:00+00:00": {
+        "signals": 1,
+        "executed": 1,
+        "labels": {
+          "TP_FIRST": 1
+        },
+        "tp_rate_evaluable": 1.0,
+        "mean_net_pnl": 11.667548200000121,
+        "median_net_pnl": 11.667548200000121,
+        "sum_net_pnl": 11.667548200000121,
+        "mean_margin_roi": 0.011675651101864816,
+        "profit_factor": null,
+        "winning_net_pnl_sum": 11.667548200000121,
+        "losing_net_pnl_sum_abs": -0.0,
+        "mean_winner": 11.667548200000121,
+        "mean_loser": null,
+        "loss_quantiles": {},
+        "entry_fees": 0.5995836,
+        "exit_fees": 0.5918681999999998,
+        "mean_duration_minutes": 110.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-04-13 00:00:00+00:00": {
+        "signals": 3,
+        "executed": 3,
+        "labels": {
+          "SL_FIRST": 3
+        },
+        "tp_rate_evaluable": 0.0,
+        "mean_net_pnl": -10.363673966666648,
+        "median_net_pnl": -10.184950039999855,
+        "sum_net_pnl": -31.09102189999994,
+        "mean_margin_roi": -0.01037098301804184,
+        "profit_factor": 0.0,
+        "winning_net_pnl_sum": 0.0,
+        "losing_net_pnl_sum_abs": 31.09102189999994,
+        "mean_winner": null,
+        "mean_loser": -10.363673966666648,
+        "loss_quantiles": {
+          "0.0": -12.09722184000009,
+          "0.05": -11.905994660000067,
+          "0.5": -10.184950039999855,
+          "0.95": -8.946460021999984,
+          "1.0": -8.808850019999998
+        },
+        "entry_fees": 1.7987569199999998,
+        "exit_fees": 1.8021649799999997,
+        "mean_duration_minutes": 930.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-04-20 00:00:00+00:00": {
+        "signals": 2,
+        "executed": 2,
+        "labels": {
+          "TP_FIRST": 1,
+          "SL_FIRST": 1
+        },
+        "tp_rate_evaluable": 0.5,
+        "mean_net_pnl": 7.272060459999986,
+        "median_net_pnl": 7.272060459999986,
+        "sum_net_pnl": 14.544120919999973,
+        "mean_margin_roi": 0.007271649270509557,
+        "profit_factor": 2.2979348151142256,
+        "winning_net_pnl_sum": 25.749707479999913,
+        "losing_net_pnl_sum_abs": 11.20558655999994,
+        "mean_winner": 25.749707479999913,
+        "mean_loser": -11.20558655999994,
+        "loss_quantiles": {
+          "0.0": -11.20558655999994,
+          "0.05": -11.20558655999994,
+          "0.5": -11.20558655999994,
+          "0.95": -11.20558655999994,
+          "1.0": -11.20558655999994
+        },
+        "entry_fees": 1.1991537599999997,
+        "exit_fees": 1.20932532,
+        "mean_duration_minutes": 655.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-04-27 00:00:00+00:00": {
+        "signals": 2,
+        "executed": 2,
+        "labels": {
+          "TIMEOUT": 1,
+          "SL_FIRST": 1
+        },
+        "tp_rate_evaluable": 0.0,
+        "mean_net_pnl": 0.2776967999999975,
+        "median_net_pnl": 0.2776967999999975,
+        "sum_net_pnl": 0.555393599999995,
+        "mean_margin_roi": 0.00028236644206724223,
+        "profit_factor": 1.078942466908596,
+        "winning_net_pnl_sum": 7.590815999999992,
+        "losing_net_pnl_sum_abs": 7.035422399999997,
+        "mean_winner": 7.590815999999992,
+        "mean_loser": -7.035422399999997,
+        "loss_quantiles": {
+          "0.0": -7.035422399999997,
+          "0.05": -7.035422399999997,
+          "0.5": -7.035422399999997,
+          "0.95": -7.035422399999997,
+          "1.0": -7.035422399999997
+        },
+        "entry_fees": 1.1991888,
+        "exit_fees": 1.1974176,
+        "mean_duration_minutes": 750.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-05-04 00:00:00+00:00": {
+        "signals": 1,
+        "executed": 1,
+        "labels": {
+          "SL_FIRST": 1
+        },
+        "tp_rate_evaluable": 0.0,
+        "mean_net_pnl": -11.15524674000005,
+        "median_net_pnl": -11.15524674000005,
+        "sum_net_pnl": -11.15524674000005,
+        "mean_margin_roi": -0.01115731977001332,
+        "profit_factor": 0.0,
+        "winning_net_pnl_sum": 0.0,
+        "losing_net_pnl_sum_abs": 11.15524674000005,
+        "mean_winner": null,
+        "mean_loser": -11.15524674000005,
+        "loss_quantiles": {
+          "0.0": -11.15524674000005,
+          "0.05": -11.15524674000005,
+          "0.5": -11.15524674000005,
+          "0.95": -11.15524674000005,
+          "1.0": -11.15524674000005
+        },
+        "entry_fees": 0.5998885199999999,
+        "exit_fees": 0.60585822,
+        "mean_duration_minutes": 170.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-05-11 00:00:00+00:00": {
+        "signals": 2,
+        "executed": 2,
+        "labels": {
+          "SL_FIRST": 2
+        },
+        "tp_rate_evaluable": 0.0,
+        "mean_net_pnl": -9.09827202,
+        "median_net_pnl": -9.09827202,
+        "sum_net_pnl": -18.19654404,
+        "mean_margin_roi": -0.009107450372593924,
+        "profit_factor": 0.0,
+        "winning_net_pnl_sum": 0.0,
+        "losing_net_pnl_sum_abs": 18.19654404,
+        "mean_winner": null,
+        "mean_loser": -9.09827202,
+        "loss_quantiles": {
+          "0.0": -9.278826700000046,
+          "0.05": -9.26077123200004,
+          "0.5": -9.09827202,
+          "0.95": -8.935772807999957,
+          "1.0": -8.917717339999951
+        },
+        "entry_fees": 1.19878296,
+        "exit_fees": 1.1985610799999997,
+        "mean_duration_minutes": 1092.5,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-05-18 00:00:00+00:00": {
+        "signals": 2,
+        "executed": 2,
+        "labels": {
+          "TP_FIRST": 2
+        },
+        "tp_rate_evaluable": 1.0,
+        "mean_net_pnl": 32.57124619,
+        "median_net_pnl": 32.57124619,
+        "sum_net_pnl": 65.14249238,
+        "mean_margin_roi": 0.03261010075984225,
+        "profit_factor": null,
+        "winning_net_pnl_sum": 65.14249238,
+        "losing_net_pnl_sum_abs": -0.0,
+        "mean_winner": 32.57124619,
+        "mean_loser": null,
+        "loss_quantiles": {},
+        "entry_fees": 1.1987791799999998,
+        "exit_fees": 1.21682844,
+        "mean_duration_minutes": 475.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-05-25 00:00:00+00:00": {
+        "signals": 1,
+        "executed": 1,
+        "labels": {
+          "TP_FIRST": 1
+        },
+        "tp_rate_evaluable": 1.0,
+        "mean_net_pnl": 17.262172979999942,
+        "median_net_pnl": 17.262172979999942,
+        "sum_net_pnl": 17.262172979999942,
+        "mean_margin_roi": 0.017265085599940652,
+        "profit_factor": null,
+        "winning_net_pnl_sum": 17.262172979999942,
+        "losing_net_pnl_sum_abs": -0.0,
+        "mean_winner": 17.262172979999942,
+        "mean_loser": null,
+        "loss_quantiles": {},
+        "entry_fees": 0.59989878,
+        "exit_fees": 0.58882824,
+        "mean_duration_minutes": 770.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-06-01 00:00:00+00:00": {
+        "signals": 3,
+        "executed": 3,
+        "labels": {
+          "SL_FIRST": 2,
+          "TIMEOUT": 1
+        },
+        "tp_rate_evaluable": 0.0,
+        "mean_net_pnl": -0.5219785999999486,
+        "median_net_pnl": -7.226601240000005,
+        "sum_net_pnl": -1.5659357999998456,
+        "mean_margin_roi": -0.0005278183513079751,
+        "profit_factor": 0.9310154781974534,
+        "winning_net_pnl_sum": 21.133878000000124,
+        "losing_net_pnl_sum_abs": 22.69981379999997,
+        "mean_winner": 21.133878000000124,
+        "mean_loser": -11.349906899999985,
+        "loss_quantiles": {
+          "0.0": -15.473212559999963,
+          "0.05": -15.060881993999965,
+          "0.5": -11.349906899999983,
+          "0.95": -7.638931806000003,
+          "1.0": -7.226601240000005
+        },
+        "entry_fees": 1.7984768399999997,
+        "exit_fees": 1.7972589599999997,
+        "mean_duration_minutes": 878.3333333333334,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-06-08 00:00:00+00:00": {
+        "signals": 2,
+        "executed": 2,
+        "labels": {
+          "SL_FIRST": 1,
+          "TIMEOUT": 1
+        },
+        "tp_rate_evaluable": 0.0,
+        "mean_net_pnl": -5.224370640000019,
+        "median_net_pnl": -5.224370640000019,
+        "sum_net_pnl": -10.448741280000037,
+        "mean_margin_roi": -0.004800667249546687,
+        "profit_factor": 0.41009641046232564,
+        "winning_net_pnl_sum": 7.263884079999956,
+        "losing_net_pnl_sum_abs": 17.712625359999993,
+        "mean_winner": 7.263884079999956,
+        "mean_loser": -17.712625359999993,
+        "loss_quantiles": {
+          "0.0": -17.712625359999993,
+          "0.05": -17.712625359999993,
+          "0.5": -17.712625359999993,
+          "0.95": -17.712625359999993,
+          "1.0": -17.712625359999993
+        },
+        "entry_fees": 1.1363169599999998,
+        "exit_fees": 1.1512243199999999,
+        "mean_duration_minutes": 1067.5,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-06-15 00:00:00+00:00": {
+        "signals": 2,
+        "executed": 2,
+        "labels": {
+          "SL_FIRST": 2
+        },
+        "tp_rate_evaluable": 0.0,
+        "mean_net_pnl": -9.539919339999958,
+        "median_net_pnl": -9.539919339999958,
+        "sum_net_pnl": -19.079838679999916,
+        "mean_margin_roi": -0.00954121851164096,
+        "profit_factor": 0.0,
+        "winning_net_pnl_sum": 0.0,
+        "losing_net_pnl_sum_abs": 19.079838679999916,
+        "mean_winner": null,
+        "mean_loser": -9.539919339999958,
+        "loss_quantiles": {
+          "0.0": -11.518745000000028,
+          "0.05": -11.32086243400002,
+          "0.5": -9.539919339999958,
+          "0.95": -7.758976245999895,
+          "1.0": -7.561093679999887
+        },
+        "entry_fees": 1.1998095599999998,
+        "exit_fees": 1.1974291199999998,
+        "mean_duration_minutes": 307.5,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-06-22 00:00:00+00:00": {
+        "signals": 1,
+        "executed": 1,
+        "labels": {
+          "SL_FIRST": 1
+        },
+        "tp_rate_evaluable": 0.0,
+        "mean_net_pnl": -7.319745640000071,
+        "median_net_pnl": -7.319745640000071,
+        "sum_net_pnl": -7.319745640000071,
+        "mean_margin_roi": -0.00732783557046987,
+        "profit_factor": 0.0,
+        "winning_net_pnl_sum": 0.0,
+        "losing_net_pnl_sum_abs": 7.319745640000071,
+        "mean_winner": null,
+        "mean_loser": -7.319745640000071,
+        "loss_quantiles": {
+          "0.0": -7.319745640000071,
+          "0.05": -7.319745640000071,
+          "0.5": -7.319745640000071,
+          "0.95": -7.319745640000071,
+          "1.0": -7.319745640000071
+        },
+        "entry_fees": 0.5993375999999999,
+        "exit_fees": 0.60300804,
+        "mean_duration_minutes": 70.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-07-06 00:00:00+00:00": {
+        "signals": 1,
+        "executed": 1,
+        "labels": {
+          "SL_FIRST": 1
+        },
+        "tp_rate_evaluable": 0.0,
+        "mean_net_pnl": -16.840560599999968,
+        "median_net_pnl": -16.840560599999968,
+        "sum_net_pnl": -16.840560599999968,
+        "mean_margin_roi": -0.016855292125317497,
+        "profit_factor": 0.0,
+        "winning_net_pnl_sum": 0.0,
+        "losing_net_pnl_sum_abs": 16.840560599999968,
+        "mean_winner": null,
+        "mean_loser": -16.840560599999968,
+        "loss_quantiles": {
+          "0.0": -16.840560599999968,
+          "0.05": -16.840560599999968,
+          "0.5": -16.840560599999968,
+          "0.95": -16.840560599999968,
+          "1.0": -16.840560599999968
+        },
+        "entry_fees": 0.5994756,
+        "exit_fees": 0.590085,
+        "mean_duration_minutes": 140.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-07-13 00:00:00+00:00": {
+        "signals": 1,
+        "executed": 1,
+        "labels": {
+          "TIMEOUT": 1
+        },
+        "tp_rate_evaluable": 0.0,
+        "mean_net_pnl": -8.806369039999977,
+        "median_net_pnl": -8.806369039999977,
+        "sum_net_pnl": -8.806369039999977,
+        "mean_margin_roi": -0.00881365969930324,
+        "profit_factor": 0.0,
+        "winning_net_pnl_sum": 0.0,
+        "losing_net_pnl_sum_abs": 8.806369039999977,
+        "mean_winner": null,
+        "mean_loser": -8.806369039999977,
+        "loss_quantiles": {
+          "0.0": -8.806369039999977,
+          "0.05": -8.806369039999977,
+          "0.5": -8.806369039999977,
+          "0.95": -8.806369039999977,
+          "1.0": -8.806369039999977
+        },
+        "entry_fees": 0.5995036799999999,
+        "exit_fees": 0.6040653599999999,
+        "mean_duration_minutes": 1440.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-07-20 00:00:00+00:00": {
+        "signals": 2,
+        "executed": 2,
+        "labels": {
+          "TIMEOUT": 2
+        },
+        "tp_rate_evaluable": 0.0,
+        "mean_net_pnl": -0.8255531800001408,
+        "median_net_pnl": -0.8255531800001408,
+        "sum_net_pnl": -1.6511063600002815,
+        "mean_margin_roi": -0.0008256656368379908,
+        "profit_factor": 0.09709291944965481,
+        "winning_net_pnl_sum": 0.17754953999984868,
+        "losing_net_pnl_sum_abs": 1.8286559000001303,
+        "mean_winner": 0.17754953999984868,
+        "mean_loser": -1.8286559000001303,
+        "loss_quantiles": {
+          "0.0": -1.8286559000001303,
+          "0.05": -1.8286559000001303,
+          "0.5": -1.8286559000001303,
+          "0.95": -1.8286559000001303,
+          "1.0": -1.8286559000001303
+        },
+        "entry_fees": 1.1992546199999998,
+        "exit_fees": 1.19805174,
+        "mean_duration_minutes": 1440.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-07-27 00:00:00+00:00": {
+        "signals": 3,
+        "executed": 3,
+        "labels": {
+          "SL_FIRST": 2,
+          "TP_FIRST": 1
+        },
+        "tp_rate_evaluable": 0.3333333333333333,
+        "mean_net_pnl": -2.844547253333351,
+        "median_net_pnl": -9.023635999999957,
+        "sum_net_pnl": -8.533641760000053,
+        "mean_margin_roi": -0.00284340565108278,
+        "profit_factor": 0.6218378091961511,
+        "winning_net_pnl_sum": 14.032447519999954,
+        "losing_net_pnl_sum_abs": 22.566089280000007,
+        "mean_winner": 14.032447519999954,
+        "mean_loser": -11.283044640000004,
+        "loss_quantiles": {
+          "0.0": -13.542453280000052,
+          "0.05": -13.316512416000046,
+          "0.5": -11.283044640000004,
+          "0.95": -9.249576863999962,
+          "1.0": -9.023635999999957
+        },
+        "entry_fees": 1.7988409799999998,
+        "exit_fees": 1.8018007799999998,
+        "mean_duration_minutes": 498.3333333333333,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-08-03 00:00:00+00:00": {
+        "signals": 3,
+        "executed": 3,
+        "labels": {
+          "SL_FIRST": 2,
+          "TIMEOUT": 1
+        },
+        "tp_rate_evaluable": 0.0,
+        "mean_net_pnl": -5.443480706666619,
+        "median_net_pnl": -10.190119679999842,
+        "sum_net_pnl": -16.330442119999855,
+        "mean_margin_roi": -0.005444908586766162,
+        "profit_factor": 0.31119684417547905,
+        "winning_net_pnl_sum": 7.377988919999892,
+        "losing_net_pnl_sum_abs": 23.708431039999745,
+        "mean_winner": 7.377988919999892,
+        "mean_loser": -11.854215519999872,
+        "loss_quantiles": {
+          "0.0": -13.518311359999904,
+          "0.05": -13.3519017759999,
+          "0.5": -11.854215519999872,
+          "0.95": -10.356529263999846,
+          "1.0": -10.190119679999842
+        },
+        "entry_fees": 1.7992037399999998,
+        "exit_fees": 1.8068383799999999,
+        "mean_duration_minutes": 970.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      }
+    }
+  },
+  "portfolio": {
+    "ALL": {
+      "signals": 76,
+      "executed": 76,
+      "labels": {
+        "SL_FIRST": 45,
+        "TP_FIRST": 17,
+        "TIMEOUT": 14
+      },
+      "tp_rate_evaluable": 0.2236842105263158,
+      "mean_net_pnl": -1.023420966315795,
+      "median_net_pnl": -8.863283679999974,
+      "sum_net_pnl": -77.77999344000041,
+      "mean_margin_roi": -0.002475533411760015,
+      "profit_factor": 0.8876100168742258,
+      "winning_net_pnl_sum": 614.2745053399992,
+      "losing_net_pnl_sum_abs": 692.0544987799994,
+      "mean_winner": 21.938375190714257,
+      "mean_loser": -14.417802057916655,
+      "loss_quantiles": {
+        "0.0": -24.99910602000005,
+        "0.05": -24.993589546999925,
+        "0.5": -12.643979120000015,
+        "0.95": -6.679837791000007,
+        "1.0": -1.8286559000001303
+      },
+      "entry_fees": 43.65858198,
+      "exit_fees": 43.671611459999994,
+      "mean_duration_minutes": 694.4078947368421,
+      "both_touched_5m": 0,
+      "unresolved_execution": 0,
+      "incomplete": 0
+    },
+    "by_split": {
+      "discovery": {
+        "signals": 58,
+        "executed": 58,
+        "labels": {
+          "SL_FIRST": 34,
+          "TP_FIRST": 16,
+          "TIMEOUT": 8
+        },
+        "tp_rate_evaluable": 0.27586206896551724,
+        "mean_net_pnl": 0.22062737655171724,
+        "median_net_pnl": -9.09827202,
+        "sum_net_pnl": 12.7963878399996,
+        "mean_margin_roi": -0.0016958664023301463,
+        "profit_factor": 1.0232032001693758,
+        "winning_net_pnl_sum": 564.2887572799995,
+        "losing_net_pnl_sum_abs": 551.4923694399998,
+        "mean_winner": 24.534293794782585,
+        "mean_loser": -15.756924841142853,
+        "loss_quantiles": {
+          "0.0": -24.99910602000005,
+          "0.05": -24.996034763999987,
+          "0.5": -14.10040008000006,
+          "0.95": -6.950312982000003,
+          "1.0": -5.326432159999868
+        },
+        "entry_fees": 32.92836239999999,
+        "exit_fees": 32.92184975999999,
+        "mean_duration_minutes": 663.0172413793103,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "validation": {
+        "signals": 18,
+        "executed": 18,
+        "labels": {
+          "SL_FIRST": 11,
+          "TIMEOUT": 6,
+          "TP_FIRST": 1
+        },
+        "tp_rate_evaluable": 0.05555555555555555,
+        "mean_net_pnl": -5.032021182222222,
+        "median_net_pnl": -8.183731359999932,
+        "sum_net_pnl": -90.57638127999999,
+        "mean_margin_roi": -0.00498779377547848,
+        "profit_factor": 0.3556131960628696,
+        "winning_net_pnl_sum": 49.98574805999977,
+        "losing_net_pnl_sum_abs": 140.56212933999976,
+        "mean_winner": 9.997149611999955,
+        "mean_loser": -10.812471487692289,
+        "loss_quantiles": {
+          "0.0": -17.712625359999993,
+          "0.05": -17.189386503999977,
+          "0.5": -10.190119679999842,
+          "0.95": -5.067423104000063,
+          "1.0": -1.8286559000001303
+        },
+        "entry_fees": 10.730219579999998,
+        "exit_fees": 10.7497617,
+        "mean_duration_minutes": 795.5555555555555,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      }
+    },
+    "by_side": {
+      "LONG": {
+        "signals": 29,
+        "executed": 29,
+        "labels": {
+          "SL_FIRST": 17,
+          "TP_FIRST": 7,
+          "TIMEOUT": 5
+        },
+        "tp_rate_evaluable": 0.2413793103448276,
+        "mean_net_pnl": -0.5943263213793176,
+        "median_net_pnl": -9.467016239999964,
+        "sum_net_pnl": -17.23546332000021,
+        "mean_margin_roi": -0.002079716692924026,
+        "profit_factor": 0.9425392823718403,
+        "winning_net_pnl_sum": 282.71664363999975,
+        "losing_net_pnl_sum_abs": 299.95210695999987,
+        "mean_winner": 28.271664363999975,
+        "mean_loser": -15.78695299789473,
+        "loss_quantiles": {
+          "0.0": -24.99910602000005,
+          "0.05": -24.997449354000125,
+          "0.5": -16.48971607999997,
+          "0.95": -4.976654533999902,
+          "1.0": -1.8286559000001303
+        },
+        "entry_fees": 16.42954176,
+        "exit_fees": 16.438921559999997,
+        "mean_duration_minutes": 708.448275862069,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "SHORT": {
+        "signals": 47,
+        "executed": 47,
+        "labels": {
+          "SL_FIRST": 28,
+          "TP_FIRST": 10,
+          "TIMEOUT": 9
+        },
+        "tp_rate_evaluable": 0.2127659574468085,
+        "mean_net_pnl": -1.2881814919148968,
+        "median_net_pnl": -8.806369039999977,
+        "sum_net_pnl": -60.54453012000015,
+        "mean_margin_roi": -0.002719760748914136,
+        "profit_factor": 0.8455900005124323,
+        "winning_net_pnl_sum": 331.5578616999995,
+        "losing_net_pnl_sum_abs": 392.1023918199997,
+        "mean_winner": 18.419881205555527,
+        "mean_loser": -13.520772131724128,
+        "loss_quantiles": {
+          "0.0": -24.990027819999927,
+          "0.05": -24.963384000000048,
+          "0.5": -11.887802819999985,
+          "0.95": -7.263859000000032,
+          "1.0": -6.40936260000001
+        },
+        "entry_fees": 27.229040219999995,
+        "exit_fees": 27.232689899999997,
+        "mean_duration_minutes": 685.7446808510638,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      }
+    },
+    "monthly": {
+      "2025-10-01 00:00:00+00:00": {
+        "signals": 1,
+        "executed": 1,
+        "labels": {
+          "TP_FIRST": 1
+        },
+        "tp_rate_evaluable": 1.0,
+        "mean_net_pnl": 27.8968482,
+        "median_net_pnl": 27.8968482,
+        "sum_net_pnl": 27.8968482,
+        "mean_margin_roi": 0.027936792225524056,
+        "profit_factor": null,
+        "winning_net_pnl_sum": 27.8968482,
+        "losing_net_pnl_sum_abs": -0.0,
+        "mean_winner": 27.8968482,
+        "mean_loser": null,
+        "loss_quantiles": {},
+        "entry_fees": 0.59914212,
+        "exit_fees": 0.6166096799999999,
+        "mean_duration_minutes": 570.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2025-11-01 00:00:00+00:00": {
+        "signals": 10,
+        "executed": 10,
+        "labels": {
+          "SL_FIRST": 7,
+          "TP_FIRST": 2,
+          "TIMEOUT": 1
+        },
+        "tp_rate_evaluable": 0.2,
+        "mean_net_pnl": -2.091535713999997,
+        "median_net_pnl": -12.148014919999962,
+        "sum_net_pnl": -20.91535713999997,
+        "mean_margin_roi": -0.003219266122314805,
+        "profit_factor": 0.8331854426901786,
+        "winning_net_pnl_sum": 104.46552973999985,
+        "losing_net_pnl_sum_abs": 125.38088687999982,
+        "mean_winner": 34.82184324666662,
+        "mean_loser": -17.9115552685714,
+        "loss_quantiles": {
+          "0.0": -24.971962400000077,
+          "0.05": -24.964093064000046,
+          "0.5": -19.266175999999962,
+          "0.95": -9.620621567999999,
+          "1.0": -9.467016239999964
+        },
+        "entry_fees": 5.564448479999999,
+        "exit_fees": 5.52340866,
+        "mean_duration_minutes": 531.5,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2025-12-01 00:00:00+00:00": {
+        "signals": 5,
+        "executed": 5,
+        "labels": {
+          "SL_FIRST": 3,
+          "TIMEOUT": 2
+        },
+        "tp_rate_evaluable": 0.0,
+        "mean_net_pnl": -4.161546140000039,
+        "median_net_pnl": -11.15869944000001,
+        "sum_net_pnl": -20.807730700000192,
+        "mean_margin_roi": -0.004163968634491718,
+        "profit_factor": 0.464349205223608,
+        "winning_net_pnl_sum": 18.03797045999977,
+        "losing_net_pnl_sum_abs": 38.84570115999996,
+        "mean_winner": 9.018985229999885,
+        "mean_loser": -12.94856705333332,
+        "loss_quantiles": {
+          "0.0": -15.066434700000006,
+          "0.05": -14.821847931999999,
+          "0.5": -12.620567019999944,
+          "0.95": -11.304886198000004,
+          "1.0": -11.15869944000001
+        },
+        "entry_fees": 2.99690376,
+        "exit_fees": 3.0135269399999998,
+        "mean_duration_minutes": 837.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-01-01 00:00:00+00:00": {
+        "signals": 11,
+        "executed": 11,
+        "labels": {
+          "SL_FIRST": 5,
+          "TIMEOUT": 3,
+          "TP_FIRST": 3
+        },
+        "tp_rate_evaluable": 0.2727272727272727,
+        "mean_net_pnl": 0.447545916363656,
+        "median_net_pnl": -5.326432159999868,
+        "sum_net_pnl": 4.923005080000216,
+        "mean_margin_roi": -0.0009473324157834344,
+        "profit_factor": 1.055040017558696,
+        "winning_net_pnl_sum": 94.36710954000006,
+        "losing_net_pnl_sum_abs": 89.44410445999982,
+        "mean_winner": 18.87342190800001,
+        "mean_loser": -14.907350743333303,
+        "loss_quantiles": {
+          "0.0": -24.995507399999923,
+          "0.05": -24.981799289999945,
+          "0.5": -13.886063670000006,
+          "0.95": -5.597164769999903,
+          "1.0": -5.326432159999868
+        },
+        "entry_fees": 6.159396299999998,
+        "exit_fees": 6.08639862,
+        "mean_duration_minutes": 747.2727272727273,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-02-01 00:00:00+00:00": {
+        "signals": 7,
+        "executed": 7,
+        "labels": {
+          "SL_FIRST": 5,
+          "TP_FIRST": 2
+        },
+        "tp_rate_evaluable": 0.2857142857142857,
+        "mean_net_pnl": -4.791464722857165,
+        "median_net_pnl": -16.48971607999997,
+        "sum_net_pnl": -33.540253060000154,
+        "mean_margin_roi": -0.015477771986337378,
+        "profit_factor": 0.6751850694447961,
+        "winning_net_pnl_sum": 69.71932617999977,
+        "losing_net_pnl_sum_abs": 103.25957923999992,
+        "mean_winner": 34.859663089999884,
+        "mean_loser": -20.651915847999984,
+        "loss_quantiles": {
+          "0.0": -24.990027819999927,
+          "0.05": -24.98212553599994,
+          "0.5": -24.941516120000042,
+          "0.95": -12.808185471999982,
+          "1.0": -11.887802819999985
+        },
+        "entry_fees": 3.41394006,
+        "exit_fees": 3.4364129999999995,
+        "mean_duration_minutes": 410.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-03-01 00:00:00+00:00": {
+        "signals": 11,
+        "executed": 11,
+        "labels": {
+          "SL_FIRST": 7,
+          "TP_FIRST": 3,
+          "TIMEOUT": 1
+        },
+        "tp_rate_evaluable": 0.2727272727272727,
+        "mean_net_pnl": -0.04767839454548373,
+        "median_net_pnl": -12.667391220000086,
+        "sum_net_pnl": -0.524462340000321,
+        "mean_margin_roi": -0.0009399228600232634,
+        "profit_factor": 0.9957330847043789,
+        "winning_net_pnl_sum": 122.38923611999999,
+        "losing_net_pnl_sum_abs": 122.91369846000032,
+        "mean_winner": 30.597309029999998,
+        "mean_loser": -17.559099780000047,
+        "loss_quantiles": {
+          "0.0": -24.99910602000005,
+          "0.05": -24.998553798000074,
+          "0.5": -17.82598428000004,
+          "0.95": -8.827721568000028,
+          "1.0": -7.182148859999997
+        },
+        "entry_fees": 6.40046076,
+        "exit_fees": 6.43810158,
+        "mean_duration_minutes": 688.1818181818181,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-04-01 00:00:00+00:00": {
+        "signals": 8,
+        "executed": 8,
+        "labels": {
+          "SL_FIRST": 5,
+          "TP_FIRST": 2,
+          "TIMEOUT": 1
+        },
+        "tp_rate_evaluable": 0.25,
+        "mean_net_pnl": -1.055472939999989,
+        "median_net_pnl": -9.496900029999926,
+        "sum_net_pnl": -8.443783519999911,
+        "mean_margin_roi": -0.001056339200158486,
+        "profit_factor": 0.8420301131100886,
+        "winning_net_pnl_sum": 45.00807168000002,
+        "losing_net_pnl_sum_abs": 53.45185519999993,
+        "mean_winner": 15.002690560000007,
+        "mean_loser": -10.690371039999986,
+        "loss_quantiles": {
+          "0.0": -12.09722184000009,
+          "0.05": -11.91889478400006,
+          "0.5": -11.15524674000005,
+          "0.95": -9.084070023999969,
+          "1.0": -8.808850019999998
+        },
+        "entry_fees": 4.796609999999999,
+        "exit_fees": 4.80317352,
+        "mean_duration_minutes": 727.5,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-05-01 00:00:00+00:00": {
+        "signals": 7,
+        "executed": 7,
+        "labels": {
+          "SL_FIRST": 4,
+          "TP_FIRST": 3
+        },
+        "tp_rate_evaluable": 0.42857142857142855,
+        "mean_net_pnl": 5.929758217142852,
+        "median_net_pnl": -7.226601240000005,
+        "sum_net_pnl": 41.50830751999996,
+        "mean_margin_roi": 0.005934927233147774,
+        "profit_factor": 2.0149634273642203,
+        "winning_net_pnl_sum": 82.40466535999994,
+        "losing_net_pnl_sum_abs": 40.89635783999997,
+        "mean_winner": 27.468221786666646,
+        "mean_loser": -10.224089459999993,
+        "loss_quantiles": {
+          "0.0": -15.473212559999963,
+          "0.05": -14.544054680999976,
+          "0.5": -9.09827202,
+          "0.95": -7.480268654999998,
+          "1.0": -7.226601240000005
+        },
+        "entry_fees": 4.19618076,
+        "exit_fees": 4.2151117199999995,
+        "mean_duration_minutes": 728.5714285714286,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-06-01 00:00:00+00:00": {
+        "signals": 6,
+        "executed": 6,
+        "labels": {
+          "SL_FIRST": 4,
+          "TIMEOUT": 2
+        },
+        "tp_rate_evaluable": 0.0,
+        "mean_net_pnl": -2.6190745999999834,
+        "median_net_pnl": -7.440419659999979,
+        "sum_net_pnl": -15.7144475999999,
+        "mean_margin_roi": -0.002478194400727701,
+        "profit_factor": 0.6437619490386883,
+        "winning_net_pnl_sum": 28.397762080000078,
+        "losing_net_pnl_sum_abs": 44.11220967999998,
+        "mean_winner": 14.198881040000039,
+        "mean_loser": -11.028052419999995,
+        "loss_quantiles": {
+          "0.0": -17.712625359999993,
+          "0.05": -16.783543306,
+          "0.5": -9.539919339999958,
+          "0.95": -7.355947846000044,
+          "1.0": -7.319745640000071
+        },
+        "entry_fees": 3.53522112,
+        "exit_fees": 3.53802648,
+        "mean_duration_minutes": 710.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-07-01 00:00:00+00:00": {
+        "signals": 9,
+        "executed": 9,
+        "labels": {
+          "SL_FIRST": 4,
+          "TIMEOUT": 4,
+          "TP_FIRST": 1
+        },
+        "tp_rate_evaluable": 0.1111111111111111,
+        "mean_net_pnl": -4.66355557777781,
+        "median_net_pnl": -8.806369039999977,
+        "sum_net_pnl": -41.972000200000295,
+        "mean_margin_roi": -0.004665299849790219,
+        "profit_factor": 0.33964743036386386,
+        "winning_net_pnl_sum": 21.587985979999694,
+        "losing_net_pnl_sum_abs": 63.55998617999999,
+        "mean_winner": 7.195995326666565,
+        "mean_loser": -10.593331029999998,
+        "loss_quantiles": {
+          "0.0": -16.840560599999968,
+          "0.05": -16.01603376999999,
+          "0.5": -11.27097367999993,
+          "0.95": -3.573084185000092,
+          "1.0": -1.8286559000001303
+        },
+        "entry_fees": 5.39671446,
+        "exit_fees": 5.39588574,
+        "mean_duration_minutes": 935.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-08-01 00:00:00+00:00": {
+        "signals": 1,
+        "executed": 1,
+        "labels": {
+          "SL_FIRST": 1
+        },
+        "tp_rate_evaluable": 0.0,
+        "mean_net_pnl": -10.190119679999842,
+        "median_net_pnl": -10.190119679999842,
+        "sum_net_pnl": -10.190119679999842,
+        "mean_margin_roi": -0.010197527163731577,
+        "profit_factor": 0.0,
+        "winning_net_pnl_sum": 0.0,
+        "losing_net_pnl_sum_abs": 10.190119679999842,
+        "mean_winner": null,
+        "mean_loser": -10.190119679999842,
+        "loss_quantiles": {
+          "0.0": -10.190119679999842,
+          "0.05": -10.190119679999842,
+          "0.5": -10.190119679999842,
+          "0.95": -10.190119679999842,
+          "1.0": -10.190119679999842
+        },
+        "entry_fees": 0.59956416,
+        "exit_fees": 0.60495552,
+        "mean_duration_minutes": 450.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      }
+    },
+    "weekly": {
+      "2025-10-27 00:00:00+00:00": {
+        "signals": 1,
+        "executed": 1,
+        "labels": {
+          "TP_FIRST": 1
+        },
+        "tp_rate_evaluable": 1.0,
+        "mean_net_pnl": 27.8968482,
+        "median_net_pnl": 27.8968482,
+        "sum_net_pnl": 27.8968482,
+        "mean_margin_roi": 0.027936792225524056,
+        "profit_factor": null,
+        "winning_net_pnl_sum": 27.8968482,
+        "losing_net_pnl_sum_abs": -0.0,
+        "mean_winner": 27.8968482,
+        "mean_loser": null,
+        "loss_quantiles": {},
+        "entry_fees": 0.59914212,
+        "exit_fees": 0.6166096799999999,
+        "mean_duration_minutes": 570.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2025-11-03 00:00:00+00:00": {
+        "signals": 3,
+        "executed": 3,
+        "labels": {
+          "TP_FIRST": 2,
+          "SL_FIRST": 1
+        },
+        "tp_rate_evaluable": 0.6666666666666666,
+        "mean_net_pnl": 24.776751806666628,
+        "median_net_pnl": 40.36773889999994,
+        "sum_net_pnl": 74.33025541999989,
+        "mean_margin_roi": 0.02479307986555647,
+        "profit_factor": 8.85149761399376,
+        "winning_net_pnl_sum": 83.79727165999985,
+        "losing_net_pnl_sum_abs": 9.467016239999964,
+        "mean_winner": 41.898635829999925,
+        "mean_loser": -9.467016239999964,
+        "loss_quantiles": {
+          "0.0": -9.467016239999964,
+          "0.05": -9.467016239999964,
+          "0.5": -9.467016239999964,
+          "0.95": -9.467016239999964,
+          "1.0": -9.467016239999964
+        },
+        "entry_fees": 1.7980475999999999,
+        "exit_fees": 1.7413969799999998,
+        "mean_duration_minutes": 470.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2025-11-10 00:00:00+00:00": {
+        "signals": 2,
+        "executed": 2,
+        "labels": {
+          "SL_FIRST": 1,
+          "TIMEOUT": 1
+        },
+        "tp_rate_evaluable": 0.0,
+        "mean_net_pnl": -2.151852160000036,
+        "median_net_pnl": -2.151852160000036,
+        "sum_net_pnl": -4.303704320000072,
+        "mean_margin_roi": -0.005202476739026508,
+        "profit_factor": 0.827658545569488,
+        "winning_net_pnl_sum": 20.668258080000005,
+        "losing_net_pnl_sum_abs": 24.971962400000077,
+        "mean_winner": 20.668258080000005,
+        "mean_loser": -24.971962400000077,
+        "loss_quantiles": {
+          "0.0": -24.971962400000077,
+          "0.05": -24.971962400000077,
+          "0.5": -24.971962400000077,
+          "0.95": -24.971962400000077,
+          "1.0": -24.971962400000077
+        },
+        "entry_fees": 0.8717236799999999,
+        "exit_fees": 0.89918064,
+        "mean_duration_minutes": 1317.5,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2025-11-17 00:00:00+00:00": {
+        "signals": 2,
+        "executed": 2,
+        "labels": {
+          "SL_FIRST": 2
+        },
+        "tp_rate_evaluable": 0.0,
+        "mean_net_pnl": -14.622605000000021,
+        "median_net_pnl": -14.622605000000021,
+        "sum_net_pnl": -29.245210000000043,
+        "mean_margin_roi": -0.014647512624116048,
+        "profit_factor": 0.0,
+        "winning_net_pnl_sum": 0.0,
+        "losing_net_pnl_sum_abs": 29.245210000000043,
+        "mean_winner": null,
+        "mean_loser": -14.622605000000021,
+        "loss_quantiles": {
+          "0.0": -19.266175999999962,
+          "0.05": -18.80181889999997,
+          "0.5": -14.622605000000021,
+          "0.95": -10.443391100000072,
+          "1.0": -9.979034000000079
+        },
+        "entry_fees": 1.1983967999999998,
+        "exit_fees": 1.1928131999999998,
+        "mean_duration_minutes": 262.5,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2025-11-24 00:00:00+00:00": {
+        "signals": 3,
+        "executed": 3,
+        "labels": {
+          "SL_FIRST": 3
+        },
+        "tp_rate_evaluable": 0.0,
+        "mean_net_pnl": -20.565566079999915,
+        "median_net_pnl": -22.433971119999917,
+        "sum_net_pnl": -61.69669823999974,
+        "mean_margin_roi": -0.022290640697844116,
+        "profit_factor": 0.0,
+        "winning_net_pnl_sum": 0.0,
+        "losing_net_pnl_sum_abs": 61.69669823999974,
+        "mean_winner": null,
+        "mean_loser": -20.565566079999915,
+        "loss_quantiles": {
+          "0.0": -24.945731279999976,
+          "0.05": -24.69455526399997,
+          "0.5": -22.433971119999917,
+          "0.95": -15.128693367999855,
+          "1.0": -14.316995839999848
+        },
+        "entry_fees": 1.6962803999999998,
+        "exit_fees": 1.6900178399999999,
+        "mean_duration_minutes": 248.33333333333334,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2025-12-01 00:00:00+00:00": {
+        "signals": 1,
+        "executed": 1,
+        "labels": {
+          "TIMEOUT": 1
+        },
+        "tp_rate_evaluable": 0.0,
+        "mean_net_pnl": 12.787733659999866,
+        "median_net_pnl": 12.787733659999866,
+        "sum_net_pnl": 12.787733659999866,
+        "mean_margin_roi": 0.012813868826859127,
+        "profit_factor": null,
+        "winning_net_pnl_sum": 12.787733659999866,
+        "losing_net_pnl_sum_abs": -0.0,
+        "mean_winner": 12.787733659999866,
+        "mean_loser": null,
+        "loss_quantiles": {},
+        "entry_fees": 0.59877624,
+        "exit_fees": 0.5903901,
+        "mean_duration_minutes": 1440.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2025-12-08 00:00:00+00:00": {
+        "signals": 1,
+        "executed": 1,
+        "labels": {
+          "TIMEOUT": 1
+        },
+        "tp_rate_evaluable": 0.0,
+        "mean_net_pnl": 5.250236799999903,
+        "median_net_pnl": 5.250236799999903,
+        "sum_net_pnl": 5.250236799999903,
+        "mean_margin_roi": 0.005250714615029871,
+        "profit_factor": null,
+        "winning_net_pnl_sum": 5.250236799999903,
+        "losing_net_pnl_sum_abs": -0.0,
+        "mean_winner": 5.250236799999903,
+        "mean_loser": null,
+        "loss_quantiles": {},
+        "entry_fees": 0.5999454,
+        "exit_fees": 0.6038178,
+        "mean_duration_minutes": 1440.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2025-12-15 00:00:00+00:00": {
+        "signals": 1,
+        "executed": 1,
+        "labels": {
+          "SL_FIRST": 1
+        },
+        "tp_rate_evaluable": 0.0,
+        "mean_net_pnl": -15.066434700000006,
+        "median_net_pnl": -15.066434700000006,
+        "sum_net_pnl": -15.066434700000006,
+        "mean_margin_roi": -0.015078758569378759,
+        "profit_factor": 0.0,
+        "winning_net_pnl_sum": 0.0,
+        "losing_net_pnl_sum_abs": 15.066434700000006,
+        "mean_winner": null,
+        "mean_loser": -15.066434700000006,
+        "loss_quantiles": {
+          "0.0": -15.066434700000006,
+          "0.05": -15.066434700000006,
+          "0.5": -15.066434700000006,
+          "0.95": -15.066434700000006,
+          "1.0": -15.066434700000006
+        },
+        "entry_fees": 0.59950962,
+        "exit_fees": 0.6078250799999999,
+        "mean_duration_minutes": 825.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2025-12-22 00:00:00+00:00": {
+        "signals": 1,
+        "executed": 1,
+        "labels": {
+          "SL_FIRST": 1
+        },
+        "tp_rate_evaluable": 0.0,
+        "mean_net_pnl": -11.15869944000001,
+        "median_net_pnl": -11.15869944000001,
+        "sum_net_pnl": -11.15869944000001,
+        "mean_margin_roi": -0.011170549158547398,
+        "profit_factor": 0.0,
+        "winning_net_pnl_sum": 0.0,
+        "losing_net_pnl_sum_abs": 11.15869944000001,
+        "mean_winner": null,
+        "mean_loser": -11.15869944000001,
+        "loss_quantiles": {
+          "0.0": -11.15869944000001,
+          "0.05": -11.15869944000001,
+          "0.5": -11.15869944000001,
+          "0.95": -11.15869944000001,
+          "1.0": -11.15869944000001
+        },
+        "entry_fees": 0.5993635199999999,
+        "exit_fees": 0.6053359199999999,
+        "mean_duration_minutes": 205.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2025-12-29 00:00:00+00:00": {
+        "signals": 1,
+        "executed": 1,
+        "labels": {
+          "SL_FIRST": 1
+        },
+        "tp_rate_evaluable": 0.0,
+        "mean_net_pnl": -12.620567019999944,
+        "median_net_pnl": -12.620567019999944,
+        "sum_net_pnl": -12.620567019999944,
+        "mean_margin_roi": -0.012635118886421435,
+        "profit_factor": 0.0,
+        "winning_net_pnl_sum": 0.0,
+        "losing_net_pnl_sum_abs": 12.620567019999944,
+        "mean_winner": null,
+        "mean_loser": -12.620567019999944,
+        "loss_quantiles": {
+          "0.0": -12.620567019999944,
+          "0.05": -12.620567019999944,
+          "0.5": -12.620567019999944,
+          "0.95": -12.620567019999944,
+          "1.0": -12.620567019999944
+        },
+        "entry_fees": 0.59930898,
+        "exit_fees": 0.60615804,
+        "mean_duration_minutes": 275.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-01-05 00:00:00+00:00": {
+        "signals": 1,
+        "executed": 1,
+        "labels": {
+          "TIMEOUT": 1
+        },
+        "tp_rate_evaluable": 0.0,
+        "mean_net_pnl": -5.326432159999868,
+        "median_net_pnl": -5.326432159999868,
+        "sum_net_pnl": -5.326432159999868,
+        "mean_margin_roi": -0.0054124863631854255,
+        "profit_factor": 0.0,
+        "winning_net_pnl_sum": 0.0,
+        "losing_net_pnl_sum_abs": 5.326432159999868,
+        "mean_winner": null,
+        "mean_loser": -5.326432159999868,
+        "loss_quantiles": {
+          "0.0": -5.326432159999868,
+          "0.05": -5.326432159999868,
+          "0.5": -5.326432159999868,
+          "0.95": -5.326432159999868,
+          "1.0": -5.326432159999868
+        },
+        "entry_fees": 0.59046048,
+        "exit_fees": 0.58797168,
+        "mean_duration_minutes": 1440.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-01-12 00:00:00+00:00": {
+        "signals": 3,
+        "executed": 3,
+        "labels": {
+          "SL_FIRST": 2,
+          "TP_FIRST": 1
+        },
+        "tp_rate_evaluable": 0.3333333333333333,
+        "mean_net_pnl": -2.8447774666667094,
+        "median_net_pnl": -19.47935394,
+        "sum_net_pnl": -8.534332400000128,
+        "mean_margin_roi": -0.007744668155227306,
+        "profit_factor": 0.8078719755177799,
+        "winning_net_pnl_sum": 35.88569649999988,
+        "losing_net_pnl_sum_abs": 44.420028900000005,
+        "mean_winner": 35.88569649999988,
+        "mean_loser": -22.210014450000003,
+        "loss_quantiles": {
+          "0.0": -24.94067496000001,
+          "0.05": -24.66760890900001,
+          "0.5": -22.210014450000003,
+          "0.95": -19.752419991,
+          "1.0": -19.47935394
+        },
+        "entry_fees": 1.5766643999999999,
+        "exit_fees": 1.550868,
+        "mean_duration_minutes": 720.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-01-19 00:00:00+00:00": {
+        "signals": 2,
+        "executed": 2,
+        "labels": {
+          "SL_FIRST": 2
+        },
+        "tp_rate_evaluable": 0.0,
+        "mean_net_pnl": -16.64414039999997,
+        "median_net_pnl": -16.64414039999997,
+        "sum_net_pnl": -33.28828079999994,
+        "mean_margin_roi": -0.017643974706664303,
+        "profit_factor": 0.0,
+        "winning_net_pnl_sum": 0.0,
+        "losing_net_pnl_sum_abs": 33.28828079999994,
+        "mean_winner": null,
+        "mean_loser": -16.64414039999997,
+        "loss_quantiles": {
+          "0.0": -24.995507399999923,
+          "0.05": -24.160370699999927,
+          "0.5": -16.64414039999997,
+          "0.95": -9.127910100000008,
+          "1.0": -8.292773400000012
+        },
+        "entry_fees": 1.15538328,
+        "exit_fees": 1.14529752,
+        "mean_duration_minutes": 460.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-01-26 00:00:00+00:00": {
+        "signals": 2,
+        "executed": 2,
+        "labels": {
+          "TIMEOUT": 1,
+          "SL_FIRST": 1
+        },
+        "tp_rate_evaluable": 0.0,
+        "mean_net_pnl": 2.8306921000000127,
+        "median_net_pnl": 2.8306921000000127,
+        "sum_net_pnl": 5.661384200000025,
+        "mean_margin_roi": 0.0028376132214888265,
+        "profit_factor": 1.8832990974796802,
+        "winning_net_pnl_sum": 12.070746800000036,
+        "losing_net_pnl_sum_abs": 6.40936260000001,
+        "mean_winner": 12.070746800000036,
+        "mean_loser": -6.40936260000001,
+        "loss_quantiles": {
+          "0.0": -6.40936260000001,
+          "0.05": -6.40936260000001,
+          "0.5": -6.40936260000001,
+          "0.95": -6.40936260000001,
+          "1.0": -6.40936260000001
+        },
+        "entry_fees": 1.1984239199999998,
+        "exit_fees": 1.1935918799999998,
+        "mean_duration_minutes": 915.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-02-02 00:00:00+00:00": {
+        "signals": 3,
+        "executed": 3,
+        "labels": {
+          "TP_FIRST": 2,
+          "TIMEOUT": 1
+        },
+        "tp_rate_evaluable": 0.6666666666666666,
+        "mean_net_pnl": 15.470222080000042,
+        "median_net_pnl": 14.451077760000048,
+        "sum_net_pnl": 46.410666240000126,
+        "mean_margin_roi": 0.01594618574186684,
+        "profit_factor": null,
+        "winning_net_pnl_sum": 46.410666240000126,
+        "losing_net_pnl_sum_abs": -0.0,
+        "mean_winner": 15.470222080000042,
+        "mean_loser": null,
+        "loss_quantiles": {},
+        "entry_fees": 1.63846422,
+        "exit_fees": 1.6086695399999997,
+        "mean_duration_minutes": 623.3333333333334,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-02-09 00:00:00+00:00": {
+        "signals": 1,
+        "executed": 1,
+        "labels": {
+          "SL_FIRST": 1
+        },
+        "tp_rate_evaluable": 0.0,
+        "mean_net_pnl": -24.9505164,
+        "median_net_pnl": -24.9505164,
+        "sum_net_pnl": -24.9505164,
+        "mean_margin_roi": -0.07131999691286564,
+        "profit_factor": 0.0,
+        "winning_net_pnl_sum": 0.0,
+        "losing_net_pnl_sum_abs": 24.9505164,
+        "mean_winner": null,
+        "mean_loser": -24.9505164,
+        "loss_quantiles": {
+          "0.0": -24.9505164,
+          "0.05": -24.9505164,
+          "0.5": -24.9505164,
+          "0.95": -24.9505164,
+          "1.0": -24.9505164
+        },
+        "entry_fees": 0.2099034,
+        "exit_fees": 0.22461299999999998,
+        "mean_duration_minutes": 1120.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-02-16 00:00:00+00:00": {
+        "signals": 2,
+        "executed": 2,
+        "labels": {
+          "TP_FIRST": 1,
+          "SL_FIRST": 1
+        },
+        "tp_rate_evaluable": 0.5,
+        "mean_net_pnl": 9.425382709999914,
+        "median_net_pnl": 9.425382709999914,
+        "sum_net_pnl": 18.850765419999828,
+        "mean_margin_roi": -0.002168308022805217,
+        "profit_factor": 1.755798698415283,
+        "winning_net_pnl_sum": 43.79228153999987,
+        "losing_net_pnl_sum_abs": 24.941516120000042,
+        "mean_winner": 43.79228153999987,
+        "mean_loser": -24.941516120000042,
+        "loss_quantiles": {
+          "0.0": -24.941516120000042,
+          "0.05": -24.941516120000042,
+          "0.5": -24.941516120000042,
+          "0.95": -24.941516120000042,
+          "1.0": -24.941516120000042
+        },
+        "entry_fees": 0.9097624799999999,
+        "exit_fees": 0.9221720999999998,
+        "mean_duration_minutes": 512.5,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-02-23 00:00:00+00:00": {
+        "signals": 2,
+        "executed": 2,
+        "labels": {
+          "TP_FIRST": 1,
+          "SL_FIRST": 1
+        },
+        "tp_rate_evaluable": 0.5,
+        "mean_net_pnl": 7.019620909999957,
+        "median_net_pnl": 7.019620909999957,
+        "sum_net_pnl": 14.039241819999914,
+        "mean_margin_roi": 0.0070288675619144874,
+        "profit_factor": 2.18097869156951,
+        "winning_net_pnl_sum": 25.9270446399999,
+        "losing_net_pnl_sum_abs": 11.887802819999985,
+        "mean_winner": 25.9270446399999,
+        "mean_loser": -11.887802819999985,
+        "loss_quantiles": {
+          "0.0": -11.887802819999985,
+          "0.05": -11.887802819999985,
+          "0.5": -11.887802819999985,
+          "0.95": -11.887802819999985,
+          "1.0": -11.887802819999985
+        },
+        "entry_fees": 1.19905734,
+        "exit_fees": 1.1892008399999998,
+        "mean_duration_minutes": 190.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-03-02 00:00:00+00:00": {
+        "signals": 3,
+        "executed": 3,
+        "labels": {
+          "SL_FIRST": 3
+        },
+        "tp_rate_evaluable": 0.0,
+        "mean_net_pnl": -22.159003060000007,
+        "median_net_pnl": -24.990027819999927,
+        "sum_net_pnl": -66.47700918000002,
+        "mean_margin_roi": -0.025104226677021304,
+        "profit_factor": 0.0,
+        "winning_net_pnl_sum": 0.0,
+        "losing_net_pnl_sum_abs": 66.47700918000002,
+        "mean_winner": null,
+        "mean_loser": -22.159003060000007,
+        "loss_quantiles": {
+          "0.0": -24.997265280000132,
+          "0.05": -24.996541534000112,
+          "0.5": -24.990027819999927,
+          "0.95": -17.339747253999967,
+          "1.0": -16.48971607999997
+        },
+        "entry_fees": 1.6202379599999999,
+        "exit_fees": 1.61107122,
+        "mean_duration_minutes": 343.3333333333333,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-03-09 00:00:00+00:00": {
+        "signals": 2,
+        "executed": 2,
+        "labels": {
+          "TP_FIRST": 1,
+          "SL_FIRST": 1
+        },
+        "tp_rate_evaluable": 0.5,
+        "mean_net_pnl": 10.86073604999998,
+        "median_net_pnl": 10.86073604999998,
+        "sum_net_pnl": 21.72147209999996,
+        "mean_margin_roi": 0.010871318434146984,
+        "profit_factor": 2.540486225692957,
+        "winning_net_pnl_sum": 35.82187218000002,
+        "losing_net_pnl_sum_abs": 14.10040008000006,
+        "mean_winner": 35.82187218000002,
+        "mean_loser": -14.10040008000006,
+        "loss_quantiles": {
+          "0.0": -14.10040008000006,
+          "0.05": -14.10040008000006,
+          "0.5": -14.10040008000006,
+          "0.95": -14.10040008000006,
+          "1.0": -14.10040008000006
+        },
+        "entry_fees": 1.1991329999999998,
+        "exit_fees": 1.2290948999999998,
+        "mean_duration_minutes": 192.5,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-03-16 00:00:00+00:00": {
+        "signals": 3,
+        "executed": 3,
+        "labels": {
+          "TP_FIRST": 2,
+          "SL_FIRST": 1
+        },
+        "tp_rate_evaluable": 0.6666666666666666,
+        "mean_net_pnl": 16.951696473333314,
+        "median_net_pnl": 22.578967240000043,
+        "sum_net_pnl": 50.85508941999994,
+        "mean_margin_roi": 0.016964005606677268,
+        "profit_factor": 3.8528629118705715,
+        "winning_net_pnl_sum": 68.68107369999998,
+        "losing_net_pnl_sum_abs": 17.82598428000004,
+        "mean_winner": 34.34053684999999,
+        "mean_loser": -17.82598428000004,
+        "loss_quantiles": {
+          "0.0": -17.82598428000004,
+          "0.05": -17.82598428000004,
+          "0.5": -17.82598428000004,
+          "0.95": -17.82598428000004,
+          "1.0": -17.82598428000004
+        },
+        "entry_fees": 1.79826,
+        "exit_fees": 1.8309505799999997,
+        "mean_duration_minutes": 916.6666666666666,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-03-23 00:00:00+00:00": {
+        "signals": 2,
+        "executed": 2,
+        "labels": {
+          "SL_FIRST": 2
+        },
+        "tp_rate_evaluable": 0.0,
+        "mean_net_pnl": -23.070254370000004,
+        "median_net_pnl": -23.070254370000004,
+        "sum_net_pnl": -46.14050874000001,
+        "mean_margin_roi": -0.026228484809361158,
+        "profit_factor": 0.0,
+        "winning_net_pnl_sum": 0.0,
+        "losing_net_pnl_sum_abs": 46.14050874000001,
+        "mean_winner": null,
+        "mean_loser": -23.070254370000004,
+        "loss_quantiles": {
+          "0.0": -24.99910602000005,
+          "0.05": -24.806220855000046,
+          "0.5": -23.070254370000004,
+          "0.95": -21.334287884999963,
+          "1.0": -21.14140271999996
+        },
+        "entry_fees": 1.0789421399999999,
+        "exit_fees": 1.0764665999999998,
+        "mean_duration_minutes": 970.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-03-30 00:00:00+00:00": {
+        "signals": 3,
+        "executed": 3,
+        "labels": {
+          "SL_FIRST": 2,
+          "TIMEOUT": 1
+        },
+        "tp_rate_evaluable": 0.0,
+        "mean_net_pnl": -0.6544166133333622,
+        "median_net_pnl": -7.182148859999997,
+        "sum_net_pnl": -1.9632498400000866,
+        "mean_margin_roi": -0.0006498938561699952,
+        "profit_factor": 0.9010934343018754,
+        "winning_net_pnl_sum": 17.886290239999997,
+        "losing_net_pnl_sum_abs": 19.849540080000082,
+        "mean_winner": 17.886290239999997,
+        "mean_loser": -9.924770040000041,
+        "loss_quantiles": {
+          "0.0": -12.667391220000086,
+          "0.05": -12.393129102000081,
+          "0.5": -9.924770040000041,
+          "0.95": -7.456410978000002,
+          "1.0": -7.182148859999997
+        },
+        "entry_fees": 1.7991044999999999,
+        "exit_fees": 1.79094534,
+        "mean_duration_minutes": 603.3333333333334,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-04-06 00:00:00+00:00": {
+        "signals": 1,
+        "executed": 1,
+        "labels": {
+          "TP_FIRST": 1
+        },
+        "tp_rate_evaluable": 1.0,
+        "mean_net_pnl": 11.667548200000121,
+        "median_net_pnl": 11.667548200000121,
+        "sum_net_pnl": 11.667548200000121,
+        "mean_margin_roi": 0.011675651101864816,
+        "profit_factor": null,
+        "winning_net_pnl_sum": 11.667548200000121,
+        "losing_net_pnl_sum_abs": -0.0,
+        "mean_winner": 11.667548200000121,
+        "mean_loser": null,
+        "loss_quantiles": {},
+        "entry_fees": 0.5995836,
+        "exit_fees": 0.5918681999999998,
+        "mean_duration_minutes": 110.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-04-13 00:00:00+00:00": {
+        "signals": 3,
+        "executed": 3,
+        "labels": {
+          "SL_FIRST": 3
+        },
+        "tp_rate_evaluable": 0.0,
+        "mean_net_pnl": -10.363673966666648,
+        "median_net_pnl": -10.184950039999855,
+        "sum_net_pnl": -31.09102189999994,
+        "mean_margin_roi": -0.01037098301804184,
+        "profit_factor": 0.0,
+        "winning_net_pnl_sum": 0.0,
+        "losing_net_pnl_sum_abs": 31.09102189999994,
+        "mean_winner": null,
+        "mean_loser": -10.363673966666648,
+        "loss_quantiles": {
+          "0.0": -12.09722184000009,
+          "0.05": -11.905994660000067,
+          "0.5": -10.184950039999855,
+          "0.95": -8.946460021999984,
+          "1.0": -8.808850019999998
+        },
+        "entry_fees": 1.7987569199999998,
+        "exit_fees": 1.8021649799999997,
+        "mean_duration_minutes": 930.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-04-20 00:00:00+00:00": {
+        "signals": 2,
+        "executed": 2,
+        "labels": {
+          "TP_FIRST": 1,
+          "SL_FIRST": 1
+        },
+        "tp_rate_evaluable": 0.5,
+        "mean_net_pnl": 7.272060459999986,
+        "median_net_pnl": 7.272060459999986,
+        "sum_net_pnl": 14.544120919999973,
+        "mean_margin_roi": 0.007271649270509557,
+        "profit_factor": 2.2979348151142256,
+        "winning_net_pnl_sum": 25.749707479999913,
+        "losing_net_pnl_sum_abs": 11.20558655999994,
+        "mean_winner": 25.749707479999913,
+        "mean_loser": -11.20558655999994,
+        "loss_quantiles": {
+          "0.0": -11.20558655999994,
+          "0.05": -11.20558655999994,
+          "0.5": -11.20558655999994,
+          "0.95": -11.20558655999994,
+          "1.0": -11.20558655999994
+        },
+        "entry_fees": 1.1991537599999997,
+        "exit_fees": 1.20932532,
+        "mean_duration_minutes": 655.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-04-27 00:00:00+00:00": {
+        "signals": 1,
+        "executed": 1,
+        "labels": {
+          "TIMEOUT": 1
+        },
+        "tp_rate_evaluable": 0.0,
+        "mean_net_pnl": 7.590815999999992,
+        "median_net_pnl": 7.590815999999992,
+        "sum_net_pnl": 7.590815999999992,
+        "mean_margin_roi": 0.007600605579987016,
+        "profit_factor": null,
+        "winning_net_pnl_sum": 7.590815999999992,
+        "losing_net_pnl_sum_abs": -0.0,
+        "mean_winner": 7.590815999999992,
+        "mean_loser": null,
+        "loss_quantiles": {},
+        "entry_fees": 0.5992272,
+        "exit_fees": 0.5939568,
+        "mean_duration_minutes": 1440.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-05-04 00:00:00+00:00": {
+        "signals": 1,
+        "executed": 1,
+        "labels": {
+          "SL_FIRST": 1
+        },
+        "tp_rate_evaluable": 0.0,
+        "mean_net_pnl": -11.15524674000005,
+        "median_net_pnl": -11.15524674000005,
+        "sum_net_pnl": -11.15524674000005,
+        "mean_margin_roi": -0.01115731977001332,
+        "profit_factor": 0.0,
+        "winning_net_pnl_sum": 0.0,
+        "losing_net_pnl_sum_abs": 11.15524674000005,
+        "mean_winner": null,
+        "mean_loser": -11.15524674000005,
+        "loss_quantiles": {
+          "0.0": -11.15524674000005,
+          "0.05": -11.15524674000005,
+          "0.5": -11.15524674000005,
+          "0.95": -11.15524674000005,
+          "1.0": -11.15524674000005
+        },
+        "entry_fees": 0.5998885199999999,
+        "exit_fees": 0.60585822,
+        "mean_duration_minutes": 170.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-05-11 00:00:00+00:00": {
+        "signals": 2,
+        "executed": 2,
+        "labels": {
+          "SL_FIRST": 2
+        },
+        "tp_rate_evaluable": 0.0,
+        "mean_net_pnl": -9.09827202,
+        "median_net_pnl": -9.09827202,
+        "sum_net_pnl": -18.19654404,
+        "mean_margin_roi": -0.009107450372593924,
+        "profit_factor": 0.0,
+        "winning_net_pnl_sum": 0.0,
+        "losing_net_pnl_sum_abs": 18.19654404,
+        "mean_winner": null,
+        "mean_loser": -9.09827202,
+        "loss_quantiles": {
+          "0.0": -9.278826700000046,
+          "0.05": -9.26077123200004,
+          "0.5": -9.09827202,
+          "0.95": -8.935772807999957,
+          "1.0": -8.917717339999951
+        },
+        "entry_fees": 1.19878296,
+        "exit_fees": 1.1985610799999997,
+        "mean_duration_minutes": 1092.5,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-05-18 00:00:00+00:00": {
+        "signals": 2,
+        "executed": 2,
+        "labels": {
+          "TP_FIRST": 2
+        },
+        "tp_rate_evaluable": 1.0,
+        "mean_net_pnl": 32.57124619,
+        "median_net_pnl": 32.57124619,
+        "sum_net_pnl": 65.14249238,
+        "mean_margin_roi": 0.03261010075984225,
+        "profit_factor": null,
+        "winning_net_pnl_sum": 65.14249238,
+        "losing_net_pnl_sum_abs": -0.0,
+        "mean_winner": 32.57124619,
+        "mean_loser": null,
+        "loss_quantiles": {},
+        "entry_fees": 1.1987791799999998,
+        "exit_fees": 1.21682844,
+        "mean_duration_minutes": 475.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-05-25 00:00:00+00:00": {
+        "signals": 1,
+        "executed": 1,
+        "labels": {
+          "TP_FIRST": 1
+        },
+        "tp_rate_evaluable": 1.0,
+        "mean_net_pnl": 17.262172979999942,
+        "median_net_pnl": 17.262172979999942,
+        "sum_net_pnl": 17.262172979999942,
+        "mean_margin_roi": 0.017265085599940652,
+        "profit_factor": null,
+        "winning_net_pnl_sum": 17.262172979999942,
+        "losing_net_pnl_sum_abs": -0.0,
+        "mean_winner": 17.262172979999942,
+        "mean_loser": null,
+        "loss_quantiles": {},
+        "entry_fees": 0.59989878,
+        "exit_fees": 0.58882824,
+        "mean_duration_minutes": 770.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-06-01 00:00:00+00:00": {
+        "signals": 3,
+        "executed": 3,
+        "labels": {
+          "SL_FIRST": 2,
+          "TIMEOUT": 1
+        },
+        "tp_rate_evaluable": 0.0,
+        "mean_net_pnl": -0.5219785999999486,
+        "median_net_pnl": -7.226601240000005,
+        "sum_net_pnl": -1.5659357999998456,
+        "mean_margin_roi": -0.0005278183513079751,
+        "profit_factor": 0.9310154781974534,
+        "winning_net_pnl_sum": 21.133878000000124,
+        "losing_net_pnl_sum_abs": 22.69981379999997,
+        "mean_winner": 21.133878000000124,
+        "mean_loser": -11.349906899999985,
+        "loss_quantiles": {
+          "0.0": -15.473212559999963,
+          "0.05": -15.060881993999965,
+          "0.5": -11.349906899999983,
+          "0.95": -7.638931806000003,
+          "1.0": -7.226601240000005
+        },
+        "entry_fees": 1.7984768399999997,
+        "exit_fees": 1.7972589599999997,
+        "mean_duration_minutes": 878.3333333333334,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-06-08 00:00:00+00:00": {
+        "signals": 2,
+        "executed": 2,
+        "labels": {
+          "SL_FIRST": 1,
+          "TIMEOUT": 1
+        },
+        "tp_rate_evaluable": 0.0,
+        "mean_net_pnl": -5.224370640000019,
+        "median_net_pnl": -5.224370640000019,
+        "sum_net_pnl": -10.448741280000037,
+        "mean_margin_roi": -0.004800667249546687,
+        "profit_factor": 0.41009641046232564,
+        "winning_net_pnl_sum": 7.263884079999956,
+        "losing_net_pnl_sum_abs": 17.712625359999993,
+        "mean_winner": 7.263884079999956,
+        "mean_loser": -17.712625359999993,
+        "loss_quantiles": {
+          "0.0": -17.712625359999993,
+          "0.05": -17.712625359999993,
+          "0.5": -17.712625359999993,
+          "0.95": -17.712625359999993,
+          "1.0": -17.712625359999993
+        },
+        "entry_fees": 1.1363169599999998,
+        "exit_fees": 1.1512243199999999,
+        "mean_duration_minutes": 1067.5,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-06-15 00:00:00+00:00": {
+        "signals": 2,
+        "executed": 2,
+        "labels": {
+          "SL_FIRST": 2
+        },
+        "tp_rate_evaluable": 0.0,
+        "mean_net_pnl": -9.539919339999958,
+        "median_net_pnl": -9.539919339999958,
+        "sum_net_pnl": -19.079838679999916,
+        "mean_margin_roi": -0.00954121851164096,
+        "profit_factor": 0.0,
+        "winning_net_pnl_sum": 0.0,
+        "losing_net_pnl_sum_abs": 19.079838679999916,
+        "mean_winner": null,
+        "mean_loser": -9.539919339999958,
+        "loss_quantiles": {
+          "0.0": -11.518745000000028,
+          "0.05": -11.32086243400002,
+          "0.5": -9.539919339999958,
+          "0.95": -7.758976245999895,
+          "1.0": -7.561093679999887
+        },
+        "entry_fees": 1.1998095599999998,
+        "exit_fees": 1.1974291199999998,
+        "mean_duration_minutes": 307.5,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-06-22 00:00:00+00:00": {
+        "signals": 1,
+        "executed": 1,
+        "labels": {
+          "SL_FIRST": 1
+        },
+        "tp_rate_evaluable": 0.0,
+        "mean_net_pnl": -7.319745640000071,
+        "median_net_pnl": -7.319745640000071,
+        "sum_net_pnl": -7.319745640000071,
+        "mean_margin_roi": -0.00732783557046987,
+        "profit_factor": 0.0,
+        "winning_net_pnl_sum": 0.0,
+        "losing_net_pnl_sum_abs": 7.319745640000071,
+        "mean_winner": null,
+        "mean_loser": -7.319745640000071,
+        "loss_quantiles": {
+          "0.0": -7.319745640000071,
+          "0.05": -7.319745640000071,
+          "0.5": -7.319745640000071,
+          "0.95": -7.319745640000071,
+          "1.0": -7.319745640000071
+        },
+        "entry_fees": 0.5993375999999999,
+        "exit_fees": 0.60300804,
+        "mean_duration_minutes": 70.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-07-06 00:00:00+00:00": {
+        "signals": 1,
+        "executed": 1,
+        "labels": {
+          "SL_FIRST": 1
+        },
+        "tp_rate_evaluable": 0.0,
+        "mean_net_pnl": -16.840560599999968,
+        "median_net_pnl": -16.840560599999968,
+        "sum_net_pnl": -16.840560599999968,
+        "mean_margin_roi": -0.016855292125317497,
+        "profit_factor": 0.0,
+        "winning_net_pnl_sum": 0.0,
+        "losing_net_pnl_sum_abs": 16.840560599999968,
+        "mean_winner": null,
+        "mean_loser": -16.840560599999968,
+        "loss_quantiles": {
+          "0.0": -16.840560599999968,
+          "0.05": -16.840560599999968,
+          "0.5": -16.840560599999968,
+          "0.95": -16.840560599999968,
+          "1.0": -16.840560599999968
+        },
+        "entry_fees": 0.5994756,
+        "exit_fees": 0.590085,
+        "mean_duration_minutes": 140.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-07-13 00:00:00+00:00": {
+        "signals": 1,
+        "executed": 1,
+        "labels": {
+          "TIMEOUT": 1
+        },
+        "tp_rate_evaluable": 0.0,
+        "mean_net_pnl": -8.806369039999977,
+        "median_net_pnl": -8.806369039999977,
+        "sum_net_pnl": -8.806369039999977,
+        "mean_margin_roi": -0.00881365969930324,
+        "profit_factor": 0.0,
+        "winning_net_pnl_sum": 0.0,
+        "losing_net_pnl_sum_abs": 8.806369039999977,
+        "mean_winner": null,
+        "mean_loser": -8.806369039999977,
+        "loss_quantiles": {
+          "0.0": -8.806369039999977,
+          "0.05": -8.806369039999977,
+          "0.5": -8.806369039999977,
+          "0.95": -8.806369039999977,
+          "1.0": -8.806369039999977
+        },
+        "entry_fees": 0.5995036799999999,
+        "exit_fees": 0.6040653599999999,
+        "mean_duration_minutes": 1440.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-07-20 00:00:00+00:00": {
+        "signals": 2,
+        "executed": 2,
+        "labels": {
+          "TIMEOUT": 2
+        },
+        "tp_rate_evaluable": 0.0,
+        "mean_net_pnl": -0.8255531800001408,
+        "median_net_pnl": -0.8255531800001408,
+        "sum_net_pnl": -1.6511063600002815,
+        "mean_margin_roi": -0.0008256656368379908,
+        "profit_factor": 0.09709291944965481,
+        "winning_net_pnl_sum": 0.17754953999984868,
+        "losing_net_pnl_sum_abs": 1.8286559000001303,
+        "mean_winner": 0.17754953999984868,
+        "mean_loser": -1.8286559000001303,
+        "loss_quantiles": {
+          "0.0": -1.8286559000001303,
+          "0.05": -1.8286559000001303,
+          "0.5": -1.8286559000001303,
+          "0.95": -1.8286559000001303,
+          "1.0": -1.8286559000001303
+        },
+        "entry_fees": 1.1992546199999998,
+        "exit_fees": 1.19805174,
+        "mean_duration_minutes": 1440.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-07-27 00:00:00+00:00": {
+        "signals": 3,
+        "executed": 3,
+        "labels": {
+          "SL_FIRST": 2,
+          "TP_FIRST": 1
+        },
+        "tp_rate_evaluable": 0.3333333333333333,
+        "mean_net_pnl": -2.844547253333351,
+        "median_net_pnl": -9.023635999999957,
+        "sum_net_pnl": -8.533641760000053,
+        "mean_margin_roi": -0.00284340565108278,
+        "profit_factor": 0.6218378091961511,
+        "winning_net_pnl_sum": 14.032447519999954,
+        "losing_net_pnl_sum_abs": 22.566089280000007,
+        "mean_winner": 14.032447519999954,
+        "mean_loser": -11.283044640000004,
+        "loss_quantiles": {
+          "0.0": -13.542453280000052,
+          "0.05": -13.316512416000046,
+          "0.5": -11.283044640000004,
+          "0.95": -9.249576863999962,
+          "1.0": -9.023635999999957
+        },
+        "entry_fees": 1.7988409799999998,
+        "exit_fees": 1.8018007799999998,
+        "mean_duration_minutes": 498.3333333333333,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      },
+      "2026-08-03 00:00:00+00:00": {
+        "signals": 3,
+        "executed": 3,
+        "labels": {
+          "SL_FIRST": 2,
+          "TIMEOUT": 1
+        },
+        "tp_rate_evaluable": 0.0,
+        "mean_net_pnl": -5.443480706666619,
+        "median_net_pnl": -10.190119679999842,
+        "sum_net_pnl": -16.330442119999855,
+        "mean_margin_roi": -0.005444908586766162,
+        "profit_factor": 0.31119684417547905,
+        "winning_net_pnl_sum": 7.377988919999892,
+        "losing_net_pnl_sum_abs": 23.708431039999745,
+        "mean_winner": 7.377988919999892,
+        "mean_loser": -11.854215519999872,
+        "loss_quantiles": {
+          "0.0": -13.518311359999904,
+          "0.05": -13.3519017759999,
+          "0.5": -11.854215519999872,
+          "0.95": -10.356529263999846,
+          "1.0": -10.190119679999842
+        },
+        "entry_fees": 1.7992037399999998,
+        "exit_fees": 1.8068383799999999,
+        "mean_duration_minutes": 970.0,
+        "both_touched_5m": 0,
+        "unresolved_execution": 0,
+        "incomplete": 0
+      }
+    }
+  },
+  "diagnosis": {
+    "events": {
+      "ALL": {
+        "ALL": {
+          "n": 87,
+          "mean_reference_pnl": 1.063506896551712,
+          "mean_nominal_slippage": 0.24600336298850575,
+          "mean_tick_rounding": 0.07332192436780818,
+          "mean_execution_cost": 0.31932528735631394,
+          "mean_fees": 1.1464093834482758,
+          "mean_gross_after_execution": 0.7441816091953977,
+          "mean_net": -0.40222777425287776,
+          "sum_net": -34.993816360000366,
+          "positive_rate": 0.3793103448275862,
+          "positive_rate_nonzero": 0.3793103448275862,
+          "mean_winner": 22.776248733939372,
+          "mean_loser_abs": 14.566852307037028,
+          "break_even_positive_rate_nonzero": 0.39008148495897255,
+          "tp_rate_all": 0.2413793103448276,
+          "tp_rate_resolved_tp_sl": 0.2916666666666667,
+          "break_even_tp_rate_resolved": 0.3361938344081734,
+          "label_counts": {
+            "SL_FIRST": 51,
+            "TP_FIRST": 21,
+            "TIMEOUT": 15
+          },
+          "optimistic_ambiguous_mean_net": -0.40222777425287776,
+          "planned_sl_net_loss": {
+            "0.0": 5.8219392000000045,
+            "0.1": 7.968215435999983,
+            "0.5": 14.40057191999989,
+            "0.9": 24.947645327999986,
+            "1.0": 24.99910602000005
+          },
+          "planned_reward_risk": {
+            "0.0": 2.0000241268195573,
+            "0.1": 2.000177519545359,
+            "0.5": 2.0015143048424955,
+            "0.9": 2.00542469610866,
+            "1.0": 2.0105371309047424
+          },
+          "planned_break_even_win_rate": {
+            "0.0": 0.33216663888130643,
+            "0.1": 0.332731677257893,
+            "0.5": 0.3331651621272133,
+            "0.9": 0.3333136101205214,
+            "1.0": 0.333330652597164
+          },
+          "stop_distance_bps": {
+            "0.0": 43.92048081368499,
+            "0.1": 65.33186635464075,
+            "0.5": 130.33798826148558,
+            "0.9": 287.0996263192683,
+            "1.0": 819.9290604635829
+          },
+          "tp_distance_bps": {
+            "0.0": 130.2203729388206,
+            "0.1": 172.73837677033623,
+            "0.5": 301.96316535114437,
+            "0.9": 616.2409461523415,
+            "1.0": 1682.7517941103683
+          },
+          "max_reconciliation_error": 7.105427357601002e-15,
+          "break_even_equal_fee_bps_current_execution": 3.894847442492033,
+          "break_even_equal_fee_bps_zero_execution_cost": 5.566110563502881,
+          "frozen_path_cost_sensitivities": {
+            "zero_fees_current_execution": 0.7441816091953977,
+            "zero_execution_cost_current_fees": -0.08290248689656417,
+            "zero_fees_zero_execution_cost": 1.063506896551712,
+            "2bp_each_current_execution": 0.36204514804597276,
+            "maker_entry_2bp_taker_exit_6bp_current_execution": -0.020363549885061515
+          },
+          "funding": {
+            "covered": 6,
+            "coverage_fraction": 0.06896551724137931,
+            "mean_cost_estimate": -0.05293008506666667,
+            "mean_net_same_events_without_funding": -4.144013979999985,
+            "mean_net_with_estimate": -4.091083894933319,
+            "mean_net_sensitivity_low": -4.091094032516652,
+            "mean_net_sensitivity_high": -4.091048863116652,
+            "interior_settlements": 8,
+            "boundary_settlements": 0,
+            "tp_below_target_after_estimate": 0
+          }
+        },
+        "LONG": {
+          "n": 34,
+          "mean_reference_pnl": 3.004861764705863,
+          "mean_nominal_slippage": 0.2419915311764706,
+          "mean_tick_rounding": 0.06924082176468689,
+          "mean_execution_cost": 0.3112323529411575,
+          "mean_fees": 1.14431946,
+          "mean_gross_after_execution": 2.6936294117647033,
+          "mean_net": 1.5493099517647055,
+          "sum_net": 52.67653835999999,
+          "positive_rate": 0.38235294117647056,
+          "positive_rate_nonzero": 0.38235294117647056,
+          "mean_winner": 29.724741584615376,
+          "mean_loser_abs": 15.892623916190464,
+          "break_even_positive_rate_nonzero": 0.34838977967523616,
+          "tp_rate_all": 0.29411764705882354,
+          "tp_rate_resolved_tp_sl": 0.3448275862068966,
+          "break_even_tp_rate_resolved": 0.3273282666551138,
+          "label_counts": {
+            "SL_FIRST": 19,
+            "TP_FIRST": 10,
+            "TIMEOUT": 5
+          },
+          "optimistic_ambiguous_mean_net": 1.5493099517647055,
+          "planned_sl_net_loss": {
+            "0.0": 7.182148859999997,
+            "0.1": 11.230520579999954,
+            "0.5": 18.095102900000057,
+            "0.9": 24.982938699999984,
+            "1.0": 24.99910602000005
+          },
+          "planned_reward_risk": {
+            "0.0": 2.0000241268195573,
+            "0.1": 2.0001552116698593,
+            "0.5": 2.0014309654094946,
+            "0.9": 2.0047991794736895,
+            "1.0": 2.006335325593195
+          },
+          "planned_break_even_win_rate": {
+            "0.0": 0.33263089166631304,
+            "0.1": 0.33280094298124924,
+            "0.5": 0.33317441317737173,
+            "0.9": 0.3333160885075987,
+            "1.0": 0.333330652597164
+          },
+          "stop_distance_bps": {
+            "0.0": 57.649667405765186,
+            "0.1": 98.42526152414726,
+            "0.5": 166.9153301190637,
+            "0.9": 290.9707491256691,
+            "1.0": 467.7262800291201
+          },
+          "tp_distance_bps": {
+            "0.0": 157.4279379157435,
+            "0.1": 238.5517234534677,
+            "0.5": 376.2610701494708,
+            "0.9": 624.1404009327711,
+            "1.0": 977.9179810725552
+          },
+          "max_reconciliation_error": 7.105427357601002e-15,
+          "break_even_equal_fee_bps_current_execution": 14.12348302683607,
+          "break_even_equal_fee_bps_zero_execution_cost": 15.755364842117757,
+          "frozen_path_cost_sensitivities": {
+            "zero_fees_current_execution": 2.6936294117647033,
+            "zero_execution_cost_current_fees": 1.8605423047058613,
+            "zero_fees_zero_execution_cost": 3.004861764705863,
+            "2bp_each_current_execution": 2.3121895917647035,
+            "maker_entry_2bp_taker_exit_6bp_current_execution": 1.9302110458823516
+          },
+          "funding": {
+            "covered": 0,
+            "coverage_fraction": 0.0
+          }
+        },
+        "SHORT": {
+          "n": 53,
+          "mean_reference_pnl": -0.18189056603774242,
+          "mean_nominal_slippage": 0.2485769909433962,
+          "mean_tick_rounding": 0.07593999018867847,
+          "mean_execution_cost": 0.3245169811320746,
+          "mean_fees": 1.1477500890566037,
+          "mean_gross_after_execution": -0.5064075471698177,
+          "mean_net": -1.6541576362264212,
+          "sum_net": -87.67035472000032,
+          "positive_rate": 0.37735849056603776,
+          "positive_rate_nonzero": 0.37735849056603776,
+          "mean_winner": 18.25972838099997,
+          "mean_loser_abs": 13.723179464848476,
+          "break_even_positive_rate_nonzero": 0.42907854191969036,
+          "tp_rate_all": 0.20754716981132076,
+          "tp_rate_resolved_tp_sl": 0.2558139534883721,
+          "break_even_tp_rate_resolved": 0.3583574478058651,
+          "label_counts": {
+            "SL_FIRST": 32,
+            "TP_FIRST": 11,
+            "TIMEOUT": 10
+          },
+          "optimistic_ambiguous_mean_net": -1.6541576362264212,
+          "planned_sl_net_loss": {
+            "0.0": 5.8219392000000045,
+            "0.1": 7.245230120000018,
+            "0.5": 12.958172499999986,
+            "0.9": 24.378490292000027,
+            "1.0": 24.990027819999927
+          },
+          "planned_reward_risk": {
+            "0.0": 2.000028248841457,
+            "0.1": 2.0003016819661723,
+            "0.5": 2.001948810155436,
+            "0.9": 2.005462580298392,
+            "1.0": 2.0105371309047424
+          },
+          "planned_break_even_win_rate": {
+            "0.0": 0.33216663888130643,
+            "0.1": 0.33272748314207784,
+            "0.5": 0.3331169394418227,
+            "0.9": 0.3332998164987716,
+            "1.0": 0.3333301946027266
+          },
+          "stop_distance_bps": {
+            "0.0": 43.92048081368499,
+            "0.1": 58.16992518223835,
+            "0.5": 115.47344110854515,
+            "0.9": 271.0409481777977,
+            "1.0": 819.9290604635829
+          },
+          "tp_distance_bps": {
+            "0.0": 130.2203729388206,
+            "0.1": 158.65787744659858,
+            "0.5": 272.80600461893647,
+            "0.9": 583.7088385048422,
+            "1.0": 1682.7517941103683
+          },
+          "max_reconciliation_error": 7.105427357601002e-15,
+          "break_even_equal_fee_bps_current_execution": -2.6473056390841707,
+          "break_even_equal_fee_bps_zero_execution_cost": -0.9508545515544129,
+          "frozen_path_cost_sensitivities": {
+            "zero_fees_current_execution": -0.5064075471698177,
+            "zero_execution_cost_current_fees": -1.3296406550943467,
+            "zero_fees_zero_execution_cost": -0.18189056603774242,
+            "2bp_each_current_execution": -0.8889909101886851,
+            "maker_entry_2bp_taker_exit_6bp_current_execution": -1.2716755547169876
+          },
+          "funding": {
+            "covered": 6,
+            "coverage_fraction": 0.11320754716981132,
+            "mean_cost_estimate": -0.05293008506666667,
+            "mean_net_same_events_without_funding": -4.144013979999985,
+            "mean_net_with_estimate": -4.091083894933319,
+            "mean_net_sensitivity_low": -4.091094032516652,
+            "mean_net_sensitivity_high": -4.091048863116652,
+            "interior_settlements": 8,
+            "boundary_settlements": 0,
+            "tp_below_target_after_estimate": 0
+          }
+        }
+      },
+      "discovery": {
+        "ALL": {
+          "n": 69,
+          "mean_reference_pnl": 2.2379101449275267,
+          "mean_nominal_slippage": 0.24227161826086957,
+          "mean_tick_rounding": 0.05592548318840148,
+          "mean_execution_cost": 0.29819710144927103,
+          "mean_fees": 1.1341686243478264,
+          "mean_gross_after_execution": 1.9397130434782548,
+          "mean_net": 0.8055444191304297,
+          "sum_net": 55.582564919999655,
+          "positive_rate": 0.4057971014492754,
+          "positive_rate_nonzero": 0.4057971014492754,
+          "mean_winner": 25.05823071999998,
+          "mean_loser_abs": 15.757265737560973,
+          "break_even_positive_rate_nonzero": 0.3860608618088237,
+          "tp_rate_all": 0.2898550724637681,
+          "tp_rate_resolved_tp_sl": 0.3333333333333333,
+          "break_even_tp_rate_resolved": 0.3434103830500017,
+          "label_counts": {
+            "SL_FIRST": 40,
+            "TP_FIRST": 20,
+            "TIMEOUT": 9
+          },
+          "optimistic_ambiguous_mean_net": 0.8055444191304297,
+          "planned_sl_net_loss": {
+            "0.0": 5.8219392000000045,
+            "0.1": 8.549949528000008,
+            "0.5": 16.204551999999964,
+            "0.9": 24.954805600000018,
+            "1.0": 24.99910602000005
+          },
+          "planned_reward_risk": {
+            "0.0": 2.0000241268195573,
+            "0.1": 2.0001507115868153,
+            "0.5": 2.001352318542962,
+            "0.9": 2.004218309563183,
+            "1.0": 2.0060217139306973
+          },
+          "planned_break_even_win_rate": {
+            "0.0": 0.33266559431880893,
+            "0.1": 0.33286529259453074,
+            "0.5": 0.33318314341898403,
+            "0.9": 0.33331658844398615,
+            "1.0": 0.333330652597164
+          },
+          "stop_distance_bps": {
+            "0.0": 43.92048081368499,
+            "0.1": 71.28681236075579,
+            "0.5": 147.9376184229703,
+            "0.9": 300.74457892639833,
+            "1.0": 819.9290604635829
+          },
+          "tp_distance_bps": {
+            "0.0": 130.2203729388206,
+            "0.1": 184.63423211128304,
+            "0.5": 338.14312782393233,
+            "0.9": 643.5808444149621,
+            "1.0": 1682.7517941103683
+          },
+          "max_reconciliation_error": 7.105427357601002e-15,
+          "break_even_equal_fee_bps_current_execution": 10.26150610325851,
+          "break_even_equal_fee_bps_zero_execution_cost": 11.839033968415647,
+          "frozen_path_cost_sensitivities": {
+            "zero_fees_current_execution": 1.9397130434782548,
+            "zero_execution_cost_current_fees": 1.1037415205797,
+            "zero_fees_zero_execution_cost": 2.2379101449275267,
+            "2bp_each_current_execution": 1.5616568353623135,
+            "maker_entry_2bp_taker_exit_6bp_current_execution": 1.1833517785507195
+          },
+          "funding": {
+            "covered": 0,
+            "coverage_fraction": 0.0
+          }
+        },
+        "LONG": {
+          "n": 30,
+          "mean_reference_pnl": 3.963116666666655,
+          "mean_nominal_slippage": 0.24178345500000004,
+          "mean_tick_rounding": 0.059783211666650765,
+          "mean_execution_cost": 0.3015666666666507,
+          "mean_fees": 1.1415294739999997,
+          "mean_gross_after_execution": 3.6615500000000036,
+          "mean_net": 2.5200205260000046,
+          "sum_net": 75.60061578000014,
+          "positive_rate": 0.4,
+          "positive_rate_nonzero": 0.4,
+          "mean_winner": 31.596479709999993,
+          "mean_loser_abs": 16.864285596666647,
+          "break_even_positive_rate_nonzero": 0.34799874682017584,
+          "tp_rate_all": 0.3333333333333333,
+          "tp_rate_resolved_tp_sl": 0.37037037037037035,
+          "break_even_tp_rate_resolved": 0.33183295907206994,
+          "label_counts": {
+            "SL_FIRST": 17,
+            "TP_FIRST": 10,
+            "TIMEOUT": 3
+          },
+          "optimistic_ambiguous_mean_net": 2.5200205260000046,
+          "planned_sl_net_loss": {
+            "0.0": 7.182148859999997,
+            "0.1": 11.031729527999943,
+            "0.5": 18.313296930000043,
+            "0.9": 24.982479827999974,
+            "1.0": 24.99910602000005
+          },
+          "planned_reward_risk": {
+            "0.0": 2.0000241268195573,
+            "0.1": 2.000131518769321,
+            "0.5": 2.001355106387825,
+            "0.9": 2.0036100574368616,
+            "1.0": 2.0060217139306973
+          },
+          "planned_break_even_win_rate": {
+            "0.0": 0.33266559431880893,
+            "0.1": 0.3329327028836541,
+            "0.5": 0.3331828339380932,
+            "0.9": 0.3333187207952141,
+            "1.0": 0.333330652597164
+          },
+          "stop_distance_bps": {
+            "0.0": 57.649667405765186,
+            "0.1": 96.44076235668014,
+            "0.5": 169.22318021758616,
+            "0.9": 299.98786056522835,
+            "1.0": 467.7262800291201
+          },
+          "tp_distance_bps": {
+            "0.0": 157.4279379157435,
+            "0.1": 234.63974650509394,
+            "0.5": 380.76648186784837,
+            "0.9": 642.1478371828916,
+            "1.0": 977.9179810725552
+          },
+          "max_reconciliation_error": 7.105427357601002e-15,
+          "break_even_equal_fee_bps_current_execution": 19.24549518902744,
+          "break_even_equal_fee_bps_zero_execution_cost": 20.83056157689708,
+          "frozen_path_cost_sensitivities": {
+            "zero_fees_current_execution": 3.6615500000000036,
+            "zero_execution_cost_current_fees": 2.821587192666655,
+            "zero_fees_zero_execution_cost": 3.963116666666655,
+            "2bp_each_current_execution": 3.2810401753333367,
+            "maker_entry_2bp_taker_exit_6bp_current_execution": 2.8997980406666715
+          },
+          "funding": {
+            "covered": 0,
+            "coverage_fraction": 0.0
+          }
+        },
+        "SHORT": {
+          "n": 39,
+          "mean_reference_pnl": 0.9108282051281973,
+          "mean_nominal_slippage": 0.24264712846153844,
+          "mean_tick_rounding": 0.05295799974359431,
+          "mean_execution_cost": 0.2956051282051328,
+          "mean_fees": 1.1285064323076925,
+          "mean_gross_after_execution": 0.6152230769230639,
+          "mean_net": -0.5132833553846281,
+          "sum_net": -20.018050860000496,
+          "positive_rate": 0.41025641025641024,
+          "positive_rate_nonzero": 0.41025641025641024,
+          "mean_winner": 20.154543977499976,
+          "mean_loser_abs": 14.890902369565227,
+          "break_even_positive_rate_nonzero": 0.4249026313460616,
+          "tp_rate_all": 0.2564102564102564,
+          "tp_rate_resolved_tp_sl": 0.30303030303030304,
+          "break_even_tp_rate_resolved": 0.36480394091072854,
+          "label_counts": {
+            "SL_FIRST": 23,
+            "TP_FIRST": 10,
+            "TIMEOUT": 6
+          },
+          "optimistic_ambiguous_mean_net": -0.5132833553846281,
+          "planned_sl_net_loss": {
+            "0.0": 5.8219392000000045,
+            "0.1": 8.034566688000023,
+            "0.5": 14.089581840000024,
+            "0.9": 24.94668830399998,
+            "1.0": 24.990027819999927
+          },
+          "planned_reward_risk": {
+            "0.0": 2.000028248841457,
+            "0.1": 2.0002644646006322,
+            "0.5": 2.001345348763889,
+            "0.9": 2.004232010577045,
+            "1.0": 2.0054706157520172
+          },
+          "planned_break_even_win_rate": {
+            "0.0": 0.3327265935520663,
+            "0.1": 0.3328637750607265,
+            "0.5": 0.3331839171429747,
+            "0.9": 0.33330395108152105,
+            "1.0": 0.3333301946027266
+          },
+          "stop_distance_bps": {
+            "0.0": 43.92048081368499,
+            "0.1": 66.212303497722,
+            "0.5": 126.67968981234881,
+            "0.9": 295.5503810860934,
+            "1.0": 819.9290604635829
+          },
+          "tp_distance_bps": {
+            "0.0": 130.2203729388206,
+            "0.1": 173.74760950208855,
+            "0.5": 295.3886225063639,
+            "0.9": 633.7430295727509,
+            "1.0": 1682.7517941103683
+          },
+          "max_reconciliation_error": 7.105427357601002e-15,
+          "break_even_equal_fee_bps_current_execution": 3.27099461364162,
+          "break_even_equal_fee_bps_zero_execution_cost": 4.84265669588947,
+          "frozen_path_cost_sensitivities": {
+            "zero_fees_current_execution": 0.6152230769230639,
+            "zero_execution_cost_current_fees": -0.21767822717949514,
+            "zero_fees_zero_execution_cost": 0.9108282051281973,
+            "2bp_each_current_execution": 0.23905426615383363,
+            "maker_entry_2bp_taker_exit_6bp_current_execution": -0.13699150000001334
+          },
+          "funding": {
+            "covered": 0,
+            "coverage_fraction": 0.0
+          }
+        }
+      },
+      "validation": {
+        "ALL": {
+          "n": 18,
+          "mean_reference_pnl": -3.4383722222222444,
+          "mean_nominal_slippage": 0.26030838444444443,
+          "mean_tick_rounding": 0.14000828222220063,
+          "mean_execution_cost": 0.40031666666664506,
+          "mean_fees": 1.1933322933333332,
+          "mean_gross_after_execution": -3.838688888888888,
+          "mean_net": -5.032021182222222,
+          "sum_net": -90.57638127999999,
+          "positive_rate": 0.2777777777777778,
+          "positive_rate_nonzero": 0.2777777777777778,
+          "mean_winner": 9.997149611999955,
+          "mean_loser_abs": 10.812471487692289,
+          "break_even_positive_rate_nonzero": 0.5195900221293407,
+          "tp_rate_all": 0.05555555555555555,
+          "tp_rate_resolved_tp_sl": 0.08333333333333333,
+          "break_even_tp_rate_resolved": 0.4570327278540912,
+          "label_counts": {
+            "SL_FIRST": 11,
+            "TIMEOUT": 6,
+            "TP_FIRST": 1
+          },
+          "optimistic_ambiguous_mean_net": -5.032021182222222,
+          "planned_sl_net_loss": {
+            "0.0": 6.979452060000178,
+            "0.1": 7.291802320000051,
+            "0.5": 12.40810354000006,
+            "0.9": 17.537096846,
+            "1.0": 24.983755719999987
+          },
+          "planned_reward_risk": {
+            "0.0": 2.0000728552534417,
+            "0.1": 2.0005875256685535,
+            "0.5": 2.0038287483989006,
+            "0.9": 2.007973351013177,
+            "1.0": 2.0105371309047424
+          },
+          "planned_break_even_win_rate": {
+            "0.0": 0.33216663888130643,
+            "0.1": 0.3324497886638739,
+            "0.5": 0.332908478716911,
+            "0.9": 0.3332680679498842,
+            "1.0": 0.3333252385017568
+          },
+          "stop_distance_bps": {
+            "0.0": 55.0711335474989,
+            "0.1": 58.51638096770013,
+            "0.5": 109.44592884209655,
+            "0.9": 160.84270383156945,
+            "1.0": 264.84821821381445
+          },
+          "tp_distance_bps": {
+            "0.0": 154.1991739329961,
+            "0.1": 159.64351612301084,
+            "0.5": 262.77015170890553,
+            "0.9": 365.52558715672035,
+            "1.0": 572.8112626484816
+          },
+          "max_reconciliation_error": 3.552713678800501e-15,
+          "break_even_equal_fee_bps_current_execution": -19.300687211772093,
+          "break_even_equal_fee_bps_zero_execution_cost": -17.287920094500304,
+          "frozen_path_cost_sensitivities": {
+            "zero_fees_current_execution": -3.838688888888888,
+            "zero_execution_cost_current_fees": -4.631704515555578,
+            "zero_fees_zero_execution_cost": -3.4383722222222444,
+            "2bp_each_current_execution": -4.23646632,
+            "maker_entry_2bp_taker_exit_6bp_current_execution": -4.6346056422222235
+          },
+          "funding": {
+            "covered": 6,
+            "coverage_fraction": 0.3333333333333333,
+            "mean_cost_estimate": -0.05293008506666667,
+            "mean_net_same_events_without_funding": -4.144013979999985,
+            "mean_net_with_estimate": -4.091083894933319,
+            "mean_net_sensitivity_low": -4.091094032516652,
+            "mean_net_sensitivity_high": -4.091048863116652,
+            "interior_settlements": 8,
+            "boundary_settlements": 0,
+            "tp_below_target_after_estimate": 0
+          }
+        },
+        "LONG": {
+          "n": 4,
+          "mean_reference_pnl": -4.1820500000000855,
+          "mean_nominal_slippage": 0.2435521025,
+          "mean_tick_rounding": 0.14017289749995773,
+          "mean_execution_cost": 0.38372499999995774,
+          "mean_fees": 1.165244355,
+          "mean_gross_after_execution": -4.565775000000043,
+          "mean_net": -5.731019355000042,
+          "sum_net": -22.924077420000167,
+          "positive_rate": 0.25,
+          "positive_rate_nonzero": 0.25,
+          "mean_winner": 7.263884079999956,
+          "mean_loser_abs": 10.062653833333375,
+          "break_even_positive_rate_nonzero": 0.5807654064341288,
+          "tp_rate_all": 0.0,
+          "tp_rate_resolved_tp_sl": 0.0,
+          "break_even_tp_rate_resolved": null,
+          "label_counts": {
+            "TIMEOUT": 2,
+            "SL_FIRST": 2
+          },
+          "optimistic_ambiguous_mean_net": -5.731019355000042,
+          "planned_sl_net_loss": {
+            "0.0": 11.518745000000028,
+            "0.1": 13.11528968000001,
+            "0.5": 17.151215469999986,
+            "0.9": 22.727190105999995,
+            "1.0": 24.983755719999987
+          },
+          "planned_reward_risk": {
+            "0.0": 2.0001934128741152,
+            "0.1": 2.0008259311070167,
+            "0.5": 2.003570117996266,
+            "0.9": 2.0058862566178597,
+            "1.0": 2.006335325593195
+          },
+          "planned_break_even_win_rate": {
+            "0.0": 0.33263089166631304,
+            "0.1": 0.3326806028961227,
+            "0.5": 0.3329371844254674,
+            "0.9": 0.33324162300515636,
+            "1.0": 0.33331184439939937
+          },
+          "stop_distance_bps": {
+            "0.0": 100.63003150157564,
+            "0.1": 116.67302882502334,
+            "0.5": 157.082119013993,
+            "0.9": 233.41101738414557,
+            "1.0": 264.84821821381445
+          },
+          "tp_distance_bps": {
+            "0.0": 245.01225061253083,
+            "0.1": 276.9277117539194,
+            "0.5": 357.7865022737716,
+            "0.9": 510.22064889305227,
+            "1.0": 572.8112626484816
+          },
+          "max_reconciliation_error": 1.7763568394002505e-15,
+          "break_even_equal_fee_bps_current_execution": -23.50978992728118,
+          "break_even_equal_fee_bps_zero_execution_cost": -21.533938261387682,
+          "frozen_path_cost_sensitivities": {
+            "zero_fees_current_execution": -4.565775000000043,
+            "zero_execution_cost_current_fees": -5.347294355000086,
+            "zero_fees_zero_execution_cost": -4.1820500000000855,
+            "2bp_each_current_execution": -4.954189785000042,
+            "maker_entry_2bp_taker_exit_6bp_current_execution": -5.341691415000042
+          },
+          "funding": {
+            "covered": 0,
+            "coverage_fraction": 0.0
+          }
+        },
+        "SHORT": {
+          "n": 14,
+          "mean_reference_pnl": -3.225892857142861,
+          "mean_nominal_slippage": 0.26509589357142854,
+          "mean_tick_rounding": 0.13996124928569859,
+          "mean_execution_cost": 0.40505714285712724,
+          "mean_fees": 1.2013574185714284,
+          "mean_gross_after_execution": -3.630949999999989,
+          "mean_net": -4.832307418571417,
+          "sum_net": -67.65230385999983,
+          "positive_rate": 0.2857142857142857,
+          "positive_rate_nonzero": 0.2857142857142857,
+          "mean_winner": 10.680465994999954,
+          "mean_loser_abs": 11.037416783999964,
+          "break_even_positive_rate_nonzero": 0.5082179002583337,
+          "tp_rate_all": 0.07142857142857142,
+          "tp_rate_resolved_tp_sl": 0.1,
+          "break_even_tp_rate_resolved": 0.445746845194385,
+          "label_counts": {
+            "SL_FIRST": 9,
+            "TIMEOUT": 4,
+            "TP_FIRST": 1
+          },
+          "optimistic_ambiguous_mean_net": -4.832307418571417,
+          "planned_sl_net_loss": {
+            "0.0": 6.979452060000178,
+            "0.1": 7.254544560000025,
+            "0.5": 10.453764570000015,
+            "0.9": 16.283851018000004,
+            "1.0": 17.712625359999993
+          },
+          "planned_reward_risk": {
+            "0.0": 2.0000728552534417,
+            "0.1": 2.0009203530927766,
+            "0.5": 2.0038287483989006,
+            "0.9": 2.008823650177161,
+            "1.0": 2.0105371309047424
+          },
+          "planned_break_even_win_rate": {
+            "0.0": 0.33216663888130643,
+            "0.1": 0.33235583773479543,
+            "0.5": 0.332908478716911,
+            "0.9": 0.333231105561003,
+            "1.0": 0.3333252385017568
+          },
+          "stop_distance_bps": {
+            "0.0": 55.0711335474989,
+            "0.1": 58.23844597161219,
+            "0.5": 89.77254381913875,
+            "0.9": 148.53574141579165,
+            "1.0": 162.67473228153378
+          },
+          "tp_distance_bps": {
+            "0.0": 154.1991739329961,
+            "0.1": 158.85500518188104,
+            "0.5": 223.72447924624367,
+            "0.9": 339.59290971564,
+            "1.0": 368.67489577372794
+          },
+          "max_reconciliation_error": 3.552713678800501e-15,
+          "break_even_equal_fee_bps_current_execution": -18.134236875072517,
+          "break_even_equal_fee_bps_zero_execution_cost": -16.111239539248214,
+          "frozen_path_cost_sensitivities": {
+            "zero_fees_current_execution": -3.630949999999989,
+            "zero_execution_cost_current_fees": -4.42725027571429,
+            "zero_fees_zero_execution_cost": -3.225892857142861,
+            "2bp_each_current_execution": -4.03140247285713,
+            "maker_entry_2bp_taker_exit_6bp_current_execution": -4.432581135714274
+          },
+          "funding": {
+            "covered": 6,
+            "coverage_fraction": 0.42857142857142855,
+            "mean_cost_estimate": -0.05293008506666667,
+            "mean_net_same_events_without_funding": -4.144013979999985,
+            "mean_net_with_estimate": -4.091083894933319,
+            "mean_net_sensitivity_low": -4.091094032516652,
+            "mean_net_sensitivity_high": -4.091048863116652,
+            "interior_settlements": 8,
+            "boundary_settlements": 0,
+            "tp_below_target_after_estimate": 0
+          }
+        }
+      }
+    },
+    "portfolio": {
+      "ALL": {
+        "ALL": {
+          "n": 76,
+          "mean_reference_pnl": 0.4496131578947285,
+          "mean_nominal_slippage": 0.24739840934210533,
+          "mean_tick_rounding": 0.07655422223683937,
+          "mean_execution_cost": 0.3239526315789446,
+          "mean_fees": 1.1490814926315789,
+          "mean_gross_after_execution": 0.1256605263157842,
+          "mean_net": -1.023420966315795,
+          "sum_net": -77.77999344000041,
+          "positive_rate": 0.3684210526315789,
+          "positive_rate_nonzero": 0.3684210526315789,
+          "mean_winner": 21.938375190714257,
+          "mean_loser_abs": 14.417802057916655,
+          "break_even_positive_rate_nonzero": 0.3965709034620683,
+          "tp_rate_all": 0.2236842105263158,
+          "tp_rate_resolved_tp_sl": 0.27419354838709675,
+          "break_even_tp_rate_resolved": 0.33887304201120216,
+          "label_counts": {
+            "SL_FIRST": 45,
+            "TP_FIRST": 17,
+            "TIMEOUT": 14
+          },
+          "optimistic_ambiguous_mean_net": -1.023420966315795,
+          "planned_sl_net_loss": {
+            "0.0": 5.8219392000000045,
+            "0.1": 7.92693353999995,
+            "0.5": 14.208697959999954,
+            "0.9": 24.96123940000004,
+            "1.0": 24.99910602000005
+          },
+          "planned_reward_risk": {
+            "0.0": 2.0000426196621324,
+            "0.1": 2.0002636161870484,
+            "0.5": 2.0021419037139703,
+            "0.9": 2.005452404612003,
+            "1.0": 2.0105371309047424
+          },
+          "planned_break_even_win_rate": {
+            "0.0": 0.33216663888130643,
+            "0.1": 0.33272860967530116,
+            "0.5": 0.33309551388025244,
+            "0.9": 0.3333040454019796,
+            "1.0": 0.333328597882593
+          },
+          "stop_distance_bps": {
+            "0.0": 43.92048081368499,
+            "0.1": 64.91042362891079,
+            "0.5": 127.9886470318951,
+            "0.9": 287.2281112763268,
+            "1.0": 698.4641506521573
+          },
+          "tp_distance_bps": {
+            "0.0": 130.2203729388206,
+            "0.1": 172.1233989091137,
+            "0.5": 298.1916051073489,
+            "0.9": 616.6228948427117,
+            "1.0": 1439.376398857761
+          },
+          "max_reconciliation_error": 7.105427357601002e-15,
+          "break_even_equal_fee_bps_current_execution": 0.6561442010244285,
+          "break_even_equal_fee_bps_zero_execution_cost": 2.347682879471201,
+          "frozen_path_cost_sensitivities": {
+            "zero_fees_current_execution": 0.1256605263157842,
+            "zero_execution_cost_current_fees": -0.6994683347368502,
+            "zero_fees_zero_execution_cost": 0.4496131578947285,
+            "2bp_each_current_execution": -0.2573666378947424,
+            "maker_entry_2bp_taker_exit_6bp_current_execution": -0.6404509489473739
+          },
+          "funding": {
+            "covered": 6,
+            "coverage_fraction": 0.07894736842105263,
+            "mean_cost_estimate": -0.05293008506666667,
+            "mean_net_same_events_without_funding": -4.144013979999985,
+            "mean_net_with_estimate": -4.091083894933319,
+            "mean_net_sensitivity_low": -4.091094032516652,
+            "mean_net_sensitivity_high": -4.091048863116652,
+            "interior_settlements": 8,
+            "boundary_settlements": 0,
+            "tp_below_target_after_estimate": 0
+          }
+        },
+        "LONG": {
+          "n": 29,
+          "mean_reference_pnl": 0.8517448275861869,
+          "mean_nominal_slippage": 0.2422251927586207,
+          "mean_tick_rounding": 0.07045066931033282,
+          "mean_execution_cost": 0.3126758620689535,
+          "mean_fees": 1.1333952868965516,
+          "mean_gross_after_execution": 0.5390689655172325,
+          "mean_net": -0.5943263213793176,
+          "sum_net": -17.23546332000021,
+          "positive_rate": 0.3448275862068966,
+          "positive_rate_nonzero": 0.3448275862068966,
+          "mean_winner": 28.271664363999975,
+          "mean_loser_abs": 15.78695299789473,
+          "break_even_positive_rate_nonzero": 0.3583170317902101,
+          "tp_rate_all": 0.2413793103448276,
+          "tp_rate_resolved_tp_sl": 0.2916666666666667,
+          "break_even_tp_rate_resolved": 0.32576118237529644,
+          "label_counts": {
+            "SL_FIRST": 17,
+            "TP_FIRST": 7,
+            "TIMEOUT": 5
+          },
+          "optimistic_ambiguous_mean_net": -0.5943263213793176,
+          "planned_sl_net_loss": {
+            "0.0": 7.182148859999997,
+            "0.1": 10.857872495999946,
+            "0.5": 17.89747686000005,
+            "0.9": 24.986106055999976,
+            "1.0": 24.99910602000005
+          },
+          "planned_reward_risk": {
+            "0.0": 2.0000601612693973,
+            "0.1": 2.0001824982443277,
+            "0.5": 2.0015040365863013,
+            "0.9": 2.0047337635819313,
+            "1.0": 2.006335325593195
+          },
+          "planned_break_even_win_rate": {
+            "0.0": 0.33263089166631304,
+            "0.1": 0.3328081883405335,
+            "0.5": 0.33316630189754115,
+            "0.9": 0.333313057001742,
+            "1.0": 0.33332664888189306
+          },
+          "stop_distance_bps": {
+            "0.0": 57.649667405765186,
+            "0.1": 94.6708426199932,
+            "0.5": 165.08930477478037,
+            "0.9": 300.7445789263983,
+            "1.0": 467.7262800291201
+          },
+          "tp_distance_bps": {
+            "0.0": 157.4279379157435,
+            "0.1": 231.15222272900866,
+            "0.5": 372.16252757418357,
+            "0.9": 643.5808444149621,
+            "1.0": 977.9179810725552
+          },
+          "max_reconciliation_error": 7.105427357601002e-15,
+          "break_even_equal_fee_bps_current_execution": 2.853738523970595,
+          "break_even_equal_fee_bps_zero_execution_cost": 4.508990838942466,
+          "frozen_path_cost_sensitivities": {
+            "zero_fees_current_execution": 0.5390689655172325,
+            "zero_execution_cost_current_fees": -0.2816504593103647,
+            "zero_fees_zero_execution_cost": 0.8517448275861869,
+            "2bp_each_current_execution": 0.16127053655171594,
+            "maker_entry_2bp_taker_exit_6bp_current_execution": -0.21663570620690428
+          },
+          "funding": {
+            "covered": 0,
+            "coverage_fraction": 0.0
+          }
+        },
+        "SHORT": {
+          "n": 47,
+          "mean_reference_pnl": 0.20148936170212706,
+          "mean_nominal_slippage": 0.2505903940425531,
+          "mean_tick_rounding": 0.08032024425532212,
+          "mean_execution_cost": 0.3309106382978753,
+          "mean_fees": 1.158760215319149,
+          "mean_gross_after_execution": -0.1294212765957481,
+          "mean_net": -1.2881814919148968,
+          "sum_net": -60.54453012000015,
+          "positive_rate": 0.3829787234042553,
+          "positive_rate_nonzero": 0.3829787234042553,
+          "mean_winner": 18.419881205555527,
+          "mean_loser_abs": 13.520772131724128,
+          "break_even_positive_rate_nonzero": 0.4233091912350868,
+          "tp_rate_all": 0.2127659574468085,
+          "tp_rate_resolved_tp_sl": 0.2631578947368421,
+          "break_even_tp_rate_resolved": 0.35495646188863517,
+          "label_counts": {
+            "SL_FIRST": 28,
+            "TP_FIRST": 10,
+            "TIMEOUT": 9
+          },
+          "optimistic_ambiguous_mean_net": -1.2881814919148968,
+          "planned_sl_net_loss": {
+            "0.0": 5.8219392000000045,
+            "0.1": 7.282487880000045,
+            "0.5": 12.958172499999986,
+            "0.9": 23.356675355999954,
+            "1.0": 24.990027819999927
+          },
+          "planned_reward_risk": {
+            "0.0": 2.0000426196621324,
+            "0.1": 2.0003992430744777,
+            "0.5": 2.0022259568451517,
+            "0.9": 2.005469864754398,
+            "1.0": 2.0105371309047424
+          },
+          "planned_break_even_win_rate": {
+            "0.0": 0.33216663888130643,
+            "0.1": 0.3327266766927839,
+            "0.5": 0.33308618817313684,
+            "0.9": 0.3332889789073185,
+            "1.0": 0.333328597882593
+          },
+          "stop_distance_bps": {
+            "0.0": 43.92048081368499,
+            "0.1": 58.44737869850222,
+            "0.5": 115.47344110854515,
+            "0.9": 239.95147155132335,
+            "1.0": 698.4641506521573
+          },
+          "tp_distance_bps": {
+            "0.0": 130.2203729388206,
+            "0.1": 159.44638838772838,
+            "0.5": 272.80600461893647,
+            "0.9": 521.7002127328028,
+            "1.0": 1439.376398857761
+          },
+          "max_reconciliation_error": 7.105427357601002e-15,
+          "break_even_equal_fee_bps_current_execution": -0.6701366247378586,
+          "break_even_equal_fee_bps_zero_execution_cost": 1.043301413208939,
+          "frozen_path_cost_sensitivities": {
+            "zero_fees_current_execution": -0.1294212765957481,
+            "zero_execution_cost_current_fees": -0.9572708536170219,
+            "zero_fees_zero_execution_cost": 0.20148936170212706,
+            "2bp_each_current_execution": -0.5156746817021316,
+            "maker_entry_2bp_taker_exit_6bp_current_execution": -0.9019539710638342
+          },
+          "funding": {
+            "covered": 6,
+            "coverage_fraction": 0.1276595744680851,
+            "mean_cost_estimate": -0.05293008506666667,
+            "mean_net_same_events_without_funding": -4.144013979999985,
+            "mean_net_with_estimate": -4.091083894933319,
+            "mean_net_sensitivity_low": -4.091094032516652,
+            "mean_net_sensitivity_high": -4.091048863116652,
+            "interior_settlements": 8,
+            "boundary_settlements": 0,
+            "tp_below_target_after_estimate": 0
+          }
+        }
+      },
+      "discovery": {
+        "ALL": {
+          "n": 58,
+          "mean_reference_pnl": 1.6562293103448236,
+          "mean_nominal_slippage": 0.24339186534482762,
+          "mean_tick_rounding": 0.056861582931037595,
+          "mean_execution_cost": 0.30025344827586514,
+          "mean_fees": 1.1353484855172413,
+          "mean_gross_after_execution": 1.3559758620689588,
+          "mean_net": 0.22062737655171724,
+          "sum_net": 12.7963878399996,
+          "positive_rate": 0.39655172413793105,
+          "positive_rate_nonzero": 0.39655172413793105,
+          "mean_winner": 24.534293794782585,
+          "mean_loser_abs": 15.756924841142853,
+          "break_even_positive_rate_nonzero": 0.39107590622968347,
+          "tp_rate_all": 0.27586206896551724,
+          "tp_rate_resolved_tp_sl": 0.32,
+          "break_even_tp_rate_resolved": 0.3467204942350932,
+          "label_counts": {
+            "SL_FIRST": 34,
+            "TP_FIRST": 16,
+            "TIMEOUT": 8
+          },
+          "optimistic_ambiguous_mean_net": 0.22062737655171724,
+          "planned_sl_net_loss": {
+            "0.0": 5.8219392000000045,
+            "0.1": 8.722132600000066,
+            "0.5": 16.216787439999962,
+            "0.9": 24.974019956000053,
+            "1.0": 24.99910602000005
+          },
+          "planned_reward_risk": {
+            "0.0": 2.0000426196621324,
+            "0.1": 2.0002797775156544,
+            "0.5": 2.0014309654094946,
+            "0.9": 2.0040747312020515,
+            "1.0": 2.0060217139306973
+          },
+          "planned_break_even_win_rate": {
+            "0.0": 0.33266559431880893,
+            "0.1": 0.33288119953704254,
+            "0.5": 0.33317441317737173,
+            "0.9": 0.3333022500938532,
+            "1.0": 0.333328597882593
+          },
+          "stop_distance_bps": {
+            "0.0": 43.92048081368499,
+            "0.1": 73.09451608653028,
+            "0.5": 148.16587246059,
+            "0.9": 301.5012972875683,
+            "1.0": 698.4641506521573
+          },
+          "tp_distance_bps": {
+            "0.0": 130.2203729388206,
+            "0.1": 188.02893681497326,
+            "0.5": 338.2201136966388,
+            "0.9": 645.0138516470328,
+            "1.0": 1439.376398857761
+          },
+          "max_reconciliation_error": 7.105427357601002e-15,
+          "break_even_equal_fee_bps_current_execution": 7.165954133199222,
+          "break_even_equal_fee_bps_zero_execution_cost": 8.752709840927542,
+          "frozen_path_cost_sensitivities": {
+            "zero_fees_current_execution": 1.3559758620689588,
+            "zero_execution_cost_current_fees": 0.5208808248275825,
+            "zero_fees_zero_execution_cost": 1.6562293103448236,
+            "2bp_each_current_execution": 0.9775263668965445,
+            "maker_entry_2bp_taker_exit_6bp_current_execution": 0.5991143006896485
+          },
+          "funding": {
+            "covered": 0,
+            "coverage_fraction": 0.0
+          }
+        },
+        "LONG": {
+          "n": 25,
+          "mean_reference_pnl": 1.6571519999999906,
+          "mean_nominal_slippage": 0.2420128872,
+          "mean_tick_rounding": 0.05929511279999284,
+          "mean_execution_cost": 0.3013079999999928,
+          "mean_fees": 1.1282994359999998,
+          "mean_gross_after_execution": 1.3558439999999965,
+          "mean_net": 0.2275445639999984,
+          "sum_net": 5.68861409999996,
+          "positive_rate": 0.36,
+          "positive_rate_nonzero": 0.36,
+          "mean_winner": 30.605862173333307,
+          "mean_loser_abs": 16.860259091249986,
+          "break_even_positive_rate_nonzero": 0.3552061689908971,
+          "tp_rate_all": 0.28,
+          "tp_rate_resolved_tp_sl": 0.3181818181818182,
+          "break_even_tp_rate_resolved": 0.33089706744237796,
+          "label_counts": {
+            "SL_FIRST": 15,
+            "TP_FIRST": 7,
+            "TIMEOUT": 3
+          },
+          "optimistic_ambiguous_mean_net": 0.2275445639999984,
+          "planned_sl_net_loss": {
+            "0.0": 7.182148859999997,
+            "0.1": 10.162444367999955,
+            "0.5": 18.29272894000006,
+            "0.9": 24.989717367999944,
+            "1.0": 24.99910602000005
+          },
+          "planned_reward_risk": {
+            "0.0": 2.0000601612693973,
+            "0.1": 2.0002168316351,
+            "0.5": 2.001357894232688,
+            "0.9": 2.003304786587748,
+            "1.0": 2.0060217139306973
+          },
+          "planned_break_even_win_rate": {
+            "0.0": 0.33266559431880893,
+            "0.1": 0.33296654074366344,
+            "0.5": 0.33318252445720237,
+            "0.9": 0.3333092430084915,
+            "1.0": 0.33332664888189306
+          },
+          "stop_distance_bps": {
+            "0.0": 57.649667405765186,
+            "0.1": 87.59116367324543,
+            "0.5": 168.74135546334702,
+            "0.9": 303.77145237107817,
+            "1.0": 467.7262800291201
+          },
+          "tp_distance_bps": {
+            "0.0": 157.4279379157435,
+            "0.1": 217.20212762466758,
+            "0.5": 380.35961272475805,
+            "0.9": 649.3128733432444,
+            "1.0": 977.9179810725552
+          },
+          "max_reconciliation_error": 7.105427357601002e-15,
+          "break_even_equal_fee_bps_current_execution": 7.210022216123822,
+          "break_even_equal_fee_bps_zero_execution_cost": 8.812299007477252,
+          "frozen_path_cost_sensitivities": {
+            "zero_fees_current_execution": 1.3558439999999965,
+            "zero_execution_cost_current_fees": 0.5288525639999907,
+            "zero_fees_zero_execution_cost": 1.6571519999999906,
+            "2bp_each_current_execution": 0.9797441879999974,
+            "maker_entry_2bp_taker_exit_6bp_current_execution": 0.6033732071999978
+          },
+          "funding": {
+            "covered": 0,
+            "coverage_fraction": 0.0
+          }
+        },
+        "SHORT": {
+          "n": 33,
+          "mean_reference_pnl": 1.6555303030303041,
+          "mean_nominal_slippage": 0.24443654575757576,
+          "mean_tick_rounding": 0.05501799969698059,
+          "mean_execution_cost": 0.29945454545455635,
+          "mean_fees": 1.1406886745454545,
+          "mean_gross_after_execution": 1.3560757575757483,
+          "mean_net": 0.21538708303029364,
+          "sum_net": 7.10777373999969,
+          "positive_rate": 0.42424242424242425,
+          "positive_rate_nonzero": 0.42424242424242425,
+          "mean_winner": 20.631142694285693,
+          "mean_loser_abs": 14.827801262105266,
+          "break_even_positive_rate_nonzero": 0.41816815752722863,
+          "tp_rate_all": 0.2727272727272727,
+          "tp_rate_resolved_tp_sl": 0.32142857142857145,
+          "break_even_tp_rate_resolved": 0.36245589954539453,
+          "label_counts": {
+            "SL_FIRST": 19,
+            "TP_FIRST": 9,
+            "TIMEOUT": 5
+          },
+          "optimistic_ambiguous_mean_net": 0.21538708303029364,
+          "planned_sl_net_loss": {
+            "0.0": 5.8219392000000045,
+            "0.1": 8.357067432000012,
+            "0.5": 14.089581840000024,
+            "0.9": 24.949559375999996,
+            "1.0": 24.990027819999927
+          },
+          "planned_reward_risk": {
+            "0.0": 2.0000426196621324,
+            "0.1": 2.000384025789328,
+            "0.5": 2.001513311921103,
+            "0.9": 2.0040899143774946,
+            "1.0": 2.0054706157520172
+          },
+          "planned_break_even_win_rate": {
+            "0.0": 0.3327265935520663,
+            "0.1": 0.332879517097799,
+            "0.5": 0.33316527234055654,
+            "0.9": 0.3332906692711267,
+            "1.0": 0.333328597882593
+          },
+          "stop_distance_bps": {
+            "0.0": 43.92048081368499,
+            "0.1": 69.47986635549533,
+            "0.5": 126.67968981234881,
+            "0.9": 287.61356614750224,
+            "1.0": 698.4641506521573
+          },
+          "tp_distance_bps": {
+            "0.0": 130.2203729388206,
+            "0.1": 180.46978251761635,
+            "0.5": 295.3886225063639,
+            "0.9": 617.7687409138222,
+            "1.0": 1439.376398857761
+          },
+          "max_reconciliation_error": 7.105427357601002e-15,
+          "break_even_equal_fee_bps_current_execution": 7.132931821819596,
+          "break_even_equal_fee_bps_zero_execution_cost": 8.708056843064593,
+          "frozen_path_cost_sensitivities": {
+            "zero_fees_current_execution": 1.3560757575757483,
+            "zero_execution_cost_current_fees": 0.5148416284848499,
+            "zero_fees_zero_execution_cost": 1.6555303030303041,
+            "2bp_each_current_execution": 0.9758461993939287,
+            "maker_entry_2bp_taker_exit_6bp_current_execution": 0.5958878563636251
+          },
+          "funding": {
+            "covered": 0,
+            "coverage_fraction": 0.0
+          }
+        }
+      },
+      "validation": {
+        "ALL": {
+          "n": 18,
+          "mean_reference_pnl": -3.4383722222222444,
+          "mean_nominal_slippage": 0.26030838444444443,
+          "mean_tick_rounding": 0.14000828222220063,
+          "mean_execution_cost": 0.40031666666664506,
+          "mean_fees": 1.1933322933333332,
+          "mean_gross_after_execution": -3.838688888888888,
+          "mean_net": -5.032021182222222,
+          "sum_net": -90.57638127999999,
+          "positive_rate": 0.2777777777777778,
+          "positive_rate_nonzero": 0.2777777777777778,
+          "mean_winner": 9.997149611999955,
+          "mean_loser_abs": 10.812471487692289,
+          "break_even_positive_rate_nonzero": 0.5195900221293407,
+          "tp_rate_all": 0.05555555555555555,
+          "tp_rate_resolved_tp_sl": 0.08333333333333333,
+          "break_even_tp_rate_resolved": 0.4570327278540912,
+          "label_counts": {
+            "SL_FIRST": 11,
+            "TIMEOUT": 6,
+            "TP_FIRST": 1
+          },
+          "optimistic_ambiguous_mean_net": -5.032021182222222,
+          "planned_sl_net_loss": {
+            "0.0": 6.979452060000178,
+            "0.1": 7.291802320000051,
+            "0.5": 12.40810354000006,
+            "0.9": 17.537096846,
+            "1.0": 24.983755719999987
+          },
+          "planned_reward_risk": {
+            "0.0": 2.0000728552534417,
+            "0.1": 2.0005875256685535,
+            "0.5": 2.0038287483989006,
+            "0.9": 2.007973351013177,
+            "1.0": 2.0105371309047424
+          },
+          "planned_break_even_win_rate": {
+            "0.0": 0.33216663888130643,
+            "0.1": 0.3324497886638739,
+            "0.5": 0.332908478716911,
+            "0.9": 0.3332680679498842,
+            "1.0": 0.3333252385017568
+          },
+          "stop_distance_bps": {
+            "0.0": 55.0711335474989,
+            "0.1": 58.51638096770013,
+            "0.5": 109.44592884209655,
+            "0.9": 160.84270383156945,
+            "1.0": 264.84821821381445
+          },
+          "tp_distance_bps": {
+            "0.0": 154.1991739329961,
+            "0.1": 159.64351612301084,
+            "0.5": 262.77015170890553,
+            "0.9": 365.52558715672035,
+            "1.0": 572.8112626484816
+          },
+          "max_reconciliation_error": 3.552713678800501e-15,
+          "break_even_equal_fee_bps_current_execution": -19.300687211772093,
+          "break_even_equal_fee_bps_zero_execution_cost": -17.287920094500304,
+          "frozen_path_cost_sensitivities": {
+            "zero_fees_current_execution": -3.838688888888888,
+            "zero_execution_cost_current_fees": -4.631704515555578,
+            "zero_fees_zero_execution_cost": -3.4383722222222444,
+            "2bp_each_current_execution": -4.23646632,
+            "maker_entry_2bp_taker_exit_6bp_current_execution": -4.6346056422222235
+          },
+          "funding": {
+            "covered": 6,
+            "coverage_fraction": 0.3333333333333333,
+            "mean_cost_estimate": -0.05293008506666667,
+            "mean_net_same_events_without_funding": -4.144013979999985,
+            "mean_net_with_estimate": -4.091083894933319,
+            "mean_net_sensitivity_low": -4.091094032516652,
+            "mean_net_sensitivity_high": -4.091048863116652,
+            "interior_settlements": 8,
+            "boundary_settlements": 0,
+            "tp_below_target_after_estimate": 0
+          }
+        },
+        "LONG": {
+          "n": 4,
+          "mean_reference_pnl": -4.1820500000000855,
+          "mean_nominal_slippage": 0.2435521025,
+          "mean_tick_rounding": 0.14017289749995773,
+          "mean_execution_cost": 0.38372499999995774,
+          "mean_fees": 1.165244355,
+          "mean_gross_after_execution": -4.565775000000043,
+          "mean_net": -5.731019355000042,
+          "sum_net": -22.924077420000167,
+          "positive_rate": 0.25,
+          "positive_rate_nonzero": 0.25,
+          "mean_winner": 7.263884079999956,
+          "mean_loser_abs": 10.062653833333375,
+          "break_even_positive_rate_nonzero": 0.5807654064341288,
+          "tp_rate_all": 0.0,
+          "tp_rate_resolved_tp_sl": 0.0,
+          "break_even_tp_rate_resolved": null,
+          "label_counts": {
+            "TIMEOUT": 2,
+            "SL_FIRST": 2
+          },
+          "optimistic_ambiguous_mean_net": -5.731019355000042,
+          "planned_sl_net_loss": {
+            "0.0": 11.518745000000028,
+            "0.1": 13.11528968000001,
+            "0.5": 17.151215469999986,
+            "0.9": 22.727190105999995,
+            "1.0": 24.983755719999987
+          },
+          "planned_reward_risk": {
+            "0.0": 2.0001934128741152,
+            "0.1": 2.0008259311070167,
+            "0.5": 2.003570117996266,
+            "0.9": 2.0058862566178597,
+            "1.0": 2.006335325593195
+          },
+          "planned_break_even_win_rate": {
+            "0.0": 0.33263089166631304,
+            "0.1": 0.3326806028961227,
+            "0.5": 0.3329371844254674,
+            "0.9": 0.33324162300515636,
+            "1.0": 0.33331184439939937
+          },
+          "stop_distance_bps": {
+            "0.0": 100.63003150157564,
+            "0.1": 116.67302882502334,
+            "0.5": 157.082119013993,
+            "0.9": 233.41101738414557,
+            "1.0": 264.84821821381445
+          },
+          "tp_distance_bps": {
+            "0.0": 245.01225061253083,
+            "0.1": 276.9277117539194,
+            "0.5": 357.7865022737716,
+            "0.9": 510.22064889305227,
+            "1.0": 572.8112626484816
+          },
+          "max_reconciliation_error": 1.7763568394002505e-15,
+          "break_even_equal_fee_bps_current_execution": -23.50978992728118,
+          "break_even_equal_fee_bps_zero_execution_cost": -21.533938261387682,
+          "frozen_path_cost_sensitivities": {
+            "zero_fees_current_execution": -4.565775000000043,
+            "zero_execution_cost_current_fees": -5.347294355000086,
+            "zero_fees_zero_execution_cost": -4.1820500000000855,
+            "2bp_each_current_execution": -4.954189785000042,
+            "maker_entry_2bp_taker_exit_6bp_current_execution": -5.341691415000042
+          },
+          "funding": {
+            "covered": 0,
+            "coverage_fraction": 0.0
+          }
+        },
+        "SHORT": {
+          "n": 14,
+          "mean_reference_pnl": -3.225892857142861,
+          "mean_nominal_slippage": 0.26509589357142854,
+          "mean_tick_rounding": 0.13996124928569859,
+          "mean_execution_cost": 0.40505714285712724,
+          "mean_fees": 1.2013574185714284,
+          "mean_gross_after_execution": -3.630949999999989,
+          "mean_net": -4.832307418571417,
+          "sum_net": -67.65230385999983,
+          "positive_rate": 0.2857142857142857,
+          "positive_rate_nonzero": 0.2857142857142857,
+          "mean_winner": 10.680465994999954,
+          "mean_loser_abs": 11.037416783999964,
+          "break_even_positive_rate_nonzero": 0.5082179002583337,
+          "tp_rate_all": 0.07142857142857142,
+          "tp_rate_resolved_tp_sl": 0.1,
+          "break_even_tp_rate_resolved": 0.445746845194385,
+          "label_counts": {
+            "SL_FIRST": 9,
+            "TIMEOUT": 4,
+            "TP_FIRST": 1
+          },
+          "optimistic_ambiguous_mean_net": -4.832307418571417,
+          "planned_sl_net_loss": {
+            "0.0": 6.979452060000178,
+            "0.1": 7.254544560000025,
+            "0.5": 10.453764570000015,
+            "0.9": 16.283851018000004,
+            "1.0": 17.712625359999993
+          },
+          "planned_reward_risk": {
+            "0.0": 2.0000728552534417,
+            "0.1": 2.0009203530927766,
+            "0.5": 2.0038287483989006,
+            "0.9": 2.008823650177161,
+            "1.0": 2.0105371309047424
+          },
+          "planned_break_even_win_rate": {
+            "0.0": 0.33216663888130643,
+            "0.1": 0.33235583773479543,
+            "0.5": 0.332908478716911,
+            "0.9": 0.333231105561003,
+            "1.0": 0.3333252385017568
+          },
+          "stop_distance_bps": {
+            "0.0": 55.0711335474989,
+            "0.1": 58.23844597161219,
+            "0.5": 89.77254381913875,
+            "0.9": 148.53574141579165,
+            "1.0": 162.67473228153378
+          },
+          "tp_distance_bps": {
+            "0.0": 154.1991739329961,
+            "0.1": 158.85500518188104,
+            "0.5": 223.72447924624367,
+            "0.9": 339.59290971564,
+            "1.0": 368.67489577372794
+          },
+          "max_reconciliation_error": 3.552713678800501e-15,
+          "break_even_equal_fee_bps_current_execution": -18.134236875072517,
+          "break_even_equal_fee_bps_zero_execution_cost": -16.111239539248214,
+          "frozen_path_cost_sensitivities": {
+            "zero_fees_current_execution": -3.630949999999989,
+            "zero_execution_cost_current_fees": -4.42725027571429,
+            "zero_fees_zero_execution_cost": -3.225892857142861,
+            "2bp_each_current_execution": -4.03140247285713,
+            "maker_entry_2bp_taker_exit_6bp_current_execution": -4.432581135714274
+          },
+          "funding": {
+            "covered": 6,
+            "coverage_fraction": 0.42857142857142855,
+            "mean_cost_estimate": -0.05293008506666667,
+            "mean_net_same_events_without_funding": -4.144013979999985,
+            "mean_net_with_estimate": -4.091083894933319,
+            "mean_net_sensitivity_low": -4.091094032516652,
+            "mean_net_sensitivity_high": -4.091048863116652,
+            "interior_settlements": 8,
+            "boundary_settlements": 0,
+            "tp_below_target_after_estimate": 0
+          }
+        }
+      }
+    }
+  },
+  "validation_bootstrap": {
+    "weeks": 10,
+    "intervals": {
+      "net_pnl": [
+        -10.214310845138083,
+        -0.92040048799406
+      ]
+    }
+  },
+  "validation_by_side": {
+    "LONG": {
+      "signals": 4,
+      "executed": 4,
+      "labels": {
+        "TIMEOUT": 2,
+        "SL_FIRST": 2
+      },
+      "tp_rate_evaluable": 0.0,
+      "mean_net_pnl": -5.731019355000042,
+      "median_net_pnl": -6.673700450000079,
+      "sum_net_pnl": -22.924077420000167,
+      "mean_margin_roi": -0.005520597645055906,
+      "profit_factor": 0.2406218810104129,
+      "winning_net_pnl_sum": 7.263884079999956,
+      "losing_net_pnl_sum_abs": 30.187961500000124,
+      "mean_winner": 7.263884079999956,
+      "mean_loser": -10.062653833333375,
+      "loss_quantiles": {
+        "0.0": -16.840560599999968,
+        "0.05": -16.308379039999974,
+        "0.5": -11.518745000000028,
+        "0.95": -2.797664810000121,
+        "1.0": -1.8286559000001303
+      },
+      "entry_fees": 2.33596764,
+      "exit_fees": 2.32500978,
+      "mean_duration_minutes": 868.75,
+      "both_touched_5m": 0,
+      "unresolved_execution": 0,
+      "incomplete": 0
+    },
+    "SHORT": {
+      "signals": 14,
+      "executed": 14,
+      "labels": {
+        "SL_FIRST": 9,
+        "TIMEOUT": 4,
+        "TP_FIRST": 1
+      },
+      "tp_rate_evaluable": 0.07142857142857142,
+      "mean_net_pnl": -4.832307418571417,
+      "median_net_pnl": -8.183731359999932,
+      "sum_net_pnl": -67.65230385999983,
+      "mean_margin_roi": -0.004835564098456357,
+      "profit_factor": 0.38706397353708877,
+      "winning_net_pnl_sum": 42.72186397999982,
+      "losing_net_pnl_sum_abs": 110.37416783999964,
+      "mean_winner": 10.680465994999954,
+      "mean_loser": -11.037416783999964,
+      "loss_quantiles": {
+        "0.0": -17.712625359999993,
+        "0.05": -16.70488959999998,
+        "0.5": -9.6068778399999,
+        "0.95": -7.268516220000035,
+        "1.0": -7.226601240000005
+      },
+      "entry_fees": 8.394251939999998,
+      "exit_fees": 8.42475192,
+      "mean_duration_minutes": 774.6428571428571,
+      "both_touched_5m": 0,
+      "unresolved_execution": 0,
+      "incomplete": 0
+    }
+  },
+  "capital_return": -0.007777999344000142,
+  "max_drawdown": -0.018814591589925156,
+  "decision": {
+    "validation_events": 18,
+    "enough_events": false,
+    "positive_event": false,
+    "positive_portfolio": false,
+    "meets_gate": false
+  }
+}
